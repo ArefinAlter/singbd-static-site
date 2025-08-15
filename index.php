@@ -1,11 +1,12 @@
 <?php
 $page_title = "Home";
+require_once 'config.php';
 include 'partials/_header.php';
 ?>
 
 <main class="main">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero__background">
             <div class="hero__overlay"></div>
             <div class="hero__floating-elements">
@@ -17,6 +18,12 @@ include 'partials/_header.php';
         <div class="hero__container">
             <div class="hero__content">
                 <div class="hero__text">
+                    <div class="hero__badge">
+                        <svg class="hero__badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>10 Years Experience</span>
+                    </div>
                     <h1 class="hero__title">
                         Connecting <span class="hero__title-highlight">Global Brands</span> with Quality Manufacturers
                     </h1>
@@ -44,154 +51,135 @@ include 'partials/_header.php';
                 </div>
                 <div class="hero__visual">
                     <div class="hero__world-map">
-                        <img src="/images/world-map.png" alt="World Map" class="hero__map-image">
-                        <div class="hero__map-points">
-                            <div class="hero__map-point" data-location="singapore">
-                                <div class="hero__map-dot"></div>
-                                <span class="hero__map-label">Singapore</span>
-                            </div>
-                            <div class="hero__map-point" data-location="bangladesh">
-                                <div class="hero__map-dot"></div>
-                                <span class="hero__map-label">Bangladesh</span>
-                            </div>
-                            <div class="hero__map-point" data-location="vietnam">
-                                <div class="hero__map-dot"></div>
-                                <span class="hero__map-label">Vietnam</span>
-                            </div>
-                        </div>
+                        <div id="hero-world-map"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clients Section -->
-    <section class="clients" id="clients">
-        <div class="clients__container">
-            <div class="clients__header">
-                <h2 class="section__title">Our Trusted Clients</h2>
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="partners__container">
+            <div class="partners__header">
+                <h2 class="section__title">Our Trusted Partners</h2>
                 <p class="section__subtitle">
                     We partner with leading international brands and retailers to deliver exceptional 
                     apparel sourcing solutions worldwide.
                 </p>
             </div>
-            <div class="clients__slider">
-                <div class="clients__track">
-                    <div class="clients__slide">
-                        <div class="client__logo" data-client="auchan">
-                            <img src="/images/auchan.png" alt="Auchan" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="cna">
-                            <img src="/images/cna.png" alt="CNA" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="dragon-sourcing">
-                            <img src="/images/dragon_sourcing.png" alt="Dragon Sourcing" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="hm">
-                            <img src="/images/HM-Logo.png" alt="H&M" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="inditex">
-                            <img src="/images/inditex.png" alt="Inditex" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="mudgear">
-                            <img src="/images/mudgear.png" alt="MudGear" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="pullnbear">
-                            <img src="/images/pullnbear.png" alt="Pull&Bear" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="sears">
-                            <img src="/images/sears.png" alt="Sears" class="client__image">
-                        </div>
-                    </div>
-                    <!-- Duplicate for seamless loop -->
-                    <div class="clients__slide">
-                        <div class="client__logo" data-client="auchan">
-                            <img src="/images/auchan.png" alt="Auchan" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="cna">
-                            <img src="/images/cna.png" alt="CNA" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="dragon-sourcing">
-                            <img src="/images/dragon_sourcing.png" alt="Dragon Sourcing" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="hm">
-                            <img src="/images/HM-Logo.png" alt="H&M" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="inditex">
-                            <img src="/images/inditex.png" alt="Inditex" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="mudgear">
-                            <img src="/images/mudgear.png" alt="MudGear" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="pullnbear">
-                            <img src="/images/pullnbear.png" alt="Pull&Bear" class="client__image">
-                        </div>
-                        <div class="client__logo" data-client="sears">
-                            <img src="/images/sears.png" alt="Sears" class="client__image">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                         <div class="partners__slider">
+                 <div class="partners__track">
+                     <!-- First set of logos -->
+                     <div class="partners__slide">
+                         <a href="https://www.auchan.com" target="_blank" class="partner__logo" data-partner="auchan">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/auchan.png" alt="Auchan" class="partner__image">
+                         </a>
+                         <a href="https://www.cna.com" target="_blank" class="partner__logo" data-partner="cna">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/cna.png" alt="CNA" class="partner__image">
+                         </a>
+                         <a href="https://www.dragonsourcing.com" target="_blank" class="partner__logo" data-partner="dragon-sourcing">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/dragon_sourcing.png" alt="Dragon Sourcing" class="partner__image">
+                         </a>
+                         <a href="https://www.hm.com" target="_blank" class="partner__logo" data-partner="hm">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/HM-Logo.png" alt="H&M" class="partner__image">
+                         </a>
+                         <a href="https://www.inditex.com" target="_blank" class="partner__logo" data-partner="inditex">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/inditex.png" alt="Inditex" class="partner__image">
+                         </a>
+                         <a href="https://www.mudgear.com" target="_blank" class="partner__logo" data-partner="mudgear">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/mudgear.png" alt="MudGear" class="partner__image">
+                         </a>
+                         <a href="https://www.pullandbear.com" target="_blank" class="partner__logo" data-partner="pullnbear">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/pullnbear.png" alt="Pull&Bear" class="partner__image">
+                         </a>
+                         <a href="https://www.sears.com" target="_blank" class="partner__logo" data-partner="sears">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/sears.png" alt="Sears" class="partner__image">
+                         </a>
+                     </div>
+                     
+                     <!-- Gap spacer to maintain consistent spacing -->
+                     <div class="partners__gap-spacer"></div>
+                     
+                     <!-- Duplicate set for seamless loop -->
+                     <div class="partners__slide">
+                         <a href="https://www.auchan.com" target="_blank" class="partner__logo" data-partner="auchan">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/auchan.png" alt="Auchan" class="partner__image">
+                         </a>
+                         <a href="https://www.cna.com" target="_blank" class="partner__logo" data-partner="cna">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/cna.png" alt="CNA" class="partner__image">
+                         </a>
+                         <a href="https://www.dragonsourcing.com" target="_blank" class="partner__logo" data-partner="dragon-sourcing">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/dragon_sourcing.png" alt="Dragon Sourcing" class="partner__image">
+                         </a>
+                         <a href="https://www.hm.com" target="_blank" class="partner__logo" data-partner="hm">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/HM-Logo.png" alt="H&M" class="partner__image">
+                         </a>
+                         <a href="https://www.inditex.com" target="_blank" class="partner__logo" data-partner="inditex">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/inditex.png" alt="Inditex" class="partner__image">
+                         </a>
+                         <a href="https://www.mudgear.com" target="_blank" class="partner__logo" data-partner="mudgear">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/mudgear.png" alt="MudGear" class="partner__image">
+                         </a>
+                         <a href="https://www.pullandbear.com" target="_blank" class="partner__logo" data-partner="pullnbear">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/pullnbear.png" alt="Pull&Bear" class="partner__image">
+                         </a>
+                         <a href="https://www.sears.com" target="_blank" class="partner__logo" data-partner="sears">
+                             <img src="<?php echo $baseUrl; ?>/images/optimized/sears.png" alt="Sears" class="partner__image">
+                         </a>
+                     </div>
+                 </div>
+             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about__container">
-            <div class="about__content">
-                <div class="about__text">
-                    <h2 class="section__title">About Us</h2>
-                    <p class="about__description">
-                        SingBD is a leading manufacturer of high-quality garments and textiles, serving clients worldwide with innovative solutions and sustainable practices. We specialize in producing a wide range of garments including woven tops, coats & jackets, sportswear, knitwear, and accessories.
-                    </p>
-                    <p class="about__description">
-                        Our state-of-the-art facilities and skilled workforce ensure that every product meets the highest standards of quality and craftsmanship. We are committed to environmental stewardship and reducing our ecological footprint through sustainable practices.
-                    </p>
-                    <div class="about__stats">
-                        <div class="about__stat">
-                            <div class="about__stat-number">15+</div>
-                            <div class="about__stat-label">Years Experience</div>
-                        </div>
-                        <div class="about__stat">
-                            <div class="about__stat-number">500+</div>
-                            <div class="about__stat-label">Happy Clients</div>
-                        </div>
-                        <div class="about__stat">
-                            <div class="about__stat-number">50+</div>
-                            <div class="about__stat-label">Countries Served</div>
-                        </div>
-                    </div>
-                    <a href="/about.php" class="btn btn--outline">Learn More</a>
+            <div class="about__header">
+                <div class="about__badge">
+                    <svg class="about__badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>10 Years Experience</span>
                 </div>
-                <div class="about__images">
-                    <div class="about__image-slider">
-                        <div class="about__image-track">
-                            <div class="about__image-slide">
-                                <img src="/images/671232c93c967b1f9989734d_ADSC_6605.jpg" alt="Manufacturing Process" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="/images/671232c97d20587cf7b75155_ADSC_6579.jpg" alt="Quality Control" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="/images/671232c98bb146c1180f9b13_ADSC_6548.jpg" alt="Production Line" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="/images/671762cccb51d83fc75c936d_Front Center up Blue knitting.jpg" alt="Textile Production" class="about__image">
-                            </div>
-                        </div>
-                        <div class="about__image-controls">
-                            <button class="about__image-control about__image-control--prev" aria-label="Previous image">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M15 18l-6-6 6-6"/>
-                                </svg>
-                            </button>
-                            <button class="about__image-control about__image-control--next" aria-label="Next image">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 18l6-6-6-6"/>
-                                </svg>
-                            </button>
-                        </div>
+                <h2 class="section__title">About Us</h2>
+                <p class="section__subtitle">
+                    We are a dynamic buying house based in Singapore, specializing in the sourcing and production of high-quality knitwear, woven garments, outerwear, and functional outdoor apparel. We are working with homeware, accessories like bags and handicrafts.
+                </p>
+                <p class="about__description">
+                    We are a sister concern of Fakir Apparels Ltd, in Bangladesh, one of the leading and largest privately owned multi-product knit, woven, and fabric manufacturing groups of companies.
+                </p>
+            </div>
+
+            <!-- What Sets Us Apart -->
+            <div class="about__features">
+                <div class="about__feature">
+                    <div class="about__feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
                     </div>
+                    <h3 class="about__feature-title">Timely</h3>
+                    <p class="about__feature-description">Fast and efficient delivery timelines</p>
+                </div>
+                <div class="about__feature">
+                    <div class="about__feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="about__feature-title">Ethical</h3>
+                    <p class="about__feature-description">Sustainable and responsible practices</p>
+                </div>
+                <div class="about__feature">
+                    <div class="about__feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="about__feature-title">Quality</h3>
+                    <p class="about__feature-description">Premium standards in every product</p>
                 </div>
             </div>
         </div>
@@ -202,348 +190,189 @@ include 'partials/_header.php';
         <div class="services__container">
             <div class="services__header">
                 <h2 class="section__title">What We Do</h2>
-                <p class="section__subtitle">
-                    Comprehensive apparel sourcing and manufacturing solutions tailored to your needs
-                </p>
+                <p class="section__subtitle">Your End-to-End Apparel Partner</p>
             </div>
-            <div class="services__tabs">
-                <div class="services__tab-list">
-                    <button class="services__tab services__tab--active" data-tab="sourcing">
-                        <svg class="services__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="M21 21l-4.35-4.35"/>
+
+            <div class="services__grid">
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                         </svg>
-                        Global Sourcing
-                    </button>
-                    <button class="services__tab" data-tab="manufacturing">
-                        <svg class="services__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4"/>
-                            <path d="M21 12c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z"/>
-                            <path d="M3 12c1 0 2-1 2-2s-1-2-2-2-2 1-2 2 1 2 2 2z"/>
-                            <path d="M12 3c0 1-1 2-2 2s-2-1-2-2 1-2 2-2 2 1 2 2z"/>
-                            <path d="M12 21c0-1 1-2 2-2s2 1 2 2-1 2-2 2-2-1-2-2z"/>
-                        </svg>
-                        Manufacturing
-                    </button>
-                    <button class="services__tab" data-tab="quality">
-                        <svg class="services__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        Quality Control
-                    </button>
-                    <button class="services__tab" data-tab="sustainability">
-                        <svg class="services__tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                        Sustainability
-                    </button>
+                    </div>
+                    <h3 class="service__title">Sourcing</h3>
+                    <p class="service__description">Find the perfect manufacturers for your apparel needs with our extensive global network.</p>
                 </div>
-                <div class="services__content">
-                    <div class="services__panel services__panel--active" data-panel="sourcing">
-                        <div class="services__panel-content">
-                            <div class="services__panel-text">
-                                <h3 class="services__panel-title">Global Sourcing Network</h3>
-                                <p class="services__panel-description">
-                                    We maintain a vast network of trusted manufacturers across Asia, Europe, and the Americas. Our sourcing experts identify the best partners for your specific requirements, ensuring quality, cost-effectiveness, and timely delivery.
-                                </p>
-                                <ul class="services__panel-features">
-                                    <li>Vendor qualification and auditing</li>
-                                    <li>Cost optimization and negotiation</li>
-                                    <li>Supply chain transparency</li>
-                                    <li>Risk management and compliance</li>
-                                </ul>
-                            </div>
-                            <div class="services__panel-image">
-                                <img src="/images/6717630ef740b09778711448_Screenshot 2024-10-19 at 3.46.07 PM.png" alt="Global Sourcing" class="services__image">
-                            </div>
-                        </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
                     </div>
-                    <div class="services__panel" data-panel="manufacturing">
-                        <div class="services__panel-content">
-                            <div class="services__panel-text">
-                                <h3 class="services__panel-title">Advanced Manufacturing</h3>
-                                <p class="services__panel-description">
-                                    Our state-of-the-art manufacturing facilities utilize cutting-edge technology and sustainable practices. We specialize in various garment types and can handle both small-batch and large-scale production runs.
-                                </p>
-                                <ul class="services__panel-features">
-                                    <li>Cutting-edge production technology</li>
-                                    <li>Flexible manufacturing capabilities</li>
-                                    <li>Custom design and development</li>
-                                    <li>Efficient production planning</li>
-                                </ul>
-                            </div>
-                            <div class="services__panel-image">
-                                <img src="/images/671762f4776de5e0af934bc0_Garment factory.jpg" alt="Manufacturing" class="services__image">
-                            </div>
-                        </div>
+                    <h3 class="service__title">QA, QC, Audits</h3>
+                    <p class="service__description">Comprehensive quality assurance and control processes to ensure product excellence.</p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 3h15v13H1z"/>
+                            <path d="M16 8h4l3 3v5h-7V8z"/>
+                        </svg>
                     </div>
-                    <div class="services__panel" data-panel="quality">
-                        <div class="services__panel-content">
-                            <div class="services__panel-text">
-                                <h3 class="services__panel-title">Rigorous Quality Control</h3>
-                                <p class="services__panel-description">
-                                    Quality is at the heart of everything we do. Our comprehensive quality control processes ensure that every product meets international standards and your specific requirements.
-                                </p>
-                                <ul class="services__panel-features">
-                                    <li>Multi-stage quality inspections</li>
-                                    <li>International standard compliance</li>
-                                    <li>Material and fabric testing</li>
-                                    <li>Performance and durability testing</li>
-                                </ul>
-                            </div>
-                            <div class="services__panel-image">
-                                <img src="/images/67175a663d9a425749bfa7d9_C-5.png" alt="Quality Control" class="services__image">
-                            </div>
-                        </div>
+                    <h3 class="service__title">Cross Border</h3>
+                    <p class="service__description">Seamless international logistics and supply chain management across borders.</p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
                     </div>
-                    <div class="services__panel" data-panel="sustainability">
-                        <div class="services__panel-content">
-                            <div class="services__panel-text">
-                                <h3 class="services__panel-title">Sustainable Practices</h3>
-                                <p class="services__panel-description">
-                                    We are committed to environmental responsibility and social sustainability. Our green manufacturing processes and ethical sourcing practices help reduce environmental impact while supporting local communities.
-                                </p>
-                                <ul class="services__panel-features">
-                                    <li>Eco-friendly materials and processes</li>
-                                    <li>Energy-efficient manufacturing</li>
-                                    <li>Waste reduction and recycling</li>
-                                    <li>Fair labor practices and compliance</li>
-                                </ul>
-                            </div>
-                            <div class="services__panel-image">
-                                <img src="/images/67175aaf13725e16569eca32_C-3.png" alt="Sustainability" class="services__image">
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="service__title">Factory Introduction</h3>
+                    <p class="service__description">Connect with verified and certified manufacturing partners worldwide.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Product Categories Section -->
-    <section class="products" id="products">
-        <div class="products__container">
-            <div class="products__header">
-                <h2 class="section__title">Our Product Categories</h2>
-                <p class="section__subtitle">
-                    Comprehensive range of high-quality garments and accessories
-                </p>
-            </div>
-            <div class="products__layout">
-                <div class="products__categories">
-                    <ul class="categories__list">
-                        <li class="category__item category__item--active" data-category="woven-tops">
-                            <div class="category__icon">
-                                <img src="/images/67123b9373b289c270dd4edf_Shirt.png" alt="Woven Tops" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Woven Tops</span>
-                        </li>
-                        <li class="category__item" data-category="coats-jackets">
-                            <div class="category__icon">
-                                <img src="/images/67175b2e9a179330cd55b091_A-6.png" alt="Coats & Jackets" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Coats & Jackets</span>
-                        </li>
-                        <li class="category__item" data-category="sportswear">
-                            <div class="category__icon">
-                                <img src="/images/67123b94552a03b62618572d_Pen.png" alt="Sportswear" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Sportswear</span>
-                        </li>
-                        <li class="category__item" data-category="woven-bottoms">
-                            <div class="category__icon">
-                                <img src="/images/67123c086cafc61cfaa3acc8_Magnifying glass.png" alt="Woven Bottoms" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Woven Bottoms</span>
-                        </li>
-                        <li class="category__item" data-category="knitwear">
-                            <div class="category__icon">
-                                <img src="/images/6713665b5f170efb0fc92ebc_Untitled design (23).png" alt="Knitwear" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Knitwear</span>
-                        </li>
-                        <li class="category__item" data-category="homeware">
-                            <div class="category__icon">
-                                <img src="/images/671366877b8e1b5fed85dd30_Untitled (40 x 40 px).png" alt="Homeware" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Homeware</span>
-                        </li>
-                        <li class="category__item" data-category="handicrafts">
-                            <div class="category__icon">
-                                <img src="/images/67123b9373b289c270dd4edf_Shirt.png" alt="Handicrafts" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Handicrafts</span>
-                        </li>
-                        <li class="category__item" data-category="accessories">
-                            <div class="category__icon">
-                                <img src="/images/67123b94552a03b62618572d_Pen.png" alt="Accessories" class="category__icon-image">
-                            </div>
-                            <span class="category__name">Accessories</span>
-                        </li>
-                    </ul>
+    <section class="categories" id="categories">
+        <div class="categories__container">
+            <h2 class="section__title">Product Categories</h2>
+            
+            <div class="categories__grid">
+                <div class="category__item" data-category="t-shirt">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/67123b9373b289c270dd4edf_Shirt.png" alt="T-shirt" class="category__icon-img">
+                    </div>
+                    <h3 class="category__title">T-shirt</h3>
                 </div>
-                <div class="products__display">
-                    <div class="products__content">
-                        <div class="products__info">
-                            <h3 class="products__category-title">Woven Tops</h3>
-                            <p class="products__category-description">
-                                High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.
-                            </p>
-                            <div class="products__features">
-                                <div class="products__feature">
-                                    <svg class="products__feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 12l2 2 4-4"/>
-                                    </svg>
-                                    <span>Premium cotton and silk blends</span>
-                                </div>
-                                <div class="products__feature">
-                                    <svg class="products__feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 12l2 2 4-4"/>
-                                    </svg>
-                                    <span>Professional and casual styles</span>
-                                </div>
-                                <div class="products__feature">
-                                    <svg class="products__feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 12l2 2 4-4"/>
-                                    </svg>
-                                    <span>Sustainable manufacturing</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="products__gallery">
-                            <div class="products__gallery-grid">
-                                <div class="products__gallery-item">
-                                    <img src="/images/671232c93c967b1f9989734d_ADSC_6605.jpg" alt="Woven Top 1" class="products__gallery-image">
-                                </div>
-                                <div class="products__gallery-item">
-                                    <img src="/images/671232c97d20587cf7b75155_ADSC_6579.jpg" alt="Woven Top 2" class="products__gallery-image">
-                                </div>
-                                <div class="products__gallery-item">
-                                    <img src="/images/671232c98bb146c1180f9b13_ADSC_6548.jpg" alt="Woven Top 3" class="products__gallery-image">
-                                </div>
-                                <div class="products__gallery-item">
-                                    <img src="/images/671762cccb51d83fc75c936d_Front Center up Blue knitting.jpg" alt="Woven Top 4" class="products__gallery-image">
-                                </div>
-                            </div>
-                        </div>
+                <div class="category__item" data-category="jacket">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/67175b2e9a179330cd55b091_A-6.png" alt="Jacket" class="category__icon-img">
                     </div>
+                    <h3 class="category__title">Jacket</h3>
                 </div>
-            </div>
-            <div class="products__cta">
-                <a href="/products.php" class="btn btn--primary">View All Products</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team" id="team">
-        <div class="team__container">
-            <div class="team__header">
-                <h2 class="section__title">Our Team</h2>
-                <p class="section__subtitle">
-                    Meet the experts behind our success in global apparel sourcing and manufacturing
-                </p>
-            </div>
-            <div class="team__grid">
-                <div class="team__member">
-                    <div class="team__member-image">
-                        <img src="/images/671232c93c967b1f9989734d_ADSC_6605.jpg" alt="Team Member" class="team__member-photo">
+                <div class="category__item" data-category="polo-shirt">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/67175aaf13725e16569eca32_C-3.png" alt="Polo Shirt" class="category__icon-img">
                     </div>
-                    <div class="team__member-info">
-                        <h3 class="team__member-name">Sarah Johnson</h3>
-                        <p class="team__member-position">CEO & Founder</p>
-                        <p class="team__member-description">
-                            With over 15 years of experience in the apparel industry, Sarah leads our company with vision and expertise.
-                        </p>
-                    </div>
+                    <h3 class="category__title">Polo Shirt</h3>
                 </div>
-                <div class="team__member">
-                    <div class="team__member-image">
-                        <img src="/images/671232c97d20587cf7b75155_ADSC_6579.jpg" alt="Team Member" class="team__member-photo">
+                <div class="category__item" data-category="vest">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/67175a663d9a425749bfa7d9_C-5.png" alt="Vest" class="category__icon-img">
                     </div>
-                    <div class="team__member-info">
-                        <h3 class="team__member-name">Michael Chen</h3>
-                        <p class="team__member-position">Head of Operations</p>
-                        <p class="team__member-description">
-                            Michael oversees all manufacturing operations, ensuring quality and efficiency across our global network.
-                        </p>
-                    </div>
+                    <h3 class="category__title">Vest</h3>
                 </div>
-                <div class="team__member">
-                    <div class="team__member-image">
-                        <img src="/images/671232c98bb146c1180f9b13_ADSC_6548.jpg" alt="Team Member" class="team__member-photo">
+                <div class="category__item" data-category="tie">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/67123c086cafc61cfaa3acc8_Magnifying glass.png" alt="Tie" class="category__icon-img">
                     </div>
-                    <div class="team__member-info">
-                        <h3 class="team__member-name">Emily Rodriguez</h3>
-                        <p class="team__member-position">Quality Assurance Manager</p>
-                        <p class="team__member-description">
-                            Emily ensures that every product meets our rigorous quality standards and customer expectations.
-                        </p>
-                    </div>
+                    <h3 class="category__title">Tie</h3>
                 </div>
-                <div class="team__member">
-                    <div class="team__member-image">
-                        <img src="/images/671762cccb51d83fc75c936d_Front Center up Blue knitting.jpg" alt="Team Member" class="team__member-photo">
+                <div class="category__item" data-category="ladies-vest">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/67123b94552a03b62618572d_Pen.png" alt="Ladies Vest" class="category__icon-img">
                     </div>
-                    <div class="team__member-info">
-                        <h3 class="team__member-name">David Kim</h3>
-                        <p class="team__member-position">Sustainability Director</p>
-                        <p class="team__member-description">
-                            David leads our sustainability initiatives, ensuring responsible practices throughout our supply chain.
-                        </p>
+                    <h3 class="category__title">Ladies Vest</h3>
+                </div>
+                <div class="category__item" data-category="trousers">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/6713665b5f170efb0fc92ebc_Untitled design (23).png" alt="Trousers" class="category__icon-img">
                     </div>
+                    <h3 class="category__title">Trousers</h3>
+                </div>
+                <div class="category__item" data-category="shorts">
+                    <div class="category__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/671366877b8e1b5fed85dd30_Untitled (40 x 40 px).png" alt="Shorts" class="category__icon-img">
+                    </div>
+                    <h3 class="category__title">Shorts</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact__container">
-            <div class="contact__header">
-                <h2 class="section__title">Get in Touch</h2>
-                <p class="section__subtitle">
-                    Ready to start your next project? Let's discuss how we can help bring your vision to life.
-                </p>
-            </div>
-            <div class="contact__form-wrapper">
-                <form class="contact__form" action="/process_contact.php" method="POST">
-                    <div class="form__row">
-                        <div class="form__group">
-                            <label for="fullname" class="form__label">Full Name *</label>
-                            <input type="text" id="fullname" name="fullname" class="form__input" required>
+            <h2 class="section__title">Contact Us</h2>
+            
+            <div class="contact__content">
+                <!-- Contact Form -->
+                <div class="contact__form-wrapper">
+                    <form class="contact__form" action="<?php echo $baseUrl; ?>/process_contact.php" method="POST">
+                        <div class="contact__form-row">
+                            <div class="contact__form-group">
+                                <label for="firstName" class="contact__form-label">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="contact__form-input" placeholder="Your first name" required>
+                            </div>
+                            <div class="contact__form-group">
+                                <label for="lastName" class="contact__form-label">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="contact__form-input" placeholder="Your last name" required>
+                            </div>
                         </div>
-                        
-                        <div class="form__group">
-                            <label for="email" class="form__label">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form__input" required>
+                        <div class="contact__form-group">
+                            <label for="email" class="contact__form-label">Email</label>
+                            <input type="email" id="email" name="email" class="contact__form-input" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="contact__form-group">
+                            <label for="company" class="contact__form-label">Company</label>
+                            <input type="text" id="company" name="company" class="contact__form-input" placeholder="Your company name">
+                        </div>
+                        <div class="contact__form-group">
+                            <label for="message" class="contact__form-label">Message</label>
+                            <textarea id="message" name="message" rows="4" class="contact__form-textarea" placeholder="Tell us about your sourcing needs..." required></textarea>
+                        </div>
+                        <button type="submit" class="contact__form-submit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info and Map -->
+                <div class="contact__info">
+                    <div class="contact__info-card">
+                        <h3 class="contact__info-title">Office Location</h3>
+                        <div class="contact__info-items">
+                            <div class="contact__info-item">
+                                <svg class="contact__info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span>100 Jln Sultan, Singapore 199001</span>
+                            </div>
+                            <div class="contact__info-item">
+                                <svg class="contact__info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <span>+65 1234 5678</span>
+                            </div>
+                            <div class="contact__info-item">
+                                <svg class="contact__info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <span>info@singbd.com</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="form__row">
-                        <div class="form__group">
-                            <label for="phone" class="form__label">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form__input">
-                        </div>
-                        
-                        <div class="form__group">
-                            <label for="company" class="form__label">Company</label>
-                            <input type="text" id="company" name="company" class="form__input">
-                        </div>
+                    <div class="contact__map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819123456789!2d103.8583!3d1.3000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTgnMDAuMCJOIDEwM8KwNTEnMjkuOSJF!5e0!3m2!1sen!2ssg!4v1234567890"
+                            width="100%" 
+                            height="300" 
+                            style="border: 0;" 
+                            allowfullscreen 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
-                    
-                    <div class="form__group">
-                        <label for="subject" class="form__label">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form__input">
-                    </div>
-                    
-                    <div class="form__group">
-                        <label for="message" class="form__label">Message *</label>
-                        <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn--primary">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>

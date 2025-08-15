@@ -1,5 +1,6 @@
 <?php
 $page_title = "About Us";
+require_once 'config.php';
 include 'partials/_header.php';
 ?>
 

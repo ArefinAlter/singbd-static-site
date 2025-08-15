@@ -1,3 +1,7 @@
+<?php 
+// Include configuration
+require_once __DIR__ . '/../config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +26,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/dynamic-style.php">
+    
+    <!-- D3.js and TopoJSON -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
     
     <title><?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?></title>
 </head>
@@ -32,26 +41,26 @@
         <nav class="nav">
             <div class="nav__container">
                 <div class="nav__logo">
-                    <a href="/" class="nav__logo-link">
-                        <img src="/images/logo.png" alt="SingBD Logo" class="nav__logo-img">
+                    <a href="<?php echo $baseUrl; ?>/" class="nav__logo-link">
+                        <img src="<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png" alt="SingBD Logo" class="nav__logo-img">
                     </a>
                 </div>
                 
                 <ul class="nav__menu">
                     <li class="nav__item">
-                        <a href="/" class="nav__link">Home</a>
+                        <a href="<?php echo $baseUrl; ?>/" class="nav__link">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="/products.php" class="nav__link">Products</a>
+                        <a href="<?php echo $baseUrl; ?>/products.php" class="nav__link">Products</a>
                     </li>
                     <li class="nav__item">
-                        <a href="/about.php" class="nav__link">About</a>
+                        <a href="<?php echo $baseUrl; ?>/about.php" class="nav__link">About</a>
                     </li>
                     <li class="nav__item">
-                        <a href="/sustainability.php" class="nav__link">Sustainability</a>
+                        <a href="<?php echo $baseUrl; ?>/sustainability.php" class="nav__link">Sustainability</a>
                     </li>
                     <li class="nav__item">
-                        <a href="/contact.php" class="nav__link">Contact</a>
+                        <a href="<?php echo $baseUrl; ?>/contact.php" class="nav__link">Contact</a>
                     </li>
                 </ul>
                 

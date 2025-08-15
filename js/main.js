@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initProductCategories();
     initAnimations();
     initHeroMapPoints();
+    initPartnerSlider();
 });
 
 // Mobile Menu Toggle
@@ -597,3 +598,134 @@ function initParallax() {
 
 // Initialize parallax
 initParallax();
+
+// Partner Logo Slider with Mouse Control
+function initPartnerSlider() {
+    const slider = document.querySelector('.partners__slider');
+    const track = document.querySelector('.partners__track');
+    
+    if (!slider || !track) return;
+    
+    let isMouseDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let animationPaused = false;
+    
+    // Pause animation on mouse enter
+    slider.addEventListener('mouseenter', () => {
+        if (!isMouseDown) {
+            track.style.animationPlayState = 'paused';
+            animationPaused = true;
+        }
+    });
+    
+    // Resume animation on mouse leave (if not dragging)
+    slider.addEventListener('mouseleave', () => {
+        if (!isMouseDown) {
+            track.style.animationPlayState = 'running';
+            animationPaused = false;
+        }
+    });
+    
+    // Mouse down event
+    slider.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = track.scrollLeft;
+        
+        // Pause animation during drag
+        track.style.animationPlayState = 'paused';
+        animationPaused = true;
+        
+        slider.style.cursor = 'grabbing';
+    });
+    
+    // Mouse leave event
+    slider.addEventListener('mouseleave', () => {
+        isMouseDown = false;
+        slider.style.cursor = 'grab';
+        
+        // Resume animation if it was paused
+        if (animationPaused) {
+            track.style.animationPlayState = 'running';
+            animationPaused = false;
+        }
+    });
+    
+    // Mouse up event
+    slider.addEventListener('mouseup', () => {
+        isMouseDown = false;
+        slider.style.cursor = 'grab';
+        
+        // Resume animation if it was paused
+        if (animationPaused) {
+            track.style.animationPlayState = 'running';
+            animationPaused = false;
+        }
+    });
+    
+    // Mouse move event
+    slider.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+        
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed multiplier
+        
+        // Calculate the scroll position
+        const scrollPosition = scrollLeft - walk;
+        
+        // Apply scroll transform
+        track.style.transform = `translateX(${scrollPosition}px)`;
+    });
+    
+    // Prevent default drag behavior on images
+    const partnerImages = document.querySelectorAll('.partner__image');
+    partnerImages.forEach(img => {
+        img.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+    });
+    
+    // Add touch support for mobile devices
+    let touchStartX = 0;
+    let touchStartY = 0;
+    
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        
+        // Pause animation on touch
+        track.style.animationPlayState = 'paused';
+        animationPaused = true;
+    });
+    
+    slider.addEventListener('touchmove', (e) => {
+        if (!touchStartX || !touchStartY) return;
+        
+        e.preventDefault();
+        
+        const touchX = e.touches[0].clientX;
+        const touchY = e.touches[0].clientY;
+        
+        const diffX = touchStartX - touchX;
+        const diffY = touchStartY - touchY;
+        
+        // Only handle horizontal scrolling
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+            const walk = diffX * 2;
+            track.style.transform = `translateX(${-walk}px)`;
+        }
+    });
+    
+    slider.addEventListener('touchend', () => {
+        touchStartX = 0;
+        touchStartY = 0;
+        
+        // Resume animation
+        if (animationPaused) {
+            track.style.animationPlayState = 'running';
+            animationPaused = false;
+        }
+    });
+}
