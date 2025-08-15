@@ -120,9 +120,10 @@ try {
    ========================================================================== */
 :root {
     /* Colors */
-    --primary-color: #2563EB;
-    --secondary-color: #1E40AF;
-    --text-color: #1E293B;
+    --primary-color: #409ABF;
+    --secondary-color: #A43C45;
+    --neutral-color: #69724C;
+    --body-text-color: #051821;
     --background-color: #FFFFFF;
     
     /* Typography */

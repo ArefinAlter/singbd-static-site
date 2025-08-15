@@ -7,16 +7,13 @@ This document outlines the frontend design and development guidelines for the Si
 ### 1. Color Palette
 
 #### Primary Colors
-- **Primary Blue:** #2563EB (Used for main CTAs, links, and highlights)
-- **Secondary Blue:** #1E40AF (Used for hover states and secondary elements)
-- **Accent Blue:** #3B82F6 (Used for subtle highlights and backgrounds)
+- **Primary Color:** #409ABF (Used for headings and primary buttons)
+- **Secondary Color:** #A43C45 (Used for accents and highlights)
 
 #### Neutral Colors
+- **Neutral 1:** #69724C (Used for dividers)
+- **Body Text:** #051821 (Used for copy text with 5% transparency)
 - **Pure White:** #FFFFFF (Background color)
-- **Light Gray:** #F8FAFC (Secondary background)
-- **Medium Gray:** #64748B (Body text)
-- **Dark Gray:** #1E293B (Headings and important text)
-- **Black:** #000000 (Logo and critical elements)
 
 #### Status Colors
 - **Success Green:** #10B981 (Success messages, confirmations)
@@ -27,8 +24,8 @@ This document outlines the frontend design and development guidelines for the Si
 ### 2. Typography
 
 #### Font Families
-- **Primary Font:** Montserrat (Headings, titles, navigation)
-- **Secondary Font:** Open Sans (Body text, paragraphs, descriptions)
+- **Primary Typeface:** Montserrat (Headings, titles, navigation)
+- **Secondary Typeface:** Open Sans (Body text, paragraphs, descriptions)
 
 #### Font Weights
 - **Montserrat:** 400 (Regular), 500 (Medium), 600 (Semi-bold), 700 (Bold)
@@ -36,15 +33,15 @@ This document outlines the frontend design and development guidelines for the Si
 
 #### Typography Scale
 - **H1:** 48px/3rem (Montserrat, Bold)
-- **H2:** 36px/2.25rem (Montserrat, Semi-bold)
+- **H2:** 36px/2.25rem (Montserrat, Semi-bold, Primary Color #409ABF)
 - **H3:** 30px/1.875rem (Montserrat, Medium)
 - **H4:** 24px/1.5rem (Montserrat, Medium)
 - **H5:** 20px/1.25rem (Montserrat, Medium)
 - **H6:** 18px/1.125rem (Montserrat, Medium)
-- **Body Large:** 18px/1.125rem (Open Sans, Regular)
-- **Body:** 16px/1rem (Open Sans, Regular)
-- **Body Small:** 14px/0.875rem (Open Sans, Regular)
-- **Caption:** 12px/0.75rem (Open Sans, Regular)
+- **Body Large:** 18px/1.125rem (Open Sans, Regular, Body Text #051821)
+- **Body:** 16px/1rem (Open Sans, Regular, Body Text #051821)
+- **Body Small:** 14px/0.875rem (Open Sans, Regular, Body Text #051821)
+- **Caption:** 12px/0.75rem (Open Sans, Regular, Body Text #051821)
 
 ### 3. Layout & Spacing
 
@@ -70,20 +67,20 @@ This document outlines the frontend design and development guidelines for the Si
 ### 4. Component Guidelines
 
 #### Buttons
-- **Primary Button:** Blue background (#2563EB), white text, rounded corners (8px)
-- **Secondary Button:** White background, blue border and text, rounded corners (8px)
+- **Primary Button:** Primary color background (#409ABF), white text, rounded corners (8px)
+- **Secondary Button:** White background, primary color border and text (#409ABF), rounded corners (8px)
 - **Button Sizes:** Small (32px), Medium (40px), Large (48px)
 - **Hover Effects:** Subtle opacity change or color shift
 
 #### Forms
-- **Input Fields:** Light gray background (#F8FAFC), dark gray text, rounded corners (6px)
-- **Focus States:** Blue border (#2563EB) with subtle shadow
+- **Input Fields:** Light gray background (#F8FAFC), body text color (#051821), rounded corners (6px)
+- **Focus States:** Primary color border (#409ABF) with subtle shadow
 - **Error States:** Red border (#EF4444) with error message
 - **Success States:** Green border (#10B981) with success message
 
 #### Navigation
 - **Main Nav:** Horizontal layout on desktop, hamburger menu on mobile
-- **Active States:** Blue underline or background highlight
+- **Active States:** Primary color underline or background highlight (#409ABF)
 - **Hover Effects:** Subtle color change or underline
 - **Mobile Menu:** Full-screen overlay with large touch targets
 
@@ -150,28 +147,43 @@ This document outlines the frontend design and development guidelines for the Si
 
 ### 8. Page-Specific Guidelines
 
+#### General Guidelines (Site-wide)
+1. **Top-Level Pages:** Home Page, Products Page, Contact Us Page, About Us, and Sustainability
+2. **Statutory Pages:** Privacy Policy, Terms of Service, Cookie Policy, and GDPR (maintain without modifications)
+3. **Subsection Titles:** Apply Primary Typeface using H2 tag with Primary Color (#409ABF)
+4. **Body and Long-Form Text:** Use Secondary Typeface with Body Text color (#051821)
+5. **Background Color:** Keep white across the website, except where specific sections have designated alternative backgrounds
+6. **Glassmorphism Elements:** Preserve existing glassmorphism effect with text color and font following specifications
+7. **Main Menu Placement:** Top horizontal bar, sticky
+8. **Mobile Menu:** As implemented in Vercel version
+9. **SEO:** Meta tags, structured data, H1/H2 hierarchy
+
 #### Homepage
-- **Hero Section:** Full-width background image with overlay text
-- **H1:** Company tagline or main value proposition
-- **H2:** Section headings for services, partners, etc.
-- **CTA Buttons:** Prominent placement in hero and key sections
+- **Hero Section:** Keep as is with immersive video background
+- **Clients List:** Follow general guidelines for background and text color
+- **About Us:** Two columns layout with sliding pictures on left (4 images), maintain Vercel design iconography
+- **Services (What We Do):** Follow https://www.seditexvn.com/#services & Synergy Demo with changing tabs
+- **Product Categories:** 
+  - Main categories: Woven Tops, Coats & Jackets, Sportswear, Woven Bottoms, Knitwear, Homeware, Handicrafts, Accessories
+  - Layout: Left column for categories, right side for changing product display
+  - Button: "View All Products" at bottom
+- **Team:** Follow https://www.seditexvn.com/#team design
+- **Sustainability:** To be decided later
+- **Contact Form:** Keep as is, follow general guidelines for color and background
 
-#### About Page
-- **H1:** "About SingBD" or company name
-- **H2:** "Our Story", "Our Mission", "Our Team"
-- **Body Text:** Open Sans, 16px, line-height 1.6
+#### Products Page
+- **Repository Page:** Follow https://singbddraft.tasneemzaman.info/products/ design
+- **Breadcrumb:** Include at top of page
+- **Individual Product Template:** Show similar products from same categories
+- **Category Cards:** Follow Vercel version individual card design
 
-#### Services Page
-- **H1:** "Our Services"
-- **H2:** Individual service names
-- **Service Cards:** Glassmorphism effect with icons
-- **Pricing:** Clear, easy-to-read format
+#### Contact Us Page
+- **Contact Form:** Duplicate from Home Page
+- **WhatsApp Popover:** Implement site-wide for direct communication
 
-#### Contact Page
-- **H1:** "Contact Us"
-- **Form:** Clean, simple layout with clear labels
-- **Contact Info:** Prominent display of phone, email, address
-- **Map:** Interactive Google Maps integration
+#### About Us & Sustainability Page
+- **Reference:** https://singbddraft.tasneemzaman.info/values-sustainability/
+- **Note:** Keep development for later stage, not finalized yet
 
 ### 9. Performance Guidelines
 
