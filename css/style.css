@@ -1,5 +1,8 @@
 /* CSS Variables based on Frontend Guidelines */
 :root {
+    /* Root font size for proper rem calculation */
+    font-size: 16px; /* Explicit base font size */
+    
     /* Colors */
     --primary-color: #409ABF;
     --secondary-color: #A43C45;
@@ -208,7 +211,7 @@ p {
 }
 
 .nav__logo-img {
-    height: 50px;
+    height: 70px; /* Increased from 50px */
     width: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -338,15 +341,14 @@ p {
 .hero__content {
     display: grid;
     grid-template-columns: 1fr 1fr; /* lg:grid-cols-2 */
-    gap: 3rem; /* gap-12 (48px) */
+    gap: 2rem; /* gap-12 (48px) */
     align-items: center; /* items-center */
     min-height: 80vh; /* min-h-[80vh] */
     width: 100%;
 }
 
-/* Add borders to see container structure */
+/* Container structure styling */
 .hero__content > *:first-child {
-    border: 3px solid red; /* Left column - text content */
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -357,51 +359,34 @@ p {
 }
 
 .hero__content > *:last-child {
-    border: 3px solid blue; /* Right column - map content */
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
     box-sizing: border-box;
     /* Position relative for map container */
     position: relative;
 }
 
-.hero__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: rgba(64, 154, 191, 0.1);
-    border: 1px solid rgba(64, 154, 191, 0.3);
-    border-radius: var(--border-radius-full);
-    font-size: 0.875rem; /* Back to original size */
-    font-weight: 500;
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-lg);
-}
-
-.hero__badge-icon {
-    color: var(--primary-color);
-}
+/* Hero badge removed as requested */
 
 .hero__title {
-    font-family: var(--font-primary);
-    font-size: 2.25rem; /* text-4xl (36px) */
-    font-weight: 700; /* font-bold */
-    color: var(--body-text-color);
-    margin-bottom: 2rem; /* space-y-8 equivalent */
-    line-height: 1.25; /* leading-tight */
+    font-family: var(--font-primary) !important;
+    font-size: 2.5rem !important; /* Force larger size for testing */
+    font-weight: 700 !important;
+    color: var(--body-text-color) !important;
+    margin-bottom: 2rem;
+    line-height: 1.25;
 }
 
 /* Responsive title sizing to match Next.js exactly */
 @media (min-width: 768px) {
     .hero__title {
-        font-size: 3.75rem; /* md:text-6xl (60px) */
+        font-size: 3rem !important; /* Force larger for tablet testing */
     }
 }
 
 @media (min-width: 1024px) {
     .hero__title {
-        font-size: 4.5rem; /* lg:text-7xl (72px) */
+        font-size: 4rem !important; /* Force larger for desktop testing */
     }
 }
 
@@ -412,18 +397,18 @@ p {
 
 
 .hero__description {
-    font-family: var(--font-secondary);
-    font-size: 1.25rem; /* text-xl (20px) */
-    color: var(--neutral-color);
-    margin-bottom: 2rem; /* space-y-8 equivalent */
-    line-height: 1.6; /* leading-relaxed */
-    max-width: 42rem; /* max-w-2xl */
+    font-family: var(--font-secondary) !important;
+    font-size: 1rem !important; /* Force larger size for testing */
+    color: var(--neutral-color) !important;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    max-width: 42rem;
 }
 
 /* Responsive description sizing to match Next.js exactly */
 @media (min-width: 768px) {
     .hero__description {
-        font-size: 1.5rem; /* md:text-2xl (24px) */
+        font-size: 1.5rem !important; /* Force larger for testing */
     }
 }
 
@@ -461,10 +446,10 @@ p {
 /* Interactive World Map Styles - Match Next.js exactly */
 #hero-world-map {
     width: 100%;
-    height: 600px; /* h-[600px] */
+    height: 1400px; /* h-[600px] */
     border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    background: #ffffff;
+    overflow: visible;
+    background: transparent; /* Fully transparent */
     border: none;
     margin: 0;
     padding: 0;
@@ -473,7 +458,7 @@ p {
 /* Responsive map sizing to match Next.js exactly */
 @media (min-width: 1024px) {
     #hero-world-map {
-        height: 700px; /* lg:h-[700px] */
+        height: 1700px; /* lg:h-[700px] */
     }
 }
 
@@ -481,8 +466,8 @@ p {
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    background: #ffffff; /* Pure white background */
+    overflow: visible;
+    background: transparent; /* Fully transparent */
     border: none; /* Remove borders */
     /* Removed filter: drop-shadow */
 }
@@ -1226,7 +1211,7 @@ p {
 }
 
 .footer__logo-img {
-    height: 60px;
+    height: 80px; /* Increased from 60px */
     width: auto;
     margin-bottom: var(--spacing-lg);
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -1330,7 +1315,7 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav__logo-img {
-        height: 45px;
+        height: 60px; /* Increased from 45px */
     }
     
     .hero__world-map {
@@ -1422,7 +1407,7 @@ p {
 
 @media (min-width: 480px) {
     .nav__logo-img {
-        height: 40px;
+        height: 55px; /* Increased from 40px */
     }
     
     .hero__world-map {

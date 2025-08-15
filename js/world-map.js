@@ -31,9 +31,6 @@
         
         console.log('WorldMap: D3 available, initializing map...');
         
-        // First, show a simple debug rectangle to confirm container works
-        showDebugRectangle(mapContainer);
-        
         // Wait a bit for the page to fully render, then load the full map
         setTimeout(() => {
             try {
@@ -45,17 +42,7 @@
         }, 500);
     });
 
-    function showDebugRectangle(container) {
-        console.log('WorldMap: Showing debug rectangle...');
-        container.innerHTML = `
-            <svg id="debug-svg" style="width: 100%; height: 100%; border-radius: 12px; overflow: hidden; background: #ffffff;">
-                <rect width="100%" height="100%" fill="#409ABF" opacity="0.3"/>
-                <text x="50%" y="50%" text-anchor="middle" fill="#409ABF" font-size="16" font-family="Arial">
-                    Loading Interactive World Map...
-                </text>
-            </svg>
-        `;
-    }
+    // Debug rectangle function removed - no longer needed
 
     function showFallback(container) {
         container.innerHTML = `
@@ -85,7 +72,7 @@
         console.log('WorldMap: Starting initialization...');
         
         // Clear container and create SVG
-        container.innerHTML = '<svg id="world-map-svg" style="width: 100%; height: 100%; border-radius: 12px; overflow: hidden;"></svg>';
+        container.innerHTML = '<svg id="world-map-svg" style="width: 100%; height: 100%; border-radius: 12px;"></svg>';
         
         const svg = d3.select('#world-map-svg');
         
@@ -101,12 +88,14 @@
          }
          
          // Ensure minimum dimensions with better aspect ratio
-         width = Math.max(width, 800);   // Reasonable minimum width
-         height = Math.max(height, 400); // Reasonable minimum height
+         width = Math.max(width, 1200);   // Increased minimum width for better map display
+         height = Math.max(height, 600); // Increased minimum height
         
         console.log('WorldMap: Container dimensions:', width, 'x', height);
         
-        svg.attr('width', width).attr('height', height);
+        // Use viewBox instead of fixed width/height for scalable SVG
+        svg.attr('viewBox', `0 0 ${width} ${height}`)
+           .attr('preserveAspectRatio', 'xMidYMid meet');
         
         // Singapore coordinates (center point)
         const SINGAPORE = [103.8198, 1.3521]; // [lng, lat] for D3
@@ -146,8 +135,8 @@
         
                  // Create projection (Mercator like Next.js)
          const projection = d3.geoMercator()
-             .scale(120) // Match Next.js scale exactly
-             .translate([width / 2, height / 2]) // Center properly
+             .scale(Math.min(width / 5, height / 3.5)) // Slightly bigger scale
+             .translate([width / 3, height / 2]) // Move map more to the right
              .center([0, 0]); // Center at origin for complete world view
         
         const path = d3.geoPath().projection(projection);
@@ -177,35 +166,8 @@
                 
                 console.log('WorldMap: Adding Singapore marker...');
                 
-                // Add Singapore marker (hub)
-                const singaporeProjected = projection(SINGAPORE);
-                if (singaporeProjected && !isNaN(singaporeProjected[0]) && !isNaN(singaporeProjected[1])) {
-                    const singaporeMarker = svg.append('circle')
-                        .attr('cx', singaporeProjected[0])
-                        .attr('cy', singaporeProjected[1])
-                        .attr('r', 8)
-                        .attr('fill', '#ef4444')
-                        .attr('stroke', '#ffffff')
-                        .attr('stroke-width', 3)
-                        .attr('class', 'singapore-marker')
-                        .style('cursor', 'pointer');
-                    
-                    // Add pulsing animation
-                    singaporeMarker.style('animation', 'pulse 2s infinite');
-                    
-                    // Add tooltip
-                    singaporeMarker.on('mouseover', function(event) {
-                        d3.select(this).attr('r', 10);
-                        showTooltip('Singapore', 'Our Global Hub', event.pageX, event.pageY);
-                    }).on('mouseout', function(event) {
-                        d3.select(this).attr('r', 8);
-                        hideTooltip();
-                    });
-                    
-                    console.log('WorldMap: Singapore marker added at:', singaporeProjected);
-                } else {
-                    console.warn('WorldMap: Could not project Singapore coordinates:', singaporeProjected);
-                }
+                // Singapore marker hidden as requested
+                console.log('WorldMap: Singapore marker hidden by user request');
                 
                 console.log('WorldMap: Creating location markers...');
                 
@@ -217,20 +179,20 @@
                         const marker = svg.append('circle')
                             .attr('cx', projected[0])
                             .attr('cy', projected[1])
-                            .attr('r', 6)
-                            .attr('fill', '#3b82f6')
+                            .attr('r', 10) // Bigger markers (was 6)
+                            .attr('fill', '#A43C45')
                             .attr('stroke', '#ffffff')
-                            .attr('stroke-width', 2)
+                            .attr('stroke-width', 3) // Thicker stroke (was 2)
                             .attr('class', 'location-marker')
                             .style('cursor', 'pointer')
                             .style('opacity', 0); // Initially hidden
                         
                         // Add tooltip
                         marker.on('mouseover', function(event) {
-                            d3.select(this).attr('r', 8);
+                            d3.select(this).attr('r', 13); // Bigger on hover (was 8)
                             showTooltip(location.name, 'Global Network Location', event.pageX, event.pageY);
                         }).on('mouseout', function(event) {
-                            d3.select(this).attr('r', 6);
+                            d3.select(this).attr('r', 10); // Back to bigger size (was 6)
                             hideTooltip();
                         });
                         
@@ -258,16 +220,16 @@
                             .attr('y1', fromProjected[1])
                             .attr('x2', toProjected[0])
                             .attr('y2', toProjected[1])
-                            .attr('stroke', '#3b82f6')
-                            .attr('stroke-width', 2)
-                            .attr('stroke-dasharray', '5,5')
+                            .attr('stroke', '#A43C45')
+                            .attr('stroke-width', 4) // Thicker lines (was 2)
+                            .attr('stroke-dasharray', '8,6') // Bigger dashes (was 5,5)
                             .attr('class', 'connection-line')
                             .style('opacity', 0.8);
                         
                         // Animate the dashed line
                         let dashOffset = 0;
                         const animate = () => {
-                            dashOffset -= 1;
+                            dashOffset -= 0.5; // 2x slower dash animation
                             connection.attr('stroke-dashoffset', dashOffset);
                             requestAnimationFrame(animate);
                         };
@@ -325,9 +287,9 @@
                     console.log('WorldMap: Starting connection animation...');
                     updateConnections();
                     
-                    // Continue animation every 2 seconds
-                    animationInterval = setInterval(updateConnections, 2000);
-                }, 1000);
+                    // Continue animation every 4 seconds (2x slower)
+                    animationInterval = setInterval(updateConnections, 4000);
+                }, 2000); // 2x slower initial delay
                 
                 console.log('WorldMap: Initialization complete!');
                 
