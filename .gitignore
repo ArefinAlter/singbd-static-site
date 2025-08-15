@@ -35,6 +35,15 @@ Thumbs.db
 # Markdown files (except README.md)
 *.md
 !README.md
+Backend-Architecture.md
+Frontend-Guidelines.md
+Implementation-Plan.md
+PRD.md
+Key-Features.md
+Tech-Stack.md
+Security-Guidelines.md
+Database-Structure.md
+Project-Rules.md
 
 # Logs
 logs
@@ -139,3 +148,4 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
