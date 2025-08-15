@@ -49,6 +49,7 @@ try {
     $lastName = sanitize_input($_POST['lastName'] ?? '');
     $email = sanitize_input($_POST['email'] ?? '');
     $company = sanitize_input($_POST['company'] ?? '');
+    $subject = sanitize_input($_POST['subject'] ?? '');
     $message = sanitize_input($_POST['message'] ?? '');
     
     // Validation
@@ -86,8 +87,8 @@ try {
     // Prepare and execute the insert statement
     $stmt = $pdo->prepare("
         INSERT INTO contact_submissions 
-        (first_name, last_name, email, company, message, ip_address, user_agent, created_at) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, NOW())
+        (first_name, last_name, email, company, subject, message, ip_address, user_agent, created_at) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())
     ");
     
     $stmt->execute([
@@ -95,19 +96,21 @@ try {
         $lastName,
         $email,
         $company,
+        $subject,
         $message,
         $_SERVER['REMOTE_ADDR'] ?? '',
         $_SERVER['HTTP_USER_AGENT'] ?? ''
     ]);
     
-    // Send email notification to admin
-    $admin_subject = "New Contact Form Submission - SingBD Website";
+    // Send email notification to admin (info@singbd.com)
+    $admin_subject = !empty($subject) ? "SingBD Contact: {$subject}" : "New Contact Form Submission - SingBD Website";
     $admin_message = "
     New contact form submission received:
     
     Name: {$firstName} {$lastName}
     Email: {$email}
     Company: {$company}
+    Subject: {$subject}
     Message: {$message}
     
     Submitted on: " . date('Y-m-d H:i:s') . "
@@ -118,6 +121,7 @@ try {
     $admin_headers .= "Reply-To: $email\r\n";
     $admin_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     
+    // Send email to info@singbd.com (configured in config.php)
     send_email($admin_email, $admin_subject, $admin_message, $admin_headers);
     
     // Send auto-reply to user

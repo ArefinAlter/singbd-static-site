@@ -131,50 +131,125 @@ include 'partials/_header.php';
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about__container">
-            <div class="about__header">
-                <div class="about__badge">
-                    <svg class="about__badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                    <span>10 Years Experience</span>
+            <!-- Two Column Layout -->
+            <div class="about__content">
+                <!-- Left Column - Image Slider -->
+                <div class="about__images">
+                    <div class="about__image-slider">
+                        <div class="about__image-track">
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us1.jpeg" alt="SingBD Team" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us2.png" alt="Manufacturing Process" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us3.jpg" alt="Quality Control" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us4.jpg" alt="Production Facility" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us5.jpg" alt="Global Partners" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us6.jpg" alt="Sustainability" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us7.jpg" alt="Innovation" class="about__image">
+                            </div>
+                        </div>
+                        <!-- Slider Controls -->
+                        <button class="about__image-control about__image-control--prev" aria-label="Previous image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15,18 9,12 15,6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="about__image-control about__image-control--next" aria-label="Next image">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,18 15,12 9,6"></polyline>
+                            </svg>
+                        </button>
+                        <!-- Slider Indicators -->
+                        <div class="about__image-indicators">
+                            <button class="about__indicator about__indicator--active" data-slide="0"></button>
+                            <button class="about__indicator" data-slide="1"></button>
+                            <button class="about__indicator" data-slide="2"></button>
+                            <button class="about__indicator" data-slide="3"></button>
+                            <button class="about__indicator" data-slide="4"></button>
+                            <button class="about__indicator" data-slide="5"></button>
+                            <button class="about__indicator" data-slide="6"></button>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="section__title">About Us</h2>
-                <p class="section__subtitle">
-                    We are a dynamic buying house based in Singapore, specializing in the sourcing and production of high-quality knitwear, woven garments, outerwear, and functional outdoor apparel. We are working with homeware, accessories like bags and handicrafts.
-                </p>
-                <p class="about__description">
-                    We are a sister concern of Fakir Apparels Ltd, in Bangladesh, one of the leading and largest privately owned multi-product knit, woven, and fabric manufacturing groups of companies.
-                </p>
+
+                <!-- Right Column - Text Content -->
+                <div class="about__text">
+                    <div class="about__badge">
+                        <svg class="about__badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>10 Years Experience</span>
+                    </div>
+                    <h2 class="section__title">About Us</h2>
+                    <p class="section__subtitle">
+                        We are a dynamic buying house based in Singapore, specializing in the sourcing and production of high-quality knitwear, woven garments, outerwear, and functional outdoor apparel. We work with homeware, accessories like bags and handicrafts.
+                    </p>
+                    <p class="about__description about__description--centered">
+                        We are a sister concern of Fakir Apparels Ltd, in Bangladesh, one of the leading and largest privately owned multi-product knit, woven, and fabric manufacturing groups of companies.
+                    </p>
+                    
+                    <!-- Key Stats -->
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <div class="about__stat-number">10+</div>
+                            <div class="about__stat-label">Years Experience</div>
+                        </div>
+                        <div class="about__stat">
+                            <div class="about__stat-number">50+</div>
+                            <div class="about__stat-label">Global Partners</div>
+                        </div>
+                        <div class="about__stat">
+                            <div class="about__stat-number">100%</div>
+                            <div class="about__stat-label">Quality Assured</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- What Sets Us Apart -->
-            <div class="about__features">
-                <div class="about__feature">
-                    <div class="about__feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                        </svg>
+            <div class="about__features-section">
+                <h3 class="about__features-title">What Sets Us Apart</h3>
+                <div class="about__features">
+                    <div class="about__feature feature-card-1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600">
+                        <div class="about__feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__feature-title">Timely</h3>
+                        <p class="about__feature-description">Fast and efficient delivery timelines</p>
                     </div>
-                    <h3 class="about__feature-title">Timely</h3>
-                    <p class="about__feature-description">Fast and efficient delivery timelines</p>
-                </div>
-                <div class="about__feature">
-                    <div class="about__feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
+                    
+                    <div class="about__feature feature-card-2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600">
+                        <div class="about__feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__feature-title">Ethical</h3>
+                        <p class="about__feature-description">Sustainable and responsible practices</p>
                     </div>
-                    <h3 class="about__feature-title">Ethical</h3>
-                    <p class="about__feature-description">Sustainable and responsible practices</p>
-                </div>
-                <div class="about__feature">
-                    <div class="about__feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
+                    
+                    <div class="about__feature feature-card-3" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="600">
+                        <div class="about__feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="about__feature-title">Quality</h3>
+                        <p class="about__feature-description">Premium standards in every product</p>
                     </div>
-                    <h3 class="about__feature-title">Quality</h3>
-                    <p class="about__feature-description">Premium standards in every product</p>
                 </div>
             </div>
         </div>
@@ -314,9 +389,15 @@ include 'partials/_header.php';
                             <label for="email" class="contact__form-label">Email</label>
                             <input type="email" id="email" name="email" class="contact__form-input" placeholder="your.email@example.com" required>
                         </div>
-                        <div class="contact__form-group">
-                            <label for="company" class="contact__form-label">Company</label>
-                            <input type="text" id="company" name="company" class="contact__form-input" placeholder="Your company name">
+                        <div class="contact__form-row">
+                            <div class="contact__form-group">
+                                <label for="company" class="contact__form-label">Company</label>
+                                <input type="text" id="company" name="company" class="contact__form-input" placeholder="Your company name">
+                            </div>
+                            <div class="contact__form-group">
+                                <label for="subject" class="contact__form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="contact__form-input" placeholder="Message subject">
+                            </div>
                         </div>
                         <div class="contact__form-group">
                             <label for="message" class="contact__form-label">Message</label>

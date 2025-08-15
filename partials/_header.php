@@ -33,6 +33,10 @@ require_once __DIR__ . '/../config.php';
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
     
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <title><?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?></title>
 </head>
 <body>
@@ -55,9 +59,6 @@ require_once __DIR__ . '/../config.php';
                     </li>
                     <li class="nav__item">
                         <a href="<?php echo $baseUrl; ?>/about.php" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="<?php echo $baseUrl; ?>/sustainability.php" class="nav__link">Sustainability</a>
                     </li>
                     <li class="nav__item">
                         <a href="<?php echo $baseUrl; ?>/contact.php" class="nav__link">Contact</a>

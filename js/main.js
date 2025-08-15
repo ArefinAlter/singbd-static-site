@@ -1,6 +1,16 @@
 // Main JavaScript file for SingBD website
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    }
+    
     // Initialize all components
     initMobileMenu();
     initContactForms();
@@ -34,49 +44,89 @@ function initAboutImageSlider() {
     const slides = document.querySelectorAll('.about__image-slide');
     const prevBtn = document.querySelector('.about__image-control--prev');
     const nextBtn = document.querySelector('.about__image-control--next');
+    const indicators = document.querySelectorAll('.about__indicator');
     
     if (!imageTrack || slides.length === 0) return;
     
     let currentSlide = 0;
     const totalSlides = slides.length;
+    let autoSlideInterval;
     
     function updateSlider() {
         const translateX = -currentSlide * 100;
         imageTrack.style.transform = `translateX(${translateX}%)`;
         
-        // Update button states
-        if (prevBtn) prevBtn.disabled = currentSlide === 0;
-        if (nextBtn) nextBtn.disabled = currentSlide === totalSlides - 1;
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('about__indicator--active', index === currentSlide);
+        });
+        
+        // Update button states (optional - remove disabled state for infinite loop)
+        if (prevBtn) prevBtn.disabled = false;
+        if (nextBtn) nextBtn.disabled = false;
     }
     
     function nextSlide() {
-        if (currentSlide < totalSlides - 1) {
-            currentSlide++;
-            updateSlider();
-        }
+        currentSlide = (currentSlide + 1) % totalSlides; // Loop back to first slide
+        updateSlider();
     }
     
     function prevSlide() {
-        if (currentSlide > 0) {
-            currentSlide--;
-            updateSlider();
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Loop to last slide
+        updateSlider();
+    }
+    
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+    }
+    
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 4000); // 4 seconds
+    }
+    
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
         }
     }
     
     // Event listeners
     if (nextBtn) {
-        nextBtn.addEventListener('click', nextSlide);
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide(); // Restart auto-slide
+        });
     }
     
     if (prevBtn) {
-        prevBtn.addEventListener('click', prevSlide);
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide(); // Restart auto-slide
+        });
     }
     
-    // Auto-slide every 5 seconds
-    setInterval(nextSlide, 5000);
+    // Indicator event listeners
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+            stopAutoSlide();
+            startAutoSlide(); // Restart auto-slide
+        });
+    });
+    
+    // Pause auto-slide on hover
+    const slider = document.querySelector('.about__image-slider');
+    if (slider) {
+        slider.addEventListener('mouseenter', stopAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
+    }
     
     // Initialize
     updateSlider();
+    startAutoSlide();
 }
 
 // Services Tabs
