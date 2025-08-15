@@ -95,14 +95,14 @@
         
                  // Fallback dimensions if container is not properly sized
          if (width === 0 || height === 0) {
-             width = 1000;   // Keep wider width
-             height = 300;   // Match the further reduced CSS height
+             width = 1000;   // Reasonable width
+             height = 600;   // Reasonable height
              console.log('WorldMap: Using fallback dimensions:', width, 'x', height);
          }
          
          // Ensure minimum dimensions with better aspect ratio
-         width = Math.max(width, 800);   // Keep minimum width
-         height = Math.max(height, 200); // Further reduced minimum height
+         width = Math.max(width, 800);   // Reasonable minimum width
+         height = Math.max(height, 400); // Reasonable minimum height
         
         console.log('WorldMap: Container dimensions:', width, 'x', height);
         
@@ -146,7 +146,7 @@
         
                  // Create projection (Mercator like Next.js)
          const projection = d3.geoMercator()
-             .scale(width / 12) // Much smaller scale to ensure entire world fits
+             .scale(120) // Match Next.js scale exactly
              .translate([width / 2, height / 2]) // Center properly
              .center([0, 0]); // Center at origin for complete world view
         

@@ -32,13 +32,13 @@ include 'partials/_header.php';
                         and premium manufacturers worldwide. Your trusted partner in apparel sourcing.
                     </p>
                     <div class="hero__buttons">
-                        <a href="#services" class="btn btn--primary">
+                        <a href="#services" class="hero__btn hero__btn--primary">
                             Explore Services
                             <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
                         </a>
-                        <a href="#contact" class="btn btn--secondary">
+                        <a href="#contact" class="hero__btn hero__btn--secondary">
                             <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                                 <circle cx="9" cy="7" r="4"/>
