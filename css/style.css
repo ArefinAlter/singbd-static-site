@@ -340,8 +340,8 @@ p {
 
 .hero__content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* lg:grid-cols-2 */
-    gap: 2rem; /* gap-12 (48px) */
+    grid-template-columns: 2fr 3fr; /* Give right column more space and push it right */
+    gap: 4rem; /* gap-12 (48px) */
     align-items: center; /* items-center */
     min-height: 80vh; /* min-h-[80vh] */
     width: 100%;
@@ -349,7 +349,7 @@ p {
 
 /* Container structure styling */
 .hero__content > *:first-child {
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
     box-sizing: border-box;
     /* Match Next.js space-y-8 pattern */
@@ -359,7 +359,7 @@ p {
 }
 
 .hero__content > *:last-child {
-    padding: 2rem;
+    padding: 4rem;
     width: 100%;
     box-sizing: border-box;
     /* Position relative for map container */
@@ -1377,8 +1377,8 @@ p {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero__content {
-        grid-template-columns: 1fr 1fr; /* Keep equal columns on tablets */
-        gap: 3rem;
+        grid-template-columns: 2fr 3fr; /* Keep right column shifted on tablets */
+        gap: 5rem;
     }
     
     .services__grid {
@@ -1392,8 +1392,8 @@ p {
 
 @media (min-width: 1025px) {
     .hero__content {
-        grid-template-columns: 1fr 1fr; /* Keep equal columns on desktop */
-        gap: 3rem;
+        grid-template-columns: 2fr 3fr; /* Keep right column shifted on desktop */
+        gap: 5rem;
     }
     
     .services__grid {
