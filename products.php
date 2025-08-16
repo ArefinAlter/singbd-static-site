@@ -1,9 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "Products";
 $page_description = "Explore SingBD's comprehensive product catalogue including woven tops, coats & jackets, sportswear, knitwear, homeware, handicrafts, and accessories. Premium quality apparel sourcing solutions.";
 $page_keywords = "product catalogue, woven tops, coats jackets, sportswear, knitwear, homeware, handicrafts, accessories, apparel products, garment catalogue, textile products, sourcing catalogue";
-$canonical_url = "https://singbd.com/products.php";
-require_once 'config.php';
+$canonical_url = $baseUrl . "/products.php";
 include 'partials/_header.php';
 ?>
 <body>
@@ -32,56 +32,56 @@ include 'partials/_header.php';
                     <div class="products-categories">
                         <div class="products-category__item products-category__item--active" data-category="woven-tops">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Woven_Tops.svg" alt="Woven Tops" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Woven_Tops.svg" alt="Woven Tops" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Woven Tops</h3>
                         </div>
                         
                         <div class="products-category__item" data-category="coats-jackets">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Coats_Jackets.svg" alt="Coats & Jackets" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Coats_Jackets.svg" alt="Coats & Jackets" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Coats & Jackets</h3>
                         </div>
                         
                         <div class="products-category__item" data-category="sportswear">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Sportswear.svg" alt="Sportswear" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Sportswear.svg" alt="Sportswear" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Sportswear</h3>
                         </div>
                         
                         <div class="products-category__item" data-category="woven-bottoms">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Woven_Bottoms.svg" alt="Woven Bottoms" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Woven_Bottoms.svg" alt="Woven Bottoms" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Woven Bottoms</h3>
                         </div>
                         
                         <div class="products-category__item" data-category="knitwear">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Knitwear.svg" alt="Knitwear" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Knitwear.svg" alt="Knitwear" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Knitwear</h3>
                         </div>
                         
                         <div class="products-category__item" data-category="homeware">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Homewear.svg" alt="Homeware" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Homewear.svg" alt="Homeware" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Homeware</h3>
                         </div>
                         
                         <div class="products-category__item" data-category="handicrafts">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Handicraft.svg" alt="Handicrafts" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Handicraft.svg" alt="Handicrafts" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Handicrafts</h3>
                         </div>
                         
                         <div class="products-category__item" data-category="accessories">
                             <div class="products-category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Accessories.svg" alt="Accessories" class="products-category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/SVG/Accessories.svg" alt="Accessories" class="products-category__icon-img">
                             </div>
                             <h3 class="products-category__title">Accessories</h3>
                         </div>

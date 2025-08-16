@@ -1,9 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "Terms of Service";
 $page_description = "SingBD Terms of Service - Read our terms and conditions for using our apparel sourcing services. Understand your rights and obligations when working with SingBD.";
 $page_keywords = "terms of service, terms and conditions, SingBD terms, service agreement, user agreement, legal terms";
-$canonical_url = "https://singbd.com/terms-of-service.php";
-require_once 'config.php';
+$canonical_url = $baseUrl . "/terms-of-service.php";
 include 'partials/_header.php';
 ?>
 

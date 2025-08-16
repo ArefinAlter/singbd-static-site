@@ -1,9 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "GDPR Compliance";
 $page_description = "SingBD GDPR Compliance - Learn about your data protection rights under GDPR. We are committed to protecting your personal data and ensuring compliance with European data protection regulations.";
 $page_keywords = "GDPR compliance, data protection rights, European data protection, personal data rights, SingBD GDPR, data subject rights";
-$canonical_url = "https://singbd.com/gdpr.php";
-require_once 'config.php';
+$canonical_url = $baseUrl . "/gdpr.php";
 include 'partials/_header.php';
 ?>
 

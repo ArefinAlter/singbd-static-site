@@ -289,7 +289,7 @@ p {
     position: relative;
     overflow: hidden;
     margin-top: -60px; /* Offset body padding for full-height hero */
-    padding-top: 60px; /* Restore spacing at top of hero content */
+    padding-top: 40px; /* Reduced spacing at top of hero content */
 }
 
 /* About Page Styles */
@@ -394,12 +394,12 @@ p {
     
     /* Responsive page content spacing */
 .page-content {
-    padding-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
 }
 
 /* Products page specific spacing */
 .products-page {
-    padding-top: var(--spacing-md); /* Reduced padding for products page */
+    padding-top: var(--spacing-sm); /* Further reduced padding for products page */
 }
     
     .about-hero {
@@ -415,7 +415,7 @@ p {
 
 @media (max-width: 480px) {
     .page-content {
-        padding-top: var(--spacing-lg);
+        padding-top: var(--spacing-md);
     }
     
     .about-hero {
@@ -426,6 +426,50 @@ p {
     .about-page .page-content,
     .contact-page .page-content {
         padding-top: calc(var(--spacing-2xl) + var(--spacing-lg));
+    }
+    
+    /* Additional mobile fixes */
+    .nav__container {
+        padding: 0 1rem;
+    }
+    
+    .nav__logo-img {
+        height: 40px;
+    }
+    
+    .nav__mobile-toggle {
+        padding: 6px;
+    }
+    
+    .nav__mobile-icon {
+        width: 22px;
+        height: 2px;
+    }
+    
+    /* Ensure no horizontal scroll on mobile */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .main {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    /* Fix any potential horizontal scroll issues */
+    .hero__container,
+    .partners__container,
+    .about__container,
+    .what-we-do__container,
+    .categories__container,
+    .team__container,
+    .contact__container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
     }
 }
 
@@ -2436,12 +2480,56 @@ p {
     .chat-widget {
         bottom: 15px !important;
         right: 15px !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+    
+    .chat-widget__toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+    
+    .chat-widget__toggle svg {
+        width: 20px;
+        height: 20px;
     }
     
     .chat-widget__container {
-        width: 300px;
-        max-height: 400px;
-        right: 70px;
+        width: 280px;
+        max-height: 350px;
+        right: 60px;
+        bottom: 0;
+    }
+    
+    .chat-widget__header {
+        padding: 0.75rem;
+    }
+    
+    .chat-widget__header-text h4 {
+        font-size: 0.9rem;
+    }
+    
+    .chat-widget__status {
+        font-size: 0.75rem;
+    }
+    
+    .chat-widget__messages {
+        max-height: 200px;
+    }
+    
+    .chat-widget__input {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+    
+    .chat-widget__quick-replies {
+        gap: 0.5rem;
+    }
+    
+    .chat-widget__quick-reply {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
     }
     
     /* Section spacing for tablets */
@@ -2459,12 +2547,56 @@ p {
     .chat-widget {
         bottom: 10px !important;
         right: 10px !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+    
+    .chat-widget__toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 11px;
+    }
+    
+    .chat-widget__toggle svg {
+        width: 18px;
+        height: 18px;
     }
     
     .chat-widget__container {
-        width: 280px;
-        max-height: 350px;
-        right: 70px;
+        width: 260px;
+        max-height: 300px;
+        right: 55px;
+        bottom: 0;
+    }
+    
+    .chat-widget__header {
+        padding: 0.5rem;
+    }
+    
+    .chat-widget__header-text h4 {
+        font-size: 0.8rem;
+    }
+    
+    .chat-widget__status {
+        font-size: 0.7rem;
+    }
+    
+    .chat-widget__messages {
+        max-height: 180px;
+    }
+    
+    .chat-widget__input {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+    
+    .chat-widget__quick-replies {
+        gap: 0.4rem;
+    }
+    
+    .chat-widget__quick-reply {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
     }
     
     /* Section spacing for mobile */
@@ -2719,7 +2851,7 @@ p {
     
     .hero {
         margin-top: -50px; /* Adjust hero offset for mobile */
-        padding-top: 50px; /* Adjust hero padding for mobile */
+        padding-top: 30px; /* Reduced hero padding for mobile */
     }
     
     .nav__logo-img {
@@ -2783,6 +2915,61 @@ p {
         display: flex;
         cursor: pointer;
         z-index: 1001;
+    }
+    
+    /* Mobile menu responsive fixes */
+    .nav__menu {
+        position: fixed;
+        top: 60px; /* Account for header height */
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        background: rgba(64, 154, 191, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+        overflow-y: auto;
+        max-height: calc(100vh - 60px);
+    }
+    
+    .nav__menu.nav__menu--active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    
+    .nav__item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+    
+    .nav__item:last-child {
+        border-bottom: none;
+    }
+    
+    .nav__link {
+        display: block;
+        padding: 1rem 0;
+        color: white;
+        text-align: center;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+    
+    .nav__link:hover {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.1);
+        transform: none;
     }
     
     .hero__content {
@@ -2979,6 +3166,199 @@ p {
     }
 }
 
+/* Mobile responsive styles for categories section */
+@media (max-width: 767px) {
+    .categories {
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .categories__container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .categories__content {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .categories__sidebar {
+        order: 1;
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .categories__display {
+        order: 2;
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .categories__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .category__item {
+        padding: var(--spacing-sm);
+        min-height: 100px;
+    }
+    
+    .category__icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .category__title {
+        font-size: 0.875rem;
+        line-height: 1.3;
+    }
+    
+    .categories__product-title {
+        font-size: 1.25rem;
+    }
+    
+    .categories__product-description {
+        font-size: 0.875rem;
+    }
+    
+    .categories__gallery {
+        min-height: 250px;
+    }
+    
+    .categories__cta-button {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: 0.9rem;
+    }
+    
+    /* Section header responsive */
+    .section__title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .section__description {
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* Extra small screens responsive styles for categories section */
+@media (max-width: 479px) {
+    .categories__list {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .category__item {
+        padding: var(--spacing-xs);
+        min-height: 80px;
+    }
+    
+    .category__icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .category__title {
+        font-size: 0.8rem;
+    }
+    
+    .categories__product-title {
+        font-size: 1.125rem;
+    }
+    
+    .categories__product-description {
+        font-size: 0.8rem;
+    }
+    
+    .categories__gallery {
+        min-height: 200px;
+    }
+    
+    .categories__cta-button {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 0.85rem;
+    }
+    
+    .section__title {
+        font-size: 1.25rem;
+    }
+    
+    .section__description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablet responsive styles for categories section */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .categories {
+        padding: var(--spacing-2xl) 0;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .categories__container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .categories__content {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-xl);
+    }
+    
+    .categories__sidebar {
+        height: 450px;
+    }
+    
+    .categories__display {
+        height: 450px;
+    }
+    
+    .categories__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .category__item {
+        padding: var(--spacing-sm);
+    }
+    
+    .category__icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .category__title {
+        font-size: 0.9rem;
+    }
+    
+    .categories__product-title {
+        font-size: 1.375rem;
+    }
+    
+    .categories__product-description {
+        font-size: 0.9rem;
+    }
+    
+    .categories__gallery {
+        min-height: 200px;
+    }
+    
+    /* Section header responsive */
+    .section__title {
+        font-size: 1.75rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .section__description {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-xl);
+    }
+}
+
 /* Animations */
 .fade-in-up {
     animation: fadeInUp 0.6s ease forwards;
@@ -2997,7 +3377,7 @@ p {
 
 /* Page Content Spacing */
 .page-content {
-    padding-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
     padding-bottom: var(--spacing-xl);
     min-height: calc(100vh - 200px); /* Account for header and footer */
 }

@@ -1,9 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "About Us";
 $page_description = "Learn about SingBD - a dynamic buying house in Singapore with 10+ years of experience in sourcing high-quality knitwear, woven garments, outerwear, and functional apparel. Sister concern of Fakir Apparels Ltd.";
 $page_keywords = "about SingBD, buying house Singapore, garment sourcing, textile manufacturing, Fakir Apparels, knitwear sourcing, woven garments, outerwear, functional apparel, 10 years experience, global partners, quality assurance";
-$canonical_url = "https://singbd.com/about.php";
-require_once 'config.php';
+$canonical_url = $baseUrl . "/about.php";
 include 'partials/_header.php';
 ?>
 

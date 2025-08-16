@@ -1,16 +1,13 @@
-# Enable URL rewriting
+# Redirect singbd.com to singbd.net
 RewriteEngine On
 
-# Redirect singbd.com to singbd.net (temporary fix) - REMOVED
-# Uncomment the lines below if you want to redirect singbd.com to singbd.net
-# RewriteCond %{HTTP_HOST} ^singbd\.com$ [NC]
-# RewriteRule ^/?$ https://singbd.net/ [R=301,L]
-# RewriteCond %{HTTP_HOST} ^singbd\.com$ [NC]
-# RewriteRule ^(.+)$ https://singbd.net/$1 [R=301,L]
+# Redirect all traffic from singbd.com to singbd.net
+RewriteCond %{HTTP_HOST} ^singbd\.com$ [NC]
+RewriteRule ^(.*)$ https://singbd.net/$1 [R=301,L]
 
-# Force HTTPS (uncomment when SSL is available)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Remove .php extension
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -61,7 +58,6 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
     Order allow,deny
     Deny from all
 </Files>
-
 <Files ".htaccess">
     Order allow,deny
     Deny from all

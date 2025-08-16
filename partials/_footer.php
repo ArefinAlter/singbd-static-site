@@ -75,14 +75,14 @@ require_once __DIR__ . '/../config.php';
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://singbd.com/"
+                "item": "<?php echo $baseUrl; ?>/"
             }
             <?php if (isset($page_title) && $page_title !== "Home"): ?>,
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "<?php echo $page_title; ?>",
-                "item": "<?php echo isset($canonical_url) ? $canonical_url : 'https://singbd.com' . $_SERVER['REQUEST_URI']; ?>"
+                "name": "<?php echo isset($page_title) ? $page_title : 'Page'; ?>",
+                "item": "<?php echo isset($canonical_url) ? $canonical_url : $baseUrl . (isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/'); ?>"
             }
             <?php endif; ?>
         ]
@@ -95,9 +95,9 @@ require_once __DIR__ . '/../config.php';
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "SingBD",
-        "image": "https://singbd.com/images/SingBD-logo-Final-01.png",
+        "image": "<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png",
         "description": "Leading manufacturer of high-quality garments and textiles, committed to sustainable practices and innovation.",
-        "url": "https://singbd.com",
+        "url": "<?php echo $baseUrl; ?>",
         "telephone": "+65-1234-5678",
         "email": "info@singbd.com",
         "address": {
