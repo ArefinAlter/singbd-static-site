@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initAboutImageSlider();
     initWhatWeDoTabs();
     initProductCategories();
+    initProductsPage();
+    initQuickView();
     initAnimations();
     initHeroMapPoints();
     initPartnerSlider();
@@ -395,6 +397,515 @@ function initProductCategories() {
     
     // Initialize slider for first category
     initCategorySlider();
+}
+
+// Products Page Functionality
+function initProductsPage() {
+    const categoryItems = document.querySelectorAll('.products-category__item');
+    const productsGrid = document.getElementById('products-grid');
+    const mainProductImage = document.getElementById('main-product-image');
+    const mainProductTitle = document.getElementById('main-product-title');
+    const mainProductDescription = document.getElementById('main-product-description');
+    const mainProductCategory = document.getElementById('main-product-category');
+    const mainProductCode = document.getElementById('main-product-code');
+    const mainProductCategoryBreadcrumb = document.getElementById('main-product-category-breadcrumb');
+    const mainProductTitleBreadcrumb = document.getElementById('main-product-title-breadcrumb');
+    
+    if (categoryItems.length === 0) return;
+    
+    // Product data for each category
+    const productData = {
+        'woven-tops': [
+            {
+                title: 'Premium Cotton Shirt',
+                description: 'High-quality cotton shirt with modern fit and comfortable design. Perfect for both casual and professional settings.',
+                image: '/singbd-static-site/images/Woven_Top1.jpg',
+                category: 'Woven Tops',
+                code: 'WT-001',
+                features: ['Premium cotton fabric', 'Modern fit design', 'Easy care maintenance']
+            },
+            {
+                title: 'Silk Blend Blouse',
+                description: 'Elegant silk blend blouse for professional wear with sophisticated styling and premium finish.',
+                image: '/singbd-static-site/images/Woven_Top2.jpg',
+                category: 'Woven Tops',
+                code: 'WT-002',
+                features: ['Silk blend fabric', 'Professional styling', 'Wrinkle resistant']
+            },
+            {
+                title: 'Casual Linen Top',
+                description: 'Comfortable linen top for everyday wear with breathable fabric and relaxed fit.',
+                image: '/singbd-static-site/images/Woven_Top1.jpg',
+                category: 'Woven Tops',
+                code: 'WT-003',
+                features: ['Natural linen fabric', 'Breathable design', 'Casual comfort']
+            },
+            {
+                title: 'Formal Dress Shirt',
+                description: 'Classic formal shirt for business occasions with crisp finish and professional appearance.',
+                image: '/singbd-static-site/images/Woven_Top2.jpg',
+                category: 'Woven Tops',
+                code: 'WT-004',
+                features: ['Crisp cotton fabric', 'Professional fit', 'Easy ironing']
+            },
+            {
+                title: 'Summer Tunic',
+                description: 'Lightweight tunic perfect for summer with flowy design and comfortable styling.',
+                image: '/singbd-static-site/images/Woven_Top1.jpg',
+                category: 'Woven Tops',
+                code: 'WT-005',
+                features: ['Lightweight fabric', 'Flowy design', 'Summer comfort']
+            },
+            {
+                title: 'Oxford Button-Down',
+                description: 'Timeless oxford shirt with button-down collar and classic styling for versatile wear.',
+                image: '/singbd-static-site/images/Woven_Top2.jpg',
+                category: 'Woven Tops',
+                code: 'WT-006',
+                features: ['Oxford cotton fabric', 'Button-down collar', 'Classic styling']
+            }
+        ],
+        'coats-jackets': [
+            {
+                title: 'Winter Wool Coat',
+                description: 'Warm wool coat for cold weather with premium insulation and elegant design.',
+                image: '/singbd-static-site/images/Coats_Jacket1.jpg',
+                category: 'Coats & Jackets',
+                code: 'CJ-001',
+                features: ['Premium wool fabric', 'Warm insulation', 'Elegant design']
+            },
+            {
+                title: 'Leather Jacket',
+                description: 'Classic leather jacket with modern styling and durable construction for long-lasting wear.',
+                image: '/singbd-static-site/images/Coats_Jacket2.jpg',
+                category: 'Coats & Jackets',
+                code: 'CJ-002',
+                features: ['Genuine leather', 'Modern styling', 'Durable construction']
+            },
+            {
+                title: 'Trench Coat',
+                description: 'Elegant trench coat for formal occasions with sophisticated design and weather protection.',
+                image: '/singbd-static-site/images/Coats_Jacket1.jpg',
+                category: 'Coats & Jackets',
+                code: 'CJ-003',
+                features: ['Water-resistant fabric', 'Sophisticated design', 'Weather protection']
+            },
+            {
+                title: 'Denim Jacket',
+                description: 'Casual denim jacket for everyday wear with comfortable fit and classic styling.',
+                image: '/singbd-static-site/images/Coats_Jacket2.jpg',
+                category: 'Coats & Jackets',
+                code: 'CJ-004',
+                features: ['Premium denim', 'Comfortable fit', 'Classic styling']
+            },
+            {
+                title: 'Puffer Jacket',
+                description: 'Lightweight puffer jacket for outdoor activities with excellent insulation and mobility.',
+                image: '/singbd-static-site/images/Coats_Jacket1.jpg',
+                category: 'Coats & Jackets',
+                code: 'CJ-005',
+                features: ['Lightweight insulation', 'Outdoor ready', 'High mobility']
+            }
+        ],
+        'sportswear': [
+            {
+                title: 'Performance T-Shirt',
+                description: 'Moisture-wicking performance t-shirt designed for athletic activities and comfort.',
+                image: '/singbd-static-site/images/Sportswear1.jpg',
+                category: 'Sportswear',
+                code: 'SW-001',
+                features: ['Moisture-wicking fabric', 'Performance fit', 'Quick drying']
+            },
+            {
+                title: 'Athletic Shorts',
+                description: 'Comfortable athletic shorts for training with stretch fabric and secure fit.',
+                image: '/singbd-static-site/images/Sportswear2.jpg',
+                category: 'Sportswear',
+                code: 'SW-002',
+                features: ['Stretch fabric', 'Secure fit', 'Training ready']
+            },
+            {
+                title: 'Track Jacket',
+                description: 'Lightweight track jacket for outdoor sports with breathable design and mobility.',
+                image: '/singbd-static-site/images/Sportswear3.jpg',
+                category: 'Sportswear',
+                code: 'SW-003',
+                features: ['Lightweight fabric', 'Breathable design', 'High mobility']
+            },
+            {
+                title: 'Leggings',
+                description: 'High-performance leggings for yoga and fitness with compression and flexibility.',
+                image: '/singbd-static-site/images/Sportswear1.jpg',
+                category: 'Sportswear',
+                code: 'SW-004',
+                features: ['Compression fit', 'High flexibility', 'Performance fabric']
+            },
+            {
+                title: 'Hoodie',
+                description: 'Comfortable hoodie for casual workouts with soft fabric and relaxed fit.',
+                image: '/singbd-static-site/images/Sportswear2.jpg',
+                category: 'Sportswear',
+                code: 'SW-005',
+                features: ['Soft fabric', 'Relaxed fit', 'Casual comfort']
+            }
+        ],
+        'woven-bottoms': [
+            {
+                title: 'Classic Trousers',
+                description: 'Professional trousers with perfect fit and comfortable design for business wear.',
+                image: '/singbd-static-site/images/Woven_Bottoms1.jpg',
+                category: 'Woven Bottoms',
+                code: 'WB-001',
+                features: ['Professional fit', 'Comfortable design', 'Business ready']
+            },
+            {
+                title: 'Casual Pants',
+                description: 'Comfortable casual pants with relaxed fit and versatile styling for everyday wear.',
+                image: '/singbd-static-site/images/Woven_Bottoms2.jpg',
+                category: 'Woven Bottoms',
+                code: 'WB-002',
+                features: ['Relaxed fit', 'Versatile styling', 'Everyday comfort']
+            },
+            {
+                title: 'Formal Skirt',
+                description: 'Elegant formal skirt with sophisticated design and professional appearance.',
+                image: '/singbd-static-site/images/Woven_Bottoms1.jpg',
+                category: 'Woven Bottoms',
+                code: 'WB-003',
+                features: ['Elegant design', 'Sophisticated styling', 'Professional look']
+            },
+            {
+                title: 'Cargo Pants',
+                description: 'Functional cargo pants with multiple pockets and durable construction.',
+                image: '/singbd-static-site/images/Woven_Bottoms2.jpg',
+                category: 'Woven Bottoms',
+                code: 'WB-004',
+                features: ['Multiple pockets', 'Durable construction', 'Functional design']
+            },
+            {
+                title: 'Pleated Trousers',
+                description: 'Classic pleated trousers with timeless design and comfortable fit.',
+                image: '/singbd-static-site/images/Woven_Bottoms1.jpg',
+                category: 'Woven Bottoms',
+                code: 'WB-005',
+                features: ['Timeless design', 'Comfortable fit', 'Classic styling']
+            }
+        ],
+        'knitwear': [
+            {
+                title: 'Cashmere Sweater',
+                description: 'Luxurious cashmere sweater with soft texture and elegant design for premium comfort.',
+                image: '/singbd-static-site/images/Knitwear1.jpg',
+                category: 'Knitwear',
+                code: 'KW-001',
+                features: ['Luxurious cashmere', 'Soft texture', 'Elegant design']
+            },
+            {
+                title: 'Cotton Cardigan',
+                description: 'Comfortable cotton cardigan with versatile styling and easy care maintenance.',
+                image: '/singbd-static-site/images/Knitwear2.jpg',
+                category: 'Knitwear',
+                code: 'KW-002',
+                features: ['Comfortable cotton', 'Versatile styling', 'Easy care']
+            },
+            {
+                title: 'Wool Pullover',
+                description: 'Warm wool pullover with cozy design and excellent insulation for cold weather.',
+                image: '/singbd-static-site/images/Knitwear1.jpg',
+                category: 'Knitwear',
+                code: 'KW-003',
+                features: ['Warm wool', 'Cozy design', 'Excellent insulation']
+            },
+            {
+                title: 'Lace Knit Top',
+                description: 'Delicate lace knit top with feminine design and breathable fabric.',
+                image: '/singbd-static-site/images/Knitwear2.jpg',
+                category: 'Knitwear',
+                code: 'KW-004',
+                features: ['Delicate lace', 'Feminine design', 'Breathable fabric']
+            },
+            {
+                title: 'Ribbed Sweater',
+                description: 'Classic ribbed sweater with textured design and comfortable stretch fit.',
+                image: '/singbd-static-site/images/Knitwear1.jpg',
+                category: 'Knitwear',
+                code: 'KW-005',
+                features: ['Textured design', 'Stretch fit', 'Classic styling']
+            }
+        ],
+        'homeware': [
+            {
+                title: 'Cotton Bedding Set',
+                description: 'Premium cotton bedding set with soft texture and elegant design for comfortable sleep.',
+                image: '/singbd-static-site/images/Homewear1.jpg',
+                category: 'Homeware',
+                code: 'HW-001',
+                features: ['Premium cotton', 'Soft texture', 'Elegant design']
+            },
+            {
+                title: 'Linen Tablecloth',
+                description: 'Natural linen tablecloth with sophisticated design and easy care maintenance.',
+                image: '/singbd-static-site/images/Homewear2.jpg',
+                category: 'Homeware',
+                code: 'HW-002',
+                features: ['Natural linen', 'Sophisticated design', 'Easy care']
+            },
+            {
+                title: 'Silk Cushions',
+                description: 'Luxurious silk cushions with elegant design and premium finish for home decoration.',
+                image: '/singbd-static-site/images/Homewear1.jpg',
+                category: 'Homeware',
+                code: 'HW-003',
+                features: ['Luxurious silk', 'Elegant design', 'Premium finish']
+            },
+            {
+                title: 'Cotton Towels',
+                description: 'Absorbent cotton towels with soft texture and quick drying properties.',
+                image: '/singbd-static-site/images/Homewear2.jpg',
+                category: 'Homeware',
+                code: 'HW-004',
+                features: ['Absorbent cotton', 'Soft texture', 'Quick drying']
+            },
+            {
+                title: 'Wool Blanket',
+                description: 'Warm wool blanket with cozy design and excellent insulation for cold weather.',
+                image: '/singbd-static-site/images/Homewear1.jpg',
+                category: 'Homeware',
+                code: 'HW-005',
+                features: ['Warm wool', 'Cozy design', 'Excellent insulation']
+            }
+        ],
+        'handicrafts': [
+            {
+                title: 'Embroidered Cushion',
+                description: 'Handcrafted embroidered cushion with traditional techniques and unique design.',
+                image: '/singbd-static-site/images/Handicrafts1.jpg',
+                category: 'Handicrafts',
+                code: 'HC-001',
+                features: ['Handcrafted', 'Traditional techniques', 'Unique design']
+            },
+            {
+                title: 'Woven Basket',
+                description: 'Artisanal woven basket with natural materials and traditional craftsmanship.',
+                image: '/singbd-static-site/images/Handicrafts2.jpg',
+                category: 'Handicrafts',
+                code: 'HC-002',
+                features: ['Natural materials', 'Traditional craftsmanship', 'Artisanal quality']
+            },
+            {
+                title: 'Ceramic Vase',
+                description: 'Handcrafted ceramic vase with unique glaze and artistic design.',
+                image: '/singbd-static-site/images/Handicrafts1.jpg',
+                category: 'Handicrafts',
+                code: 'HC-003',
+                features: ['Handcrafted ceramic', 'Unique glaze', 'Artistic design']
+            },
+            {
+                title: 'Leather Bag',
+                description: 'Handcrafted leather bag with premium materials and traditional techniques.',
+                image: '/singbd-static-site/images/Handicrafts2.jpg',
+                category: 'Handicrafts',
+                code: 'HC-004',
+                features: ['Premium leather', 'Traditional techniques', 'Handcrafted quality']
+            },
+            {
+                title: 'Wooden Bowl',
+                description: 'Artisanal wooden bowl with natural finish and traditional woodworking techniques.',
+                image: '/singbd-static-site/images/Handicrafts1.jpg',
+                category: 'Handicrafts',
+                code: 'HC-005',
+                features: ['Natural finish', 'Traditional techniques', 'Artisanal quality']
+            }
+        ],
+        'accessories': [
+            {
+                title: 'Leather Wallet',
+                description: 'Premium leather wallet with multiple compartments and durable construction.',
+                image: '/singbd-static-site/images/Accessories1.jpeg',
+                category: 'Accessories',
+                code: 'AC-001',
+                features: ['Premium leather', 'Multiple compartments', 'Durable construction']
+            },
+            {
+                title: 'Silk Scarf',
+                description: 'Luxurious silk scarf with elegant design and versatile styling options.',
+                image: '/singbd-static-site/images/Accessories2.jpg',
+                category: 'Accessories',
+                code: 'AC-002',
+                features: ['Luxurious silk', 'Elegant design', 'Versatile styling']
+            },
+            {
+                title: 'Leather Belt',
+                description: 'Classic leather belt with adjustable fit and timeless design.',
+                image: '/singbd-static-site/images/Accessories3.jpg',
+                category: 'Accessories',
+                code: 'AC-003',
+                features: ['Classic leather', 'Adjustable fit', 'Timeless design']
+            },
+            {
+                title: 'Cotton Hat',
+                description: 'Comfortable cotton hat with breathable design and casual styling.',
+                image: '/singbd-static-site/images/Accessories1.jpeg',
+                category: 'Accessories',
+                code: 'AC-004',
+                features: ['Comfortable cotton', 'Breathable design', 'Casual styling']
+            },
+            {
+                title: 'Wool Gloves',
+                description: 'Warm wool gloves with excellent insulation and comfortable fit for cold weather.',
+                image: '/singbd-static-site/images/Accessories2.jpg',
+                category: 'Accessories',
+                code: 'AC-005',
+                features: ['Warm wool', 'Excellent insulation', 'Comfortable fit']
+            }
+        ]
+    };
+    
+    function updateProductDisplay(category) {
+        const products = productData[category] || [];
+        
+        // Update main product display with first product
+        if (products.length > 0) {
+            const mainProduct = products[0];
+            mainProductImage.src = mainProduct.image;
+            mainProductTitle.textContent = mainProduct.title;
+            mainProductDescription.textContent = mainProduct.description;
+            mainProductCategory.textContent = mainProduct.category;
+            mainProductCode.textContent = mainProduct.code;
+            mainProductCategoryBreadcrumb.textContent = mainProduct.category;
+            mainProductTitleBreadcrumb.textContent = mainProduct.title;
+        }
+        
+        // Update products grid
+        productsGrid.innerHTML = products.map((product, index) => `
+            <div class="product-card" data-product-index="${index}" data-category="${category}">
+                <div class="product-card__image">
+                    <img src="${product.image}" alt="${product.title}" class="product-card__img">
+                    <div class="product-card__overlay">
+                        <button class="product-card__quick-view">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-card__content">
+                    <h4 class="product-card__title">${product.title}</h4>
+                    <p class="product-card__description">${product.description}</p>
+                    <div class="product-card__meta">
+                        <span class="product-card__category">${product.category}</span>
+                        <span class="product-card__code">${product.code}</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        
+        // Add click handlers to product cards
+        const productCards = productsGrid.querySelectorAll('.product-card');
+        productCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const productIndex = parseInt(this.dataset.productIndex);
+                const product = products[productIndex];
+                
+                // Update main product display
+                mainProductImage.src = product.image;
+                mainProductTitle.textContent = product.title;
+                mainProductDescription.textContent = product.description;
+                mainProductCategory.textContent = product.category;
+                mainProductCode.textContent = product.code;
+                mainProductCategoryBreadcrumb.textContent = product.category;
+                mainProductTitleBreadcrumb.textContent = product.title;
+                
+                // Add active class to clicked card
+                productCards.forEach(c => c.classList.remove('product-card--active'));
+                this.classList.add('product-card--active');
+            });
+        });
+    }
+    
+    categoryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // Remove active class from all items
+            categoryItems.forEach(i => i.classList.remove('products-category__item--active'));
+            
+            // Add active class to clicked item
+            this.classList.add('products-category__item--active');
+            
+            // Update product display
+            updateProductDisplay(category);
+        });
+    });
+    
+    // Initialize with first category
+    const firstCategory = categoryItems[0].dataset.category;
+    updateProductDisplay(firstCategory);
+}
+
+// Quick View Modal
+function initQuickView() {
+    const quickViewButtons = document.querySelectorAll('.product-card__quick-view');
+    
+    quickViewButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            const card = this.closest('.product-card');
+            const title = card.querySelector('.product-card__title').textContent;
+            const description = card.querySelector('.product-card__description').textContent;
+            const image = card.querySelector('.product-card__img').src;
+            const category = card.querySelector('.product-card__category').textContent;
+            const code = card.querySelector('.product-card__code').textContent;
+            
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'quick-view-modal';
+            modal.innerHTML = `
+                <div class="quick-view-modal__overlay">
+                    <div class="quick-view-modal__content">
+                        <button class="quick-view-modal__close">&times;</button>
+                        <div class="quick-view-modal__body">
+                            <div class="quick-view-modal__image">
+                                <img src="${image}" alt="${title}">
+                            </div>
+                            <div class="quick-view-modal__info">
+                                <h3>${title}</h3>
+                                <p>${description}</p>
+                                <div class="quick-view-modal__meta">
+                                    <span class="quick-view-modal__category">${category}</span>
+                                    <span class="quick-view-modal__code">${code}</span>
+                                </div>
+                                <a href="<?php echo $baseUrl; ?>/contact.php" class="quick-view-modal__cta">
+                                    Get Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Close modal functionality
+            const closeBtn = modal.querySelector('.quick-view-modal__close');
+            const overlay = modal.querySelector('.quick-view-modal__overlay');
+            
+            function closeModal() {
+                modal.remove();
+            }
+            
+            closeBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    closeModal();
+                }
+            });
+            
+            // ESC key to close
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        });
+    });
 }
 
 // Category Slider Functionality

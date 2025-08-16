@@ -502,6 +502,116 @@ include 'partials/_header.php';
         </div>
     </section>
 
+    <!-- Our Team Section -->
+    <section class="team" id="team">
+        <div class="team__container">
+            <div class="team__header">
+                <h2 class="section__title" data-aos="fade-up">Our Team</h2>
+                <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Meet the dedicated professionals behind SingBD's success in global apparel sourcing
+                </p>
+            </div>
+            
+            <div class="team__grid">
+                <div class="team__member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team__member-image">
+                        <svg class="team__member-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="team__member-info">
+                        <h3 class="team__member-name">Ahmed Rahman</h3>
+                        <p class="team__member-position">Founder & CEO</p>
+                        <p class="team__member-description">
+                            With over 15 years of experience in the garment industry, Ahmed leads our mission to connect global brands with quality manufacturers.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team__member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team__member-image">
+                        <svg class="team__member-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="team__member-info">
+                        <h3 class="team__member-name">Sarah Lim</h3>
+                        <p class="team__member-position">Sourcing Manager</p>
+                        <p class="team__member-description">
+                            Sarah oversees our sourcing operations across Asia, ensuring quality standards and timely delivery for all our clients.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team__member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team__member-image">
+                        <svg class="team__member-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="team__member-info">
+                        <h3 class="team__member-name">Mohammad Hassan</h3>
+                        <p class="team__member-position">QC Coordinator</p>
+                        <p class="team__member-description">
+                            Mohammad ensures every product meets our rigorous quality standards through comprehensive inspection and testing protocols.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team__member" data-aos="fade-up" data-aos-delay="500">
+                    <div class="team__member-image">
+                        <svg class="team__member-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="team__member-info">
+                        <h3 class="team__member-name">Priya Patel</h3>
+                        <p class="team__member-position">Sourcing Staff</p>
+                        <p class="team__member-description">
+                            Priya works closely with manufacturers to source the best materials and ensure smooth production processes.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team__member" data-aos="fade-up" data-aos-delay="600">
+                    <div class="team__member-image">
+                        <svg class="team__member-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="team__member-info">
+                        <h3 class="team__member-name">David Chen</h3>
+                        <p class="team__member-position">Operations Manager</p>
+                        <p class="team__member-description">
+                            David manages our day-to-day operations, ensuring efficient processes and excellent customer service delivery.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team__member" data-aos="fade-up" data-aos-delay="700">
+                    <div class="team__member-image">
+                        <svg class="team__member-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="team__member-info">
+                        <h3 class="team__member-name">Fatima Khan</h3>
+                        <p class="team__member-position">Client Relations</p>
+                        <p class="team__member-description">
+                            Fatima builds and maintains strong relationships with our international clients, ensuring their satisfaction and success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact__container">
