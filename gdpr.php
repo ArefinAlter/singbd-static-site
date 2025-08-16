@@ -1,10 +1,24 @@
 <?php
 $page_title = "GDPR Compliance";
+$page_description = "SingBD GDPR Compliance - Learn about your data protection rights under GDPR. We are committed to protecting your personal data and ensuring compliance with European data protection regulations.";
+$page_keywords = "GDPR compliance, data protection rights, European data protection, personal data rights, SingBD GDPR, data subject rights";
+$canonical_url = "https://singbd.com/gdpr.php";
 require_once 'config.php';
 include 'partials/_header.php';
 ?>
 
 <main class="main">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs__container">
+            <ol class="breadcrumbs__nav">
+                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
+                <li><span class="breadcrumbs__separator">/</span></li>
+                <li><span class="breadcrumbs__current">GDPR Compliance</span></li>
+            </ol>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
     <section class="legal-hero">
         <div class="legal-hero__container">
@@ -67,7 +81,7 @@ include 'partials/_header.php';
             </div>
         </div>
     </section>
-            
+    
     <section class="legal-content">
         <div class="legal-content__container">
             <div class="legal-content__grid">

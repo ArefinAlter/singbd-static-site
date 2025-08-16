@@ -70,7 +70,7 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 60px; /* Further reduced from 80px for less gutter space */
+    padding-top: 60px; /* Back to original for homepage */
 }
 
 /* Typography */
@@ -298,6 +298,11 @@ p {
     background: #ffffff;
 }
 
+/* About page specific spacing */
+.about-hero {
+    padding-top: var(--spacing-4xl);
+}
+
 .about-hero__container, .company-overview__container, .sustainability__container, 
 .sustainability-initiatives__container, .values__container {
     max-width: 1400px;
@@ -385,6 +390,42 @@ p {
     
     .sustainability-initiatives__grid, .values__grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Responsive page content spacing */
+.page-content {
+    padding-top: var(--spacing-xl);
+}
+
+/* Products page specific spacing */
+.products-page {
+    padding-top: var(--spacing-md); /* Reduced padding for products page */
+}
+    
+    .about-hero {
+        padding-top: var(--spacing-lg);
+    }
+    
+    /* Specific spacing for about and contact pages on tablet */
+    .about-page .page-content,
+    .contact-page .page-content {
+        padding-top: calc(var(--spacing-3xl) + var(--spacing-xl));
+    }
+}
+
+@media (max-width: 480px) {
+    .page-content {
+        padding-top: var(--spacing-lg);
+    }
+    
+    .about-hero {
+        padding-top: var(--spacing-md);
+    }
+    
+    /* Specific spacing for about and contact pages on mobile */
+    .about-page .page-content,
+    .contact-page .page-content {
+        padding-top: calc(var(--spacing-2xl) + var(--spacing-lg));
     }
 }
 
@@ -528,6 +569,30 @@ p {
     margin-bottom: 1rem;
     line-height: 1.6;
     max-width: 42rem;
+}
+
+.hero__link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.hero__link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.section__link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.section__link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
 /* Responsive description sizing to match Next.js exactly */
@@ -719,8 +784,8 @@ p {
 
 /* Partners Section */
 .partners {
-    padding: var(--spacing-3xl) 0;
-    margin-bottom: var(--spacing-5xl);
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-3xl);
     background: #ffffff !important;
 }
 
@@ -732,7 +797,7 @@ p {
 
 .partners__header {
     text-align: center;
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-2xl);
 }
 
 .partners__slider {
@@ -809,8 +874,8 @@ p {
 
 /* About Section */
 .about {
-    padding: var(--spacing-3xl) 0;
-    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-xl);
     background: #ffffff !important;
 }
 
@@ -1244,8 +1309,8 @@ p {
 
 /* What We Do Section */
 .what-we-do {
-    padding: var(--spacing-3xl) 0;
-    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-xl);
     background: #ffffff !important;
     color: var(--body-text-color);
 }
@@ -1258,7 +1323,7 @@ p {
 
 .what-we-do__header {
     text-align: center;
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-2xl);
 }
 
 .what-we-do__header .section__title {
@@ -1552,8 +1617,8 @@ p {
 @media (max-width: 768px) {
     .what-we-do__tabs {
         flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-sm);
+    align-items: center;
+    gap: var(--spacing-sm);
     }
     
     .what-we-do__tab {
@@ -1587,15 +1652,15 @@ p {
 
 /* Categories Section */
 .categories {
-    padding: var(--spacing-3xl) 0;
-    margin-bottom: var(--spacing-4xl);
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-2xl);
     background: #ffffff !important;
 }
 
 /* Our Team Section */
 .team {
-    padding: var(--spacing-3xl) 0;
-    margin-bottom: var(--spacing-4xl);
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-xl);
     background: #ffffff !important;
 }
 
@@ -1609,7 +1674,7 @@ p {
 
 .team__header {
     text-align: center;
-    margin-bottom: var(--spacing-3xl);
+    margin-bottom: var(--spacing-2xl);
 }
 
 .team__grid {
@@ -1931,9 +1996,14 @@ p {
 
 /* Contact Section */
 .contact {
-    padding: var(--spacing-3xl) 0;
-    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-lg);
     background: #ffffff !important;
+}
+
+/* Contact page specific spacing */
+.contact:first-of-type {
+    padding-top: var(--spacing-4xl);
 }
 
 .contact__container {
@@ -2373,6 +2443,16 @@ p {
         max-height: 400px;
         right: 70px;
     }
+    
+    /* Section spacing for tablets */
+    .partners, .about, .what-we-do, .categories, .team, .contact {
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .partners__header, .what-we-do__header, .team__header {
+        margin-bottom: var(--spacing-xl);
+    }
 }
 
 @media (max-width: 480px) {
@@ -2385,6 +2465,16 @@ p {
         width: 280px;
         max-height: 350px;
         right: 70px;
+    }
+    
+    /* Section spacing for mobile */
+    .partners, .about, .what-we-do, .categories, .team, .contact {
+        padding: var(--spacing-lg) 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .partners__header, .what-we-do__header, .team__header {
+        margin-bottom: var(--spacing-lg);
     }
 }
 
@@ -2907,9 +2997,15 @@ p {
 
 /* Page Content Spacing */
 .page-content {
-    padding-top: var(--spacing-xl);
+    padding-top: var(--spacing-2xl);
     padding-bottom: var(--spacing-xl);
     min-height: calc(100vh - 200px); /* Account for header and footer */
+}
+
+/* Specific spacing for about and contact pages */
+.about-page .page-content,
+.contact-page .page-content {
+    padding-top: calc(var(--spacing-4xl) + var(--spacing-2xl));
 }
 
 /* Breadcrumbs */
@@ -2927,7 +3023,7 @@ p {
 
 .breadcrumbs__nav {
     display: flex;
-    align-items: center;
+        align-items: center;
     gap: var(--spacing-sm);
 }
 
@@ -2987,7 +3083,7 @@ p {
 .products-category__item {
     background: white;
     border-radius: var(--border-radius-md);
-    padding: var(--spacing-md);
+        padding: var(--spacing-md);
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -4188,5 +4284,70 @@ p {
         flex-direction: column;
         text-align: center;
         gap: var(--spacing-sm);
+    }
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    background: var(--background-color);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 60px; /* Account for sticky header height */
+}
+
+.breadcrumbs__container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.breadcrumbs__nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.breadcrumbs__nav li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs__link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.breadcrumbs__separator {
+    margin: 0 var(--spacing-xs);
+    color: var(--text-muted);
+}
+
+.breadcrumbs__current {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .breadcrumbs {
+        padding: var(--spacing-sm) 0;
+        margin-top: 60px; /* Keep consistent with desktop */
+    }
+    
+    .breadcrumbs__container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .breadcrumbs__nav {
+        font-size: 0.8rem;
     }
 }

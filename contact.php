@@ -1,10 +1,24 @@
 <?php
 $page_title = "Contact Us";
+$page_description = "Contact SingBD for apparel sourcing solutions. Get in touch with our team in Singapore for high-quality garment manufacturing, textile sourcing, and sustainable fashion partnerships.";
+$page_keywords = "contact SingBD, apparel sourcing contact, garment manufacturing contact, textile sourcing, Singapore office, sourcing solutions, get quote, business inquiry";
+$canonical_url = "https://singbd.com/contact.php";
 require_once 'config.php';
 include 'partials/_header.php';
 ?>
 
 <main class="main">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs__container">
+            <ol class="breadcrumbs__nav">
+                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
+                <li><span class="breadcrumbs__separator">/</span></li>
+                <li><span class="breadcrumbs__current">Contact Us</span></li>
+            </ol>
+        </div>
+    </nav>
+    
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact__container">

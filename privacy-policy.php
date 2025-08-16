@@ -1,10 +1,24 @@
 <?php
 $page_title = "Privacy Policy";
+$page_description = "SingBD Privacy Policy - Learn how we collect, use, and protect your personal information. We are committed to transparency and data protection in accordance with international standards.";
+$page_keywords = "privacy policy, data protection, personal information, SingBD privacy, GDPR compliance, data security, information collection";
+$canonical_url = "https://singbd.com/privacy-policy.php";
 require_once 'config.php';
 include 'partials/_header.php';
 ?>
 
 <main class="main">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs__container">
+            <ol class="breadcrumbs__nav">
+                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
+                <li><span class="breadcrumbs__separator">/</span></li>
+                <li><span class="breadcrumbs__current">Privacy Policy</span></li>
+            </ol>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
     <section class="legal-hero">
         <div class="legal-hero__container">
@@ -70,7 +84,7 @@ include 'partials/_header.php';
             </div>
         </div>
     </section>
-            
+    
     <section class="legal-content">
         <div class="legal-content__container">
             <div class="legal-content__grid">
@@ -175,7 +189,7 @@ include 'partials/_header.php';
                         <h2 class="legal-card__title">3. How We Use Your Information</h2>
                     </div>
                     <div class="legal-card__content">
-                        <p>We use the information we collect to:</p>
+                <p>We use the information we collect to:</p>
                         <div class="legal-list">
                             <div class="legal-list__item">
                                 <div class="legal-list__icon">

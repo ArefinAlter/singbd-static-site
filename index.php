@@ -1,5 +1,8 @@
 <?php
 $page_title = "Home";
+$page_description = "SingBD - Your trusted partner in apparel sourcing. Connect with global brands and premium manufacturers worldwide for high-quality garments, textiles, and sustainable fashion solutions.";
+$page_keywords = "apparel sourcing, garment manufacturing, textile manufacturing, sustainable fashion, global brands, premium manufacturers, knitwear, woven garments, outerwear, functional apparel, homeware, accessories, handicrafts, Bangladesh manufacturing, Singapore sourcing";
+$canonical_url = "https://singbd.com/";
 require_once 'config.php';
 include 'partials/_header.php';
 ?>
@@ -24,7 +27,7 @@ include 'partials/_header.php';
                     </h1>
                     <p class="hero__description">
                         From our hub in Singapore, we bridge the gap between international fashion brands 
-                        and premium manufacturers worldwide. Your trusted partner in apparel sourcing.
+                        and premium manufacturers worldwide. Your trusted partner in <a href="<?php echo $baseUrl; ?>/products.php" class="hero__link">apparel sourcing</a>.
                     </p>
                     <div class="hero__buttons">
                         <a href="#services" class="hero__btn hero__btn--primary">
@@ -58,10 +61,10 @@ include 'partials/_header.php';
         <div class="partners__container">
             <div class="partners__header">
                 <h2 class="section__title">Our Trusted Partners</h2>
-                <p class="section__subtitle">
-                    We partner with leading international brands and retailers to deliver exceptional 
-                    apparel sourcing solutions worldwide.
-                </p>
+                                    <p class="section__subtitle">
+                        We partner with leading international brands and retailers to deliver exceptional 
+                        <a href="<?php echo $baseUrl; ?>/products.php" class="section__link">apparel sourcing solutions</a> worldwide.
+                    </p>
             </div>
                          <div class="partners__slider">
                  <div class="partners__track">
@@ -699,5 +702,47 @@ include 'partials/_header.php';
         </div>
     </section>
 </main>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What services does SingBD offer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SingBD offers comprehensive apparel sourcing services including knitwear, woven garments, outerwear, functional outdoor apparel, homeware, accessories, and handicrafts. We connect global brands with premium manufacturers worldwide."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is SingBD located?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SingBD is based in Singapore at 100 Jln Sultan, Singapore 199001. We serve clients worldwide from our strategic location."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long has SingBD been in business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SingBD has over 10 years of experience in apparel sourcing and manufacturing. We are a sister concern of Fakir Apparels Ltd, one of Bangladesh's leading manufacturing groups."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What quality standards does SingBD maintain?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SingBD maintains rigorous quality standards including pre-production QC, in-line QC, final QC, and multiple quality checks before shipment. We work with certified manufacturers and maintain compliance with international standards."
+                }
+            }
+        ]
+    }
+    </script>
 
 <?php include 'partials/_footer.php'; ?>

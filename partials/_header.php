@@ -10,15 +10,30 @@ require_once __DIR__ . '/../config.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="SingBD - Leading manufacturer of high-quality garments and textiles">
-    <meta name="keywords" content="garments, textiles, manufacturing, Bangladesh, sustainable fashion">
+    <meta name="description" content="<?php echo isset($page_description) ? $page_description : 'SingBD - Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide for apparel sourcing solutions.'; ?>">
+    <meta name="keywords" content="<?php echo isset($page_keywords) ? $page_keywords : 'garments, textiles, manufacturing, Bangladesh, sustainable fashion, apparel sourcing, knitwear, woven garments, outerwear, functional apparel, homeware, accessories, handicrafts'; ?>">
     <meta name="author" content="SingBD">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo isset($canonical_url) ? $canonical_url : 'https://singbd.com' . $_SERVER['REQUEST_URI']; ?>">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="SingBD - Quality Garments & Textiles">
-    <meta property="og:description" content="Leading manufacturer of high-quality garments and textiles">
+    <meta property="og:title" content="<?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?>">
+    <meta property="og:description" content="<?php echo isset($page_description) ? $page_description : 'Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide.'; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://singbd.com">
+    <meta property="og:url" content="<?php echo isset($canonical_url) ? $canonical_url : 'https://singbd.com' . $_SERVER['REQUEST_URI']; ?>">
+    <meta property="og:image" content="https://singbd.com/images/SingBD-logo-Final-01.png">
+    <meta property="og:site_name" content="SingBD">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?>">
+    <meta name="twitter:description" content="<?php echo isset($page_description) ? $page_description : 'Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide.'; ?>">
+    <meta name="twitter:image" content="https://singbd.com/images/SingBD-logo-Final-01.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="<?php echo $baseUrl; ?>/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $baseUrl; ?>/images/apple-touch-icon.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +53,36 @@ require_once __DIR__ . '/../config.php';
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <title><?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?></title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SingBD",
+        "url": "https://singbd.com",
+        "logo": "https://singbd.com/images/SingBD-logo-Final-01.png",
+        "description": "Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide for apparel sourcing solutions.",
+        "foundingDate": "2014",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "100 Jln Sultan",
+            "addressLocality": "Singapore",
+            "postalCode": "199001",
+            "addressCountry": "SG"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+65-1234-5678",
+            "contactType": "customer service",
+            "email": "info@singbd.com"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/singbd",
+            "https://www.facebook.com/singbd"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header Navigation -->

@@ -1,22 +1,14 @@
 <?php
+$page_title = "Products";
+$page_description = "Explore SingBD's comprehensive product catalogue including woven tops, coats & jackets, sportswear, knitwear, homeware, handicrafts, and accessories. Premium quality apparel sourcing solutions.";
+$page_keywords = "product catalogue, woven tops, coats jackets, sportswear, knitwear, homeware, handicrafts, accessories, apparel products, garment catalogue, textile products, sourcing catalogue";
+$canonical_url = "https://singbd.com/products.php";
 require_once 'config.php';
+include 'partials/_header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - SingBD</title>
-    <meta name="description" content="Explore our comprehensive range of high-quality products including woven tops, coats & jackets, sportswear, and more.">
-    
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <?php include 'partials/_header.php'; ?>
-</head>
 <body>
 
-    <div class="page-content">
+    <div class="page-content products-page">
         <!-- Product Catalogue Section -->
     <section class="product-catalogue" id="product-catalogue">
         <div class="product-catalogue__container">

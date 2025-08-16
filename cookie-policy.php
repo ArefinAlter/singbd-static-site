@@ -1,10 +1,24 @@
 <?php
 $page_title = "Cookie Policy";
+$page_description = "SingBD Cookie Policy - Learn how we use cookies and tracking technologies to improve your experience on our website. We are committed to transparency in cookie usage.";
+$page_keywords = "cookie policy, cookies, tracking technologies, SingBD cookies, website cookies, cookie management";
+$canonical_url = "https://singbd.com/cookie-policy.php";
 require_once 'config.php';
 include 'partials/_header.php';
 ?>
 
 <main class="main">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs__container">
+            <ol class="breadcrumbs__nav">
+                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
+                <li><span class="breadcrumbs__separator">/</span></li>
+                <li><span class="breadcrumbs__current">Cookie Policy</span></li>
+            </ol>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
     <section class="legal-hero">
         <div class="legal-hero__container">
@@ -67,7 +81,7 @@ include 'partials/_header.php';
             </div>
         </div>
     </section>
-            
+    
     <section class="legal-content">
         <div class="legal-content__container">
             <div class="legal-content__grid">
@@ -116,7 +130,7 @@ include 'partials/_header.php';
                         <h2 class="legal-card__title">3. How We Use Cookies</h2>
                     </div>
                     <div class="legal-card__content">
-                        <p>We use cookies for several purposes, including:</p>
+                <p>We use cookies for several purposes, including:</p>
                         <div class="legal-list">
                             <div class="legal-list__item">
                                 <div class="legal-list__icon">

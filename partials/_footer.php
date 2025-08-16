@@ -65,6 +65,71 @@ require_once __DIR__ . '/../config.php';
 
 
 
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://singbd.com/"
+            }
+            <?php if (isset($page_title) && $page_title !== "Home"): ?>,
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "<?php echo $page_title; ?>",
+                "item": "<?php echo isset($canonical_url) ? $canonical_url : 'https://singbd.com' . $_SERVER['REQUEST_URI']; ?>"
+            }
+            <?php endif; ?>
+        ]
+    }
+    </script>
+    
+    <!-- LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SingBD",
+        "image": "https://singbd.com/images/SingBD-logo-Final-01.png",
+        "description": "Leading manufacturer of high-quality garments and textiles, committed to sustainable practices and innovation.",
+        "url": "https://singbd.com",
+        "telephone": "+65-1234-5678",
+        "email": "info@singbd.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "100 Jln Sultan",
+            "addressLocality": "Singapore",
+            "postalCode": "199001",
+            "addressCountry": "SG"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 1.3000,
+            "longitude": 103.8583
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday", 
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "servesCuisine": "Apparel Manufacturing",
+        "areaServed": "Worldwide"
+    }
+    </script>
+
     <!-- JavaScript -->
     <script src="<?php echo $baseUrl; ?>/js/main.js?v=<?php echo time(); ?>"></script>
     <script src="<?php echo $baseUrl; ?>/js/world-map.js"></script>

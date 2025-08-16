@@ -1,10 +1,24 @@
 <?php
 $page_title = "Terms of Service";
+$page_description = "SingBD Terms of Service - Read our terms and conditions for using our apparel sourcing services. Understand your rights and obligations when working with SingBD.";
+$page_keywords = "terms of service, terms and conditions, SingBD terms, service agreement, user agreement, legal terms";
+$canonical_url = "https://singbd.com/terms-of-service.php";
 require_once 'config.php';
 include 'partials/_header.php';
 ?>
 
 <main class="main">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs__container">
+            <ol class="breadcrumbs__nav">
+                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
+                <li><span class="breadcrumbs__separator">/</span></li>
+                <li><span class="breadcrumbs__current">Terms of Service</span></li>
+            </ol>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
     <section class="legal-hero">
         <div class="legal-hero__container">
@@ -68,7 +82,7 @@ include 'partials/_header.php';
             </div>
         </div>
     </section>
-            
+    
     <section class="legal-content">
         <div class="legal-content__container">
             <div class="legal-content__grid">
@@ -158,7 +172,7 @@ include 'partials/_header.php';
                         <h2 class="legal-card__title">3. Disclaimer</h2>
                     </div>
                     <div class="legal-card__content">
-                        <p>The materials on SingBD's website are provided on an 'as is' basis. SingBD makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+                <p>The materials on SingBD's website are provided on an 'as is' basis. SingBD makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
                     </div>
                 </div>
 

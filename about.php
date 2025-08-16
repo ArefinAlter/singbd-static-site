@@ -1,10 +1,24 @@
 <?php
 $page_title = "About Us";
+$page_description = "Learn about SingBD - a dynamic buying house in Singapore with 10+ years of experience in sourcing high-quality knitwear, woven garments, outerwear, and functional apparel. Sister concern of Fakir Apparels Ltd.";
+$page_keywords = "about SingBD, buying house Singapore, garment sourcing, textile manufacturing, Fakir Apparels, knitwear sourcing, woven garments, outerwear, functional apparel, 10 years experience, global partners, quality assurance";
+$canonical_url = "https://singbd.com/about.php";
 require_once 'config.php';
 include 'partials/_header.php';
 ?>
 
 <main class="main">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbs__container">
+            <ol class="breadcrumbs__nav">
+                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
+                <li><span class="breadcrumbs__separator">/</span></li>
+                <li><span class="breadcrumbs__current">About Us</span></li>
+            </ol>
+        </div>
+    </nav>
+    
     <!-- About Section (matching homepage structure) -->
     <section class="about" id="about">
         <div class="about__container">
