@@ -397,55 +397,107 @@ include 'partials/_header.php';
         <div class="categories__container">
             <h2 class="section__title">Product Categories</h2>
             
-            <div class="categories__grid">
-                <div class="category__item" data-category="t-shirt">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/67123b9373b289c270dd4edf_Shirt.png" alt="T-shirt" class="category__icon-img">
+            <div class="categories__content">
+                <!-- Left Column - Categories -->
+                <div class="categories__sidebar">
+                    <div class="categories__list">
+                        <div class="category__item category__item--active" data-category="woven-tops">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Woven_Tops.svg" alt="Woven Tops" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Woven Tops</h3>
+                        </div>
+                        <div class="category__item" data-category="coats-jackets">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Coats_Jackets.svg" alt="Coats & Jackets" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Coats & Jackets</h3>
+                        </div>
+                        <div class="category__item" data-category="sportswear">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Sportswear.svg" alt="Sportswear" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Sportswear</h3>
+                        </div>
+                        <div class="category__item" data-category="woven-bottoms">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Woven_Bottoms.svg" alt="Woven Bottoms" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Woven Bottoms</h3>
+                        </div>
+                        <div class="category__item" data-category="knitwear">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Knitwear.svg" alt="Knitwear" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Knitwear</h3>
+                        </div>
+                        <div class="category__item" data-category="homeware">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Homewear.svg" alt="Homeware" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Homeware</h3>
+                        </div>
+                        <div class="category__item" data-category="handicrafts">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Handicraft.svg" alt="Handicrafts" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Handicrafts</h3>
+                        </div>
+                        <div class="category__item" data-category="accessories">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Accessories.svg" alt="Accessories" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Accessories</h3>
+                        </div>
                     </div>
-                    <h3 class="category__title">T-shirt</h3>
                 </div>
-                <div class="category__item" data-category="jacket">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/67175b2e9a179330cd55b091_A-6.png" alt="Jacket" class="category__icon-img">
+                
+                <!-- Right Column - Product Display -->
+                <div class="categories__display">
+                    <div class="categories__product-info">
+                        <h3 class="categories__product-title">Woven Tops</h3>
+                        <p class="categories__product-description">High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.</p>
                     </div>
-                    <h3 class="category__title">Jacket</h3>
-                </div>
-                <div class="category__item" data-category="polo-shirt">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/67175aaf13725e16569eca32_C-3.png" alt="Polo Shirt" class="category__icon-img">
+                    
+                    <div class="categories__gallery">
+                        <div class="categories__gallery-slider">
+                            <div class="categories__gallery-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/Woven_Top1.jpg" alt="Woven Tops 1" class="categories__gallery-image">
+                            </div>
+                            <div class="categories__gallery-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/Woven_Top2.jpg" alt="Woven Tops 2" class="categories__gallery-image">
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Controls -->
+                        <button class="categories__gallery-nav categories__gallery-nav--prev">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 18l-6-6 6-6"/>
+                            </svg>
+                        </button>
+                        <button class="categories__gallery-nav categories__gallery-nav--next">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18l6-6-6-6"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Dot Indicators -->
+                        <div class="categories__gallery-controls">
+                            <div class="categories__gallery-dot categories__gallery-dot--active"></div>
+                            <div class="categories__gallery-dot"></div>
+                        </div>
                     </div>
-                    <h3 class="category__title">Polo Shirt</h3>
                 </div>
-                <div class="category__item" data-category="vest">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/67175a663d9a425749bfa7d9_C-5.png" alt="Vest" class="category__icon-img">
-                    </div>
-                    <h3 class="category__title">Vest</h3>
-                </div>
-                <div class="category__item" data-category="tie">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/67123c086cafc61cfaa3acc8_Magnifying glass.png" alt="Tie" class="category__icon-img">
-                    </div>
-                    <h3 class="category__title">Tie</h3>
-                </div>
-                <div class="category__item" data-category="ladies-vest">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/67123b94552a03b62618572d_Pen.png" alt="Ladies Vest" class="category__icon-img">
-                    </div>
-                    <h3 class="category__title">Ladies Vest</h3>
-                </div>
-                <div class="category__item" data-category="trousers">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/6713665b5f170efb0fc92ebc_Untitled design (23).png" alt="Trousers" class="category__icon-img">
-                    </div>
-                    <h3 class="category__title">Trousers</h3>
-                </div>
-                <div class="category__item" data-category="shorts">
-                    <div class="category__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/671366877b8e1b5fed85dd30_Untitled (40 x 40 px).png" alt="Shorts" class="category__icon-img">
-                    </div>
-                    <h3 class="category__title">Shorts</h3>
-                </div>
+            </div>
+            
+            <!-- View All Products Button -->
+            <div class="categories__cta">
+                <a href="<?php echo $baseUrl; ?>/products.php" class="categories__cta-button">
+                    View All Products
+                    <svg class="categories__cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>

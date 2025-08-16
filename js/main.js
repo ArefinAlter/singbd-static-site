@@ -263,10 +263,9 @@ function initWhatWeDoTabs() {
 // Product Categories
 function initProductCategories() {
     const categoryItems = document.querySelectorAll('.category__item');
-    const categoryTitle = document.querySelector('.products__category-title');
-    const categoryDescription = document.querySelector('.products__category-description');
-    const categoryFeatures = document.querySelector('.products__features');
-    const galleryGrid = document.querySelector('.products__gallery-grid');
+    const productTitle = document.querySelector('.categories__product-title');
+    const productDescription = document.querySelector('.categories__product-description');
+    const galleryGrid = document.querySelector('.categories__gallery');
     
     if (categoryItems.length === 0) return;
     
@@ -275,121 +274,67 @@ function initProductCategories() {
         'woven-tops': {
             title: 'Woven Tops',
             description: 'High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.',
-            features: [
-                'Premium cotton and silk blends',
-                'Professional and casual styles',
-                'Sustainable manufacturing'
-            ],
             images: [
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg',
-                '/images/671762cccb51d83fc75c936d_Front Center up Blue knitting.jpg'
+                'Woven_Top1.jpg',
+                'Woven_Top2.jpg'
             ]
         },
         'coats-jackets': {
             title: 'Coats & Jackets',
             description: 'Stylish and functional outerwear for all seasons. From lightweight jackets to heavy winter coats.',
-            features: [
-                'Weather-resistant materials',
-                'Contemporary designs',
-                'Durable construction'
-            ],
             images: [
-                '/images/67175b2e9a179330cd55b091_A-6.png',
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg'
+                'Coats_Jacket1.jpg',
+                'Coats_Jacket2.jpg'
             ]
         },
         'sportswear': {
             title: 'Sportswear',
             description: 'Performance-driven athletic wear designed for comfort and functionality during physical activities.',
-            features: [
-                'Moisture-wicking fabrics',
-                'Flexible and breathable',
-                'Performance-oriented design'
-            ],
             images: [
-                '/images/67123b94552a03b62618572d_Pen.png',
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg'
+                'Sportswear1.jpg',
+                'Sportswear2.jpg',
+                'Sportswear3.jpg'
             ]
         },
         'woven-bottoms': {
             title: 'Woven Bottoms',
             description: 'Classic and contemporary bottom wear including trousers, pants, and skirts.',
-            features: [
-                'Comfortable fit',
-                'Versatile styling',
-                'Quality craftsmanship'
-            ],
             images: [
-                '/images/67123c086cafc61cfaa3acc8_Magnifying glass.png',
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg'
+                'Woven_Bottoms1.jpg',
+                'Woven_Bottoms2.jpg'
             ]
         },
         'knitwear': {
             title: 'Knitwear',
             description: 'Soft and comfortable knit garments perfect for layering and everyday wear.',
-            features: [
-                'Soft, breathable materials',
-                'Versatile layering pieces',
-                'Comfortable fit'
-            ],
             images: [
-                '/images/6713665b5f170efb0fc92ebc_Untitled design (23).png',
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg'
+                'Knitwear1.jpg',
+                'Knitwear2.jpg'
             ]
         },
         'homeware': {
             title: 'Homeware',
             description: 'Beautiful and functional home textiles and accessories for modern living.',
-            features: [
-                'Premium home textiles',
-                'Elegant designs',
-                'Quality materials'
-            ],
             images: [
-                '/images/671366877b8e1b5fed85dd30_Untitled (40 x 40 px).png',
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg'
+                'Homewear1.jpg',
+                'Homewear2.jpg'
             ]
         },
         'handicrafts': {
             title: 'Handicrafts',
             description: 'Artisanal handcrafted items showcasing traditional craftsmanship and unique designs.',
-            features: [
-                'Handcrafted quality',
-                'Traditional techniques',
-                'Unique designs'
-            ],
             images: [
-                '/images/67123b9373b289c270dd4edf_Shirt.png',
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg'
+                'Handicrafts1.jpg',
+                'Handicrafts2.jpg'
             ]
         },
         'accessories': {
             title: 'Accessories',
             description: 'Stylish accessories to complement any outfit and enhance personal style.',
-            features: [
-                'Trendy designs',
-                'Quality materials',
-                'Versatile styling'
-            ],
             images: [
-                '/images/67123b94552a03b62618572d_Pen.png',
-                '/images/671232c93c967b1f9989734d_ADSC_6605.jpg',
-                '/images/671232c97d20587cf7b75155_ADSC_6579.jpg',
-                '/images/671232c98bb146c1180f9b13_ADSC_6548.jpg'
+                'Accessories1.jpeg',
+                'Accessories2.jpg',
+                'Accessories3.jpg'
             ]
         }
     };
@@ -399,28 +344,37 @@ function initProductCategories() {
         if (!data) return;
         
         // Update title and description
-        if (categoryTitle) categoryTitle.textContent = data.title;
-        if (categoryDescription) categoryDescription.textContent = data.description;
+        if (productTitle) productTitle.textContent = data.title;
+        if (productDescription) productDescription.textContent = data.description;
         
-        // Update features
-        if (categoryFeatures) {
-            categoryFeatures.innerHTML = data.features.map(feature => `
-                <div class="products__feature">
-                    <svg class="products__feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 12l2 2 4-4"/>
-                    </svg>
-                    <span>${feature}</span>
-                </div>
-            `).join('');
-        }
+
         
-        // Update gallery
+        // Update gallery slider
         if (galleryGrid) {
-            galleryGrid.innerHTML = data.images.map((image, index) => `
-                <div class="products__gallery-item">
-                    <img src="${image}" alt="${data.title} ${index + 1}" class="products__gallery-image">
-                </div>
-            `).join('');
+            const slider = galleryGrid.querySelector('.categories__gallery-slider');
+            const controls = galleryGrid.querySelector('.categories__gallery-controls');
+            
+            if (slider) {
+                slider.innerHTML = data.images.map((image, index) => `
+                    <div class="categories__gallery-slide">
+                        <img src="/singbd-static-site/images/${image}" alt="${data.title} ${index + 1}" class="categories__gallery-image">
+                    </div>
+                `).join('');
+            }
+            
+            if (controls) {
+                controls.innerHTML = data.images.map((_, index) => `
+                    <div class="categories__gallery-dot ${index === 0 ? 'categories__gallery-dot--active' : ''}" data-slide="${index}"></div>
+                `).join('');
+            }
+            
+            // Reset slider position
+            if (slider) {
+                slider.style.transform = 'translateX(0)';
+            }
+            
+            // Reinitialize slider functionality
+            initCategorySlider();
         }
     }
     
@@ -437,6 +391,71 @@ function initProductCategories() {
             // Update product display
             updateProductDisplay(category);
         });
+    });
+    
+    // Initialize slider for first category
+    initCategorySlider();
+}
+
+// Category Slider Functionality
+function initCategorySlider() {
+    const slider = document.querySelector('.categories__gallery-slider');
+    const dots = document.querySelectorAll('.categories__gallery-dot');
+    const prevBtn = document.querySelector('.categories__gallery-nav--prev');
+    const nextBtn = document.querySelector('.categories__gallery-nav--next');
+    
+    if (!slider || dots.length === 0) return;
+    
+    let currentSlide = 0;
+    const totalSlides = dots.length;
+    
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('categories__gallery-dot--active', index === currentSlide);
+        });
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+    
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+    }
+    
+    // Event listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+    
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+    
+    // Auto-slide
+    let autoSlideInterval = setInterval(nextSlide, 5000);
+    
+    // Pause auto-slide on hover
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        autoSlideInterval = setInterval(nextSlide, 5000);
     });
 }
 
