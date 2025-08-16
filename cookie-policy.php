@@ -1,9 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "Cookie Policy";
 $page_description = "SingBD Cookie Policy - Learn how we use cookies and tracking technologies to improve your experience on our website. We are committed to transparency in cookie usage.";
 $page_keywords = "cookie policy, cookies, tracking technologies, SingBD cookies, website cookies, cookie management";
-$canonical_url = "https://singbd.com/cookie-policy.php";
-require_once 'config.php';
+$canonical_url = $baseUrl . "/cookie-policy.php";
 include 'partials/_header.php';
 ?>
 

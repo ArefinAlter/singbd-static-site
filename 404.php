@@ -1,8 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "Page Not Found";
 $page_description = "The page you're looking for doesn't exist. Return to SingBD's homepage for apparel sourcing solutions.";
-$canonical_url = "https://singbd.com/404.php";
-require_once 'config.php';
+$page_keywords = "404 error, page not found, SingBD error page";
+$canonical_url = $baseUrl . "/404.php";
 include 'partials/_header.php';
 ?>
 

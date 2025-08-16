@@ -4,8 +4,16 @@
  * Central configuration file for the website
  */
 
-// Base URL for the project (change this when deploying to production)
-$baseUrl = "/singbd-static-site";
+// Base URL for the project (auto-detect environment)
+if ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === '127.0.0.1') {
+    // Local development
+    $baseUrl = "/singbd-static-site";
+} else {
+    // Production (auto-detect domain)
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'];
+    $baseUrl = $protocol . '://' . $host;
+}
 
 // Site settings
 $site_title = "SingBD - Quality Garments & Textiles";

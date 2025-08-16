@@ -14,14 +14,14 @@ require_once __DIR__ . '/../config.php';
     <meta name="keywords" content="<?php echo isset($page_keywords) ? $page_keywords : 'garments, textiles, manufacturing, Bangladesh, sustainable fashion, apparel sourcing, knitwear, woven garments, outerwear, functional apparel, homeware, accessories, handicrafts'; ?>">
     <meta name="author" content="SingBD">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="<?php echo isset($canonical_url) ? $canonical_url : 'https://singbd.com' . $_SERVER['REQUEST_URI']; ?>">
+    <link rel="canonical" href="<?php echo isset($canonical_url) ? $canonical_url : $baseUrl . (isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/'); ?>">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="<?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?>">
     <meta property="og:description" content="<?php echo isset($page_description) ? $page_description : 'Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide.'; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo isset($canonical_url) ? $canonical_url : 'https://singbd.com' . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="og:image" content="https://singbd.com/images/SingBD-logo-Final-01.png">
+    <meta property="og:url" content="<?php echo isset($canonical_url) ? $canonical_url : $baseUrl . (isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/'); ?>">
+    <meta property="og:image" content="<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png">
     <meta property="og:site_name" content="SingBD">
     <meta property="og:locale" content="en_US">
     
@@ -29,7 +29,7 @@ require_once __DIR__ . '/../config.php';
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?>">
     <meta name="twitter:description" content="<?php echo isset($page_description) ? $page_description : 'Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide.'; ?>">
-    <meta name="twitter:image" content="https://singbd.com/images/SingBD-logo-Final-01.png">
+    <meta name="twitter:image" content="<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo $baseUrl; ?>/images/favicon.ico">
@@ -52,6 +52,18 @@ require_once __DIR__ . '/../config.php';
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'page_title': '<?php echo isset($page_title) ? $page_title : "Home"; ?>',
+            'page_location': window.location.href
+        });
+    </script>
+    
     <title><?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?></title>
     
     <!-- Structured Data -->
@@ -60,8 +72,8 @@ require_once __DIR__ . '/../config.php';
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "SingBD",
-        "url": "https://singbd.com",
-        "logo": "https://singbd.com/images/SingBD-logo-Final-01.png",
+        "url": "<?php echo $baseUrl; ?>",
+        "logo": "<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png",
         "description": "Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide for apparel sourcing solutions.",
         "foundingDate": "2014",
         "address": {

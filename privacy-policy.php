@@ -1,9 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "Privacy Policy";
 $page_description = "SingBD Privacy Policy - Learn how we collect, use, and protect your personal information. We are committed to transparency and data protection in accordance with international standards.";
 $page_keywords = "privacy policy, data protection, personal information, SingBD privacy, GDPR compliance, data security, information collection";
-$canonical_url = "https://singbd.com/privacy-policy.php";
-require_once 'config.php';
+$canonical_url = $baseUrl . "/privacy-policy.php";
 include 'partials/_header.php';
 ?>
 

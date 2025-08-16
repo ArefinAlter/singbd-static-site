@@ -1,8 +1,9 @@
 <?php
+require_once 'config.php';
 $page_title = "Server Error";
 $page_description = "We're experiencing technical difficulties. Please try again later or contact SingBD support.";
-$canonical_url = "https://singbd.com/500.php";
-require_once 'config.php';
+$page_keywords = "500 error, server error, SingBD error page";
+$canonical_url = $baseUrl . "/500.php";
 include 'partials/_header.php';
 ?>
 
