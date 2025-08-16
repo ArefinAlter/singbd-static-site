@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForms();
     initProductFilters();
     initSmoothScrolling();
-    initWhatsAppPopover();
+
     initAboutImageSlider();
     initWhatWeDoTabs();
     initProductCategories();
@@ -1104,22 +1104,7 @@ function initSmoothScrolling() {
     });
 }
 
-// WhatsApp Popover
-function initWhatsAppPopover() {
-    const whatsappPopover = document.getElementById('whatsappPopover');
-    
-    if (whatsappPopover) {
-        // Show popover after 5 seconds
-        setTimeout(() => {
-            whatsappPopover.style.display = 'block';
-        }, 5000);
-        
-        // Hide popover when clicked
-        whatsappPopover.addEventListener('click', function() {
-            this.style.display = 'none';
-        });
-    }
-}
+
 
 // Animations
 function initAnimations() {

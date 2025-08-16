@@ -63,16 +63,11 @@ require_once __DIR__ . '/../config.php';
         </div>
     </footer>
 
-    <!-- WhatsApp Popover -->
-    <div class="whatsapp-popover" id="whatsappPopover">
-        <a href="https://wa.me/8801234567890" target="_blank" class="whatsapp-popover__link">
-            <span class="whatsapp-popover__icon">💬</span>
-            <span class="whatsapp-popover__text">Chat with us</span>
-        </a>
-    </div>
+
 
     <!-- JavaScript -->
     <script src="<?php echo $baseUrl; ?>/js/main.js?v=<?php echo time(); ?>"></script>
     <script src="<?php echo $baseUrl; ?>/js/world-map.js"></script>
+    <script src="<?php echo $baseUrl; ?>/js/chat-widget.js"></script>
 </body>
 </html>

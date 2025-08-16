@@ -2301,33 +2301,314 @@ p {
     color: var(--neutral-color);
 }
 
-/* WhatsApp Popover */
-.whatsapp-popover {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* Chat Widget - WhatsApp Style */
+.chat-widget {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.chat-widget__toggle {
     background: #25d366;
     color: white;
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
-    z-index: 1000;
-    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
     animation: slideInUp 0.3s ease;
 }
 
-.whatsapp-popover__link {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+.chat-widget__toggle:active {
+    transform: scale(0.95);
 }
 
-.whatsapp-popover__icon {
-    font-size: 1.5rem;
+.chat-widget--minimized .chat-widget__toggle {
+    display: flex;
 }
+
+.chat-widget__toggle:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+}
+
+.chat-widget__toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+.chat-widget__container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    display: none;
+    animation: slideInUp 0.3s ease;
+    position: absolute;
+    bottom: 0; /* Position from bottom instead of top */
+    right: 70px; /* Position to the left of the button */
+    z-index: 1001;
+    width: 350px;
+    max-height: 500px; /* Limit maximum height */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .chat-widget {
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+    
+    .chat-widget__container {
+        width: 300px;
+        max-height: 400px;
+        right: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-widget {
+        bottom: 10px !important;
+        right: 10px !important;
+    }
+    
+    .chat-widget__container {
+        width: 280px;
+        max-height: 350px;
+        right: 70px;
+    }
+}
+
+.chat-widget--open .chat-widget__container {
+    display: block;
+}
+
+.chat-widget--minimized .chat-widget__container {
+    display: none;
+}
+
+.chat-widget__header {
+    background: #075e54;
+    color: white;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-widget__header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-widget__avatar {
+    width: 40px;
+    height: 40px;
+    background: #128c7e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-widget__avatar svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.chat-widget__header-text h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chat-widget__status {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.chat-widget__header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.chat-widget__whatsapp-btn,
+.chat-widget__minimize-btn,
+.chat-widget__close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.chat-widget__whatsapp-btn:hover,
+.chat-widget__minimize-btn:hover,
+.chat-widget__close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.chat-widget__whatsapp-btn svg,
+.chat-widget__minimize-btn svg,
+.chat-widget__close-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.chat-widget__whatsapp-btn svg {
+    color: #25d366;
+}
+
+.chat-widget__body {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-widget__messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background: #e5ddd5;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.chat-widget__message {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-widget__message--sent {
+    align-items: flex-end;
+}
+
+.chat-widget__message--received {
+    align-items: flex-start;
+}
+
+.chat-widget__message-content {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 18px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.chat-widget__message--sent .chat-widget__message-content {
+    background: #dcf8c6;
+    color: #000;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-widget__message--received .chat-widget__message-content {
+    background: white;
+    color: #000;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat-widget__message-text {
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+.chat-widget__message-time {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-top: 4px;
+    text-align: right;
+}
+
+.chat-widget__quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.chat-widget__quick-reply {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #075e54;
+}
+
+.chat-widget__quick-reply:hover {
+    background: #f0f0f0;
+    border-color: #075e54;
+}
+
+.chat-widget__input-area {
+    padding: 12px 16px;
+    background: #f0f0f0;
+    border-top: 1px solid #ddd;
+}
+
+.chat-widget__input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.chat-widget__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: transparent;
+}
+
+.chat-widget__input::placeholder {
+    color: #999;
+}
+
+.chat-widget__send-btn {
+    background: #25d366;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.chat-widget__send-btn:hover {
+    background: #128c7e;
+}
+
+.chat-widget__send-btn svg {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+
 
 @keyframes slideInUp {
     from {
