@@ -72,7 +72,7 @@ require_once __DIR__ . '/../config.php';
     </div>
 
     <!-- JavaScript -->
-    <script src="<?php echo $baseUrl; ?>/js/main.js"></script>
+    <script src="<?php echo $baseUrl; ?>/js/main.js?v=<?php echo time(); ?>"></script>
     <script src="<?php echo $baseUrl; ?>/js/world-map.js"></script>
 </body>
 </html>

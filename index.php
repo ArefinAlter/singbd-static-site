@@ -255,54 +255,138 @@ include 'partials/_header.php';
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="services__container">
-            <div class="services__header">
+    <!-- What We Do Section -->
+    <section class="what-we-do" id="services">
+        <div class="what-we-do__container">
+            <div class="what-we-do__header">
                 <h2 class="section__title">What We Do</h2>
-                <p class="section__subtitle">Your End-to-End Apparel Partner</p>
+                <p class="section__subtitle">Comprehensive solutions across sourcing, quality control, and cross-border business</p>
             </div>
-
-            <div class="services__grid">
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M2 12h20"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
+            
+            <!-- Tab Navigation -->
+            <div class="what-we-do__tabs">
+                <button class="what-we-do__tab what-we-do__tab--active" data-tab="sourcing">
+                    <img src="<?php echo $baseUrl; ?>/images/Sourcing.png" alt="Sourcing" class="what-we-do__tab-icon">
+                    <span>Sourcing</span>
+                </button>
+                <button class="what-we-do__tab" data-tab="qa-qc">
+                    <img src="<?php echo $baseUrl; ?>/images/QA_QC_Audit.png" alt="QA, QC & Audit" class="what-we-do__tab-icon">
+                    <span>QA, QC & Audit</span>
+                </button>
+                <button class="what-we-do__tab" data-tab="cross-border">
+                    <img src="<?php echo $baseUrl; ?>/images/cross_border_business.png" alt="Cross Border" class="what-we-do__tab-icon">
+                    <span>Cross Border</span>
+                </button>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="what-we-do__content">
+                <!-- Sourcing Tab -->
+                <div class="what-we-do__panel what-we-do__panel--active" id="sourcing">
+                    <div class="what-we-do__grid">
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Factory_introduction.png" alt="Factory Introduction">
+                            </div>
+                            <h3 class="what-we-do__card-title">Factory Introduction</h3>
+                            <p class="what-we-do__card-description">
+                                With 20+ years of experience, SingBD connects you with top factories that meet your specific needs, ensuring quality and reliability for all your manufacturing requirements.
+                            </p>
+                        </div>
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Product_development.png" alt="Product Development">
+                            </div>
+                            <h3 class="what-we-do__card-title">Product Development</h3>
+                            <p class="what-we-do__card-description">
+                                We transform your concepts into reality with expert guidance. From design to production, we refine ideas, source materials, and manage manufacturing, ensuring seamless execution.
+                            </p>
+                        </div>
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Costing.png" alt="Costing">
+                            </div>
+                            <h3 class="what-we-do__card-title">Costing</h3>
+                            <p class="what-we-do__card-description">
+                                We collaborate with factories to provide accurate pricing based on your specifications. We work with your target price to achieve optimal cost-efficiency and value.
+                            </p>
+                        </div>
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Merchendising.png" alt="Merchandising">
+                            </div>
+                            <h3 class="what-we-do__card-title">Merchandising</h3>
+                            <p class="what-we-do__card-description">
+                                We manage sampling, approvals, production planning, and shipping documentation to deliver comprehensive final landed pricing and approval samples.
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="service__title">Sourcing</h3>
-                    <p class="service__description">Find the perfect manufacturers for your apparel needs with our extensive global network.</p>
                 </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
+                
+                <!-- QA, QC & Audit Tab -->
+                <div class="what-we-do__panel" id="qa-qc">
+                    <div class="what-we-do__grid what-we-do__grid--three">
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/QA_QC.png" alt="Quality Control">
+                            </div>
+                            <h3 class="what-we-do__card-title">Quality Control</h3>
+                            <p class="what-we-do__card-description">
+                                We have a team of experienced QA and QC professionals. We provide in-line and final inspection services to ensure your expectations are consistently exceeded.
+                            </p>
+                        </div>
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/factory_audit.png" alt="Factory Assessments">
+                            </div>
+                            <h3 class="what-we-do__card-title">Factory Assessments</h3>
+                            <p class="what-we-do__card-description">
+                                We perform comprehensive audit visits to factories to evaluate social and environmental compliance levels. We produce detailed reports and Corrective Action Plans (CAP).
+                            </p>
+                        </div>
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Compliance_audit.png" alt="Compliance Audit">
+                            </div>
+                            <h3 class="what-we-do__card-title">Compliance Audit</h3>
+                            <p class="what-we-do__card-description">
+                                We conduct thorough compliance audits ensuring adherence to international standards, labor regulations, and ethical manufacturing practices, providing comprehensive compliance certification.
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="service__title">QA, QC, Audits</h3>
-                    <p class="service__description">Comprehensive quality assurance and control processes to ensure product excellence.</p>
                 </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M1 3h15v13H1z"/>
-                            <path d="M16 8h4l3 3v5h-7V8z"/>
-                        </svg>
+                
+                <!-- Cross Border Tab -->
+                <div class="what-we-do__panel" id="cross-border">
+                    <div class="what-we-do__grid what-we-do__grid--three">
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Consulting.png" alt="Consulting">
+                            </div>
+                            <h3 class="what-we-do__card-title">Consulting</h3>
+                            <p class="what-we-do__card-description">
+                                We provide strategic consulting services for factories, brands, and investors looking to establish manufacturing facilities, offices, or other business activities in the region.
+                            </p>
+                        </div>
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Staff_Search.png" alt="Staff Search & Hosting">
+                            </div>
+                            <h3 class="what-we-do__card-title">Staff Search & Hosting</h3>
+                            <p class="what-we-do__card-description">
+                                We help you find qualified staff to work in Vietnam and provide comprehensive hosting services for your team members throughout their assignment in the region.
+                            </p>
+                        </div>
+                        <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="what-we-do__card-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Business_set_up.png" alt="Business Set-Up">
+                            </div>
+                            <h3 class="what-we-do__card-title">Business Set-Up</h3>
+                            <p class="what-we-do__card-description">
+                                We help companies establish their businesses in Vietnam and Cambodia, managing everything from legal setup to staff recruitment, ensuring smooth and successful market entry.
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="service__title">Cross Border</h3>
-                    <p class="service__description">Seamless international logistics and supply chain management across borders.</p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service__title">Factory Introduction</h3>
-                    <p class="service__description">Connect with verified and certified manufacturing partners worldwide.</p>
                 </div>
             </div>
         </div>

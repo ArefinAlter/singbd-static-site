@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initWhatsAppPopover();
     initAboutImageSlider();
-    initServicesTabs();
+    initWhatWeDoTabs();
     initProductCategories();
     initAnimations();
     initHeroMapPoints();
@@ -129,29 +129,135 @@ function initAboutImageSlider() {
     startAutoSlide();
 }
 
-// Services Tabs
-function initServicesTabs() {
-    const tabs = document.querySelectorAll('.services__tab');
-    const panels = document.querySelectorAll('.services__panel');
+// What We Do Tabs Functionality
+function initWhatWeDoTabs() {
+    console.log('=== WHAT WE DO TABS INITIALIZATION ===');
+    const tabs = document.querySelectorAll('.what-we-do__tab');
+    const panels = document.querySelectorAll('.what-we-do__panel');
     
-    if (tabs.length === 0 || panels.length === 0) return;
+    console.log('Tabs found:', tabs.length);
+    console.log('Panels found:', panels.length);
     
+    if (tabs.length === 0 || panels.length === 0) {
+        console.error('No tabs or panels found!');
+        return;
+    }
+    
+    // Animation timings
+    const PANEL_TRANSITION_DELAY = 200;
+    const CARD_STAGGER_DELAY = 100;
+    
+    function activateTab(targetTab, clickedTabElement) {
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('what-we-do__tab--active'));
+        
+        // Add active class to clicked tab
+        clickedTabElement.classList.add('what-we-do__tab--active');
+        
+        // Hide all panels first
+        panels.forEach(p => {
+            p.classList.remove('what-we-do__panel--active');
+            // Reset card animations
+            const cards = p.querySelectorAll('.what-we-do__card');
+            cards.forEach((card, index) => {
+                card.style.animation = 'none';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(40px)';
+            });
+        });
+        
+        // Show target panel after a short delay
+        setTimeout(() => {
+            const targetPanel = document.getElementById(targetTab);
+            if (targetPanel) {
+                targetPanel.classList.add('what-we-do__panel--active');
+                
+                // Animate cards with staggered delays
+                const cards = targetPanel.querySelectorAll('.what-we-do__card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.animation = `cardSlideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards`;
+                        card.style.animationDelay = `${index * CARD_STAGGER_DELAY}ms`;
+                    }, index * CARD_STAGGER_DELAY);
+                });
+                
+                // Re-trigger AOS animations for the new panel
+                if (typeof AOS !== 'undefined') {
+                    setTimeout(() => {
+                        AOS.refresh();
+                    }, 300);
+                }
+            }
+        }, PANEL_TRANSITION_DELAY);
+    }
+    
+    // Initialize first tab
+    if (tabs.length > 0) {
+        tabs[0].classList.add('what-we-do__tab--active');
+    }
+    if (panels.length > 0) {
+        panels[0].classList.add('what-we-do__panel--active');
+    }
+    
+    // Add click handlers
     tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const targetPanel = this.dataset.tab;
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetTab = this.getAttribute('data-tab');
             
-            // Remove active class from all tabs and panels
-            tabs.forEach(t => t.classList.remove('services__tab--active'));
-            panels.forEach(p => p.classList.remove('services__panel--active'));
+            // Don't do anything if this tab is already active
+            if (this.classList.contains('what-we-do__tab--active')) {
+                return;
+            }
             
-            // Add active class to clicked tab and corresponding panel
-            this.classList.add('services__tab--active');
-            const activePanel = document.querySelector(`[data-panel="${targetPanel}"]`);
-            if (activePanel) {
-                activePanel.classList.add('services__panel--active');
+            // Add ripple effect
+            createRippleEffect(this, e);
+            
+            // Activate the tab
+            activateTab(targetTab, this);
+        });
+        
+        // Add keyboard support
+        tab.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
             }
         });
     });
+    
+    // Ripple effect for tab clicks
+    function createRippleEffect(element, event) {
+        const rect = element.getBoundingClientRect();
+        const ripple = document.createElement('span');
+        const size = Math.max(rect.width, rect.height);
+        const x = event.clientX - rect.left - size / 2;
+        const y = event.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s ease-out;
+            pointer-events: none;
+        `;
+        
+        element.style.position = 'relative';
+        element.style.overflow = 'hidden';
+        element.appendChild(ripple);
+        
+        // Remove ripple after animation
+        setTimeout(() => {
+            if (ripple.parentNode) {
+                ripple.parentNode.removeChild(ripple);
+            }
+        }, 600);
+    }
 }
 
 // Product Categories

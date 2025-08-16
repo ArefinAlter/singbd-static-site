@@ -26,7 +26,7 @@ require_once __DIR__ . '/../config.php';
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="<?php echo $baseUrl; ?>/css/dynamic-style.php">
     
     <!-- D3.js and TopoJSON -->
