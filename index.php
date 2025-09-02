@@ -139,29 +139,23 @@ include 'partials/_header.php';
                 <!-- Left Column - Image Slider -->
                 <div class="about__images">
                     <div class="about__image-slider">
-                        <div class="about__image-track">
-                            <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/about_us1.jpeg" alt="SingBD Team" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/about_us2.png" alt="Manufacturing Process" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/about_us3.jpg" alt="Quality Control" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/about_us4.jpg" alt="Production Facility" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/about_us5.jpg" alt="Global Partners" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/about_us6.jpg" alt="Sustainability" class="about__image">
-                            </div>
-                            <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/about_us7.jpg" alt="Innovation" class="about__image">
-                            </div>
-                        </div>
+                                                 <div class="about__image-track">
+                             <div class="about__image-slide">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0722.webp" alt="SingBD Team" class="about__image">
+                             </div>
+                             <div class="about__image-slide">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0612.webp" alt="Manufacturing Process" class="about__image">
+                             </div>
+                             <div class="about__image-slide">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0560.webp" alt="Quality Control" class="about__image">
+                             </div>
+                             <div class="about__image-slide">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0544.webp" alt="Production Facility" class="about__image">
+                             </div>
+                             <div class="about__image-slide">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0216.webp" alt="Global Partners" class="about__image">
+                             </div>
+                         </div>
                         <!-- Slider Controls -->
                         <button class="about__image-control about__image-control--prev" aria-label="Previous image">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -173,16 +167,14 @@ include 'partials/_header.php';
                                 <polyline points="9,18 15,12 9,6"></polyline>
                             </svg>
                         </button>
-                        <!-- Slider Indicators -->
-                        <div class="about__image-indicators">
-                            <button class="about__indicator about__indicator--active" data-slide="0"></button>
-                            <button class="about__indicator" data-slide="1"></button>
-                            <button class="about__indicator" data-slide="2"></button>
-                            <button class="about__indicator" data-slide="3"></button>
-                            <button class="about__indicator" data-slide="4"></button>
-                            <button class="about__indicator" data-slide="5"></button>
-                            <button class="about__indicator" data-slide="6"></button>
-                        </div>
+                                                 <!-- Slider Indicators -->
+                         <div class="about__image-indicators">
+                             <button class="about__indicator about__indicator--active" data-slide="0"></button>
+                             <button class="about__indicator" data-slide="1"></button>
+                             <button class="about__indicator" data-slide="2"></button>
+                             <button class="about__indicator" data-slide="3"></button>
+                             <button class="about__indicator" data-slide="4"></button>
+                         </div>
                     </div>
                 </div>
 
@@ -406,51 +398,63 @@ include 'partials/_header.php';
                     <div class="categories__list">
                         <div class="category__item category__item--active" data-category="woven-tops">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Woven_Tops.svg" alt="Woven Tops" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Tops.webp" alt="Woven Tops" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Woven Tops</h3>
                         </div>
-                        <div class="category__item" data-category="coats-jackets">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Coats_Jackets.svg" alt="Coats & Jackets" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Coats & Jackets</h3>
-                        </div>
-                        <div class="category__item" data-category="sportswear">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Sportswear.svg" alt="Sportswear" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Sportswear</h3>
-                        </div>
                         <div class="category__item" data-category="woven-bottoms">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Woven_Bottoms.svg" alt="Woven Bottoms" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Bottoms.webp" alt="Woven Bottoms" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Woven Bottoms</h3>
                         </div>
+                        <div class="category__item" data-category="coats-jackets">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Coats & Jackets.webp" alt="Coats & Jackets" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Coats & Jackets</h3>
+                        </div>
+                        <div class="category__item" data-category="denim">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Denim.webp" alt="Denim" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Denim</h3>
+                        </div>
                         <div class="category__item" data-category="knitwear">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Knitwear.svg" alt="Knitwear" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Knit Wear.webp" alt="Knitwear" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Knitwear</h3>
                         </div>
+                        <div class="category__item" data-category="sweater">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Accessories.webp" alt="Sweater" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Sweater</h3>
+                        </div>
+                        <div class="category__item" data-category="sportswear">
+                            <div class="category__icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Sports Wear.webp" alt="Sportswear" class="category__icon-img">
+                            </div>
+                            <h3 class="category__title">Sportswear</h3>
+                        </div>
                         <div class="category__item" data-category="homeware">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Homewear.svg" alt="Homeware" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Home Wear.webp" alt="Homeware" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Homeware</h3>
                         </div>
                         <div class="category__item" data-category="handicrafts">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Handicraft.svg" alt="Handicrafts" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Handicraft.webp" alt="Handicrafts" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Handicrafts</h3>
                         </div>
-                        <div class="category__item" data-category="accessories">
+                        <div class="category__item" data-category="workwear">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Accessories.svg" alt="Accessories" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Work Wear.webp" alt="Workwear" class="category__icon-img">
                             </div>
-                            <h3 class="category__title">Accessories</h3>
+                            <h3 class="category__title">Workwear</h3>
                         </div>
                     </div>
                 </div>
@@ -462,15 +466,142 @@ include 'partials/_header.php';
                         <p class="categories__product-description">High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.</p>
                     </div>
                     
-                    <div class="categories__gallery">
-                        <div class="categories__gallery-slider">
-                            <div class="categories__gallery-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/Woven_Top1.jpg" alt="Woven Tops 1" class="categories__gallery-image">
-                            </div>
-                            <div class="categories__gallery-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/Woven_Top2.jpg" alt="Woven Tops 2" class="categories__gallery-image">
-                            </div>
-                        </div>
+                                         <div class="categories__gallery">
+                         <div class="categories__gallery-slider">
+                             <!-- Woven Tops Images -->
+                             <div class="categories__gallery-slide" data-category="woven-tops">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp" alt="Woven Tops Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="woven-tops">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/dr bdxf.webp" alt="Woven Tops Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="woven-tops">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp" alt="Woven Tops Quality" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="woven-tops">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/_Z5A0814.webp" alt="Woven Tops Collection" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="woven-tops">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/_Z5A0200.webp" alt="Woven Tops Style" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Woven Bottoms Images -->
+                             <div class="categories__gallery-slide" data-category="woven-bottoms">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Bottom/safv.webp" alt="Woven Bottoms Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="woven-bottoms">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Bottom/pg nfv.webp" alt="Woven Bottoms Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="woven-bottoms">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Bottom/IMG_8297.webp" alt="Woven Bottoms Quality" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="woven-bottoms">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Bottom/111.webp" alt="Woven Bottoms Collection" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Coats & Jackets Images -->
+                             <div class="categories__gallery-slide" data-category="coats-jackets">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Coats & Jacket/_Z5A0220.webp" alt="Coats & Jackets Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="coats-jackets">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Coats & Jacket/_Z5A0203.webp" alt="Coats & Jackets Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="coats-jackets">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Coats & Jacket/_Z5A0203 (2).webp" alt="Coats & Jackets Quality" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Denim Images -->
+                             <div class="categories__gallery-slide" data-category="denim">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Denim/_Z5A0203.webp" alt="Denim Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="denim">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Denim/1dd08.webp" alt="Denim Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="denim">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Denim/108.webp" alt="Denim Quality" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="denim">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Denim/106wr.webp" alt="Denim Collection" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="denim">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Denim/106.webp" alt="Denim Style" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Knitwear Images -->
+                             <div class="categories__gallery-slide" data-category="knitwear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Knitwear/_Z5A0835.webp" alt="Knitwear Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="knitwear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Knitwear/_Z5A0233.webp" alt="Knitwear Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="knitwear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Knitwear/_Z5A0200.webp" alt="Knitwear Quality" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Sweater Images -->
+                             <div class="categories__gallery-slide" data-category="sweater">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sweater/fb dndb.webp" alt="Sweater Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="sweater">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sweater/bfb dbdxfb.webp" alt="Sweater Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="sweater">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sweater/_Z5A0724.webp" alt="Sweater Quality" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="sweater">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sweater/_Z5A0207.webp" alt="Sweater Collection" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="sweater">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sweater/Our Collection.webp" alt="Sweater Style" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="sweater">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sweater/111.webp" alt="Sweater Fashion" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Sportswear Images -->
+                             <div class="categories__gallery-slide" data-category="sportswear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sportswear/dsrgdb.webp" alt="Sportswear Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="sportswear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sportswear/_Z5A0225.webp" alt="Sportswear Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="sportswear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sportswear/244.webp" alt="Sportswear Quality" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Homeware Images -->
+                             <div class="categories__gallery-slide" data-category="homeware">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Homewear/sdbb.webp" alt="Homeware Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="homeware">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Homewear/fgvdxb.webp" alt="Homeware Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="homeware">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Homewear/afav s.webp" alt="Homeware Quality" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Handicrafts Images -->
+                             <div class="categories__gallery-slide" data-category="handicrafts">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Handicrafts/qefc.webp" alt="Handicrafts Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="handicrafts">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Handicrafts/arfa.webp" alt="Handicrafts Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="handicrafts">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Handicrafts/3w42.webp" alt="Handicrafts Quality" class="categories__gallery-image">
+                             </div>
+                             
+                             <!-- Workwear Images -->
+                             <div class="categories__gallery-slide" data-category="workwear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Workwear/wef.webp" alt="Workwear Manufacturing" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="workwear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Workwear/sfef.webp" alt="Workwear Process" class="categories__gallery-image">
+                             </div>
+                             <div class="categories__gallery-slide" data-category="workwear">
+                                 <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Workwear/q2.webp" alt="Workwear Quality" class="categories__gallery-image">
+                             </div>
+                         </div>
                         
                         <!-- Navigation Controls -->
                         <button class="categories__gallery-nav categories__gallery-nav--prev">
@@ -484,11 +615,10 @@ include 'partials/_header.php';
                             </svg>
                         </button>
                         
-                        <!-- Dot Indicators -->
-                        <div class="categories__gallery-controls">
-                            <div class="categories__gallery-dot categories__gallery-dot--active"></div>
-                            <div class="categories__gallery-dot"></div>
-                        </div>
+                                                 <!-- Dot Indicators -->
+                         <div class="categories__gallery-controls">
+                             <!-- Dots will be dynamically generated based on active category -->
+                         </div>
                     </div>
                 </div>
             </div>
