@@ -43,11 +43,6 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
     AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
-# Add WebP MIME type support
-<IfModule mod_mime.c>
-    AddType image/webp .webp
-</IfModule>
-
 # Browser caching
 <IfModule mod_expires.c>
     ExpiresActive on
@@ -57,7 +52,6 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
 </IfModule>

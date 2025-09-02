@@ -52,7 +52,7 @@ include 'partials/_header.php';
                 
                 <div class="certification__card" data-aos="fade-up" data-aos-delay="200">
                     <div class="certification__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/OEKO_TEX.png" alt="OEKO-TEX Standard 100" class="certification__img">
+                        <img src="<?php echo $baseUrl; ?>/images/higgindex.png" alt="OEKO-TEX Standard 100" class="certification__img">
                     </div>
                     <h3 class="certification__title">OEKO-TEX Standard 100</h3>
                     <div class="certification__status">Certified</div>
@@ -61,7 +61,7 @@ include 'partials/_header.php';
                 
                 <div class="certification__card" data-aos="fade-up" data-aos-delay="300">
                     <div class="certification__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/Better_Cotton_Initiative.png" alt="Better Cotton Initiative" class="certification__img">
+                        <img src="<?php echo $baseUrl; ?>/images/GOTS.png" alt="Better Cotton Initiative" class="certification__img">
                     </div>
                     <h3 class="certification__title">Better Cotton Initiative</h3>
                     <div class="certification__status">Member</div>
@@ -70,7 +70,7 @@ include 'partials/_header.php';
                 
                 <div class="certification__card" data-aos="fade-up" data-aos-delay="400">
                     <div class="certification__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/CradletoCradleLogo.jpg" alt="Cradle to Cradle" class="certification__img">
+                        <img src="<?php echo $baseUrl; ?>/images/higgindex.png" alt="Cradle to Cradle" class="certification__img">
                     </div>
                     <h3 class="certification__title">Cradle to Cradle</h3>
                     <div class="certification__status">Silver Level</div>

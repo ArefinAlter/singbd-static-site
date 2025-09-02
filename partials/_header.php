@@ -96,7 +96,7 @@ require_once __DIR__ . '/../config.php';
     }
     </script>
 </head>
-<body class="<?php echo isset($page_title) ? strtolower(str_replace(' ', '-', $page_title)) . '-page' : 'home-page'; ?>">
+<body>
     <!-- Header Navigation -->
     <header class="header">
         <nav class="nav">

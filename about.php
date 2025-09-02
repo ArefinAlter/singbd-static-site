@@ -29,19 +29,25 @@ include 'partials/_header.php';
                     <div class="about__image-slider">
                         <div class="about__image-track">
                             <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0722.webp" alt="SingBD Manufacturing Process" class="about__image">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us1.jpeg" alt="SingBD Team" class="about__image">
                             </div>
                             <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0612.webp" alt="Quality Control Process" class="about__image">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us2.png" alt="Manufacturing Process" class="about__image">
                             </div>
                             <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0560.webp" alt="Production Facility" class="about__image">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us3.jpg" alt="Quality Control" class="about__image">
                             </div>
                             <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0544.webp" alt="Global Partners" class="about__image">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us4.jpg" alt="Production Facility" class="about__image">
                             </div>
                             <div class="about__image-slide">
-                                <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Home Page Slides/_Z5A0216.webp" alt="Innovation and Sustainability" class="about__image">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us5.jpg" alt="Global Partners" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us6.jpg" alt="Sustainability" class="about__image">
+                            </div>
+                            <div class="about__image-slide">
+                                <img src="<?php echo $baseUrl; ?>/images/about_us7.jpg" alt="Innovation" class="about__image">
                             </div>
                         </div>
                         <!-- Slider Controls -->
@@ -62,6 +68,8 @@ include 'partials/_header.php';
                             <button class="about__indicator" data-slide="2"></button>
                             <button class="about__indicator" data-slide="3"></button>
                             <button class="about__indicator" data-slide="4"></button>
+                            <button class="about__indicator" data-slide="5"></button>
+                            <button class="about__indicator" data-slide="6"></button>
                         </div>
                     </div>
                 </div>

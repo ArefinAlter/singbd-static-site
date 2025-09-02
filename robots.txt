@@ -4,29 +4,15 @@ Allow: /
 # Sitemap
 Sitemap: https://singbd.com/sitemap.xml
 
-# Disallow admin areas and sensitive directories
+# Disallow admin areas (if any)
 Disallow: /admin/
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /logs/
-Disallow: /config/
-Disallow: /database/
-Disallow: /.git/
-Disallow: /vendor/
-Disallow: /node_modules/
 
-# Allow important static resources
+# Allow important files
 Allow: /css/
 Allow: /js/
 Allow: /images/
 Allow: /*.php
 Allow: /*.html
-
-# Allow specific important files
-Allow: /favicon.ico
-Allow: /manifest.json
-Allow: /robots.txt
-Allow: /sitemap.xml
-
-# Crawl-delay (optional - helps prevent server overload)
-Crawl-delay: 1
