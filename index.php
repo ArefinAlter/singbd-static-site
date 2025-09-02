@@ -398,25 +398,13 @@ include 'partials/_header.php';
                     <div class="categories__list">
                         <div class="category__item category__item--active" data-category="woven-tops">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Woven_Tops.svg" alt="Woven Tops" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Tops.webp" alt="Woven Tops" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Woven Tops</h3>
                         </div>
-                        <div class="category__item" data-category="coats-jackets">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Coats_Jackets.svg" alt="Coats & Jackets" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Coats & Jackets</h3>
-                        </div>
-                        <div class="category__item" data-category="sportswear">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Sportswear.svg" alt="Sportswear" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Sportswear</h3>
-                        </div>
                         <div class="category__item" data-category="woven-bottoms">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Woven_Bottoms.svg" alt="Woven Bottoms" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Bottoms.webp" alt="Woven Bottoms" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Woven Bottoms</h3>
                         </div>
@@ -434,7 +422,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="category__item" data-category="knitwear">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Knitwear.svg" alt="Knitwear" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Knit Wear.webp" alt="Knitwear" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Knitwear</h3>
                         </div>
@@ -452,19 +440,19 @@ include 'partials/_header.php';
                         </div>
                         <div class="category__item" data-category="homeware">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Homewear.svg" alt="Homeware" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Home Wear.webp" alt="Homeware" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Homeware</h3>
                         </div>
                         <div class="category__item" data-category="handicrafts">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Handicraft.svg" alt="Handicrafts" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Handicraft.webp" alt="Handicrafts" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Handicrafts</h3>
                         </div>
                         <div class="category__item" data-category="workwear">
                             <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/SVG/Accessories.svg" alt="Accessories" class="category__icon-img">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Work Wear.webp" alt="Workwear" class="category__icon-img">
                             </div>
                             <h3 class="category__title">Workwear</h3>
                         </div>
