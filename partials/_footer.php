@@ -12,7 +12,7 @@ require_once __DIR__ . '/../config.php';
         <div class="footer__container">
             <div class="footer__content">
                 <div class="footer__section">
-                    <img src="<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png" alt="SingBD Logo" class="footer__logo-img">
+                    <img src="<?php echo $baseUrl; ?>/images/Logo/SingBD logo Final.svg" alt="SingBD Logo" class="footer__logo-img">
                     <h3 class="footer__title">SingBD</h3>
                     <p class="footer__description">
                         Leading manufacturer of high-quality garments and textiles, committed to sustainable practices and innovation.
@@ -25,6 +25,7 @@ require_once __DIR__ . '/../config.php';
                         <li><a href="<?php echo $baseUrl; ?>/" class="footer__link">Home</a></li>
                         <li><a href="<?php echo $baseUrl; ?>/products.php" class="footer__link">Products</a></li>
                         <li><a href="<?php echo $baseUrl; ?>/about.php" class="footer__link">About</a></li>
+                        <li><a href="<?php echo $baseUrl; ?>/sustainability.php" class="footer__link">Sustainability</a></li>
                         <li><a href="<?php echo $baseUrl; ?>/contact.php" class="footer__link">Contact</a></li>
                     </ul>
                 </div>
@@ -95,7 +96,7 @@ require_once __DIR__ . '/../config.php';
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "SingBD",
-        "image": "<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png",
+        "image": "<?php echo $baseUrl; ?>/images/Logo/SingBD logo Final.svg",
         "description": "Leading manufacturer of high-quality garments and textiles, committed to sustainable practices and innovation.",
         "url": "<?php echo $baseUrl; ?>",
         "telephone": "+65-1234-5678",
