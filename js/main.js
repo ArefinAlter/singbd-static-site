@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initHeroMapPoints();
     initPartnerSlider();
+    
+    // Initialize products page functionality
+    initProductsPageCategorySwitching();
 });
 
 // Mobile Menu Toggle
@@ -486,13 +489,51 @@ function initProductCategories() {
                 'Website Visuals/Product Category Overview/Denim/108.webp'
             ]
         },
-        'accessories': {
-            title: 'Accessories',
-            description: 'Stylish accessories to complement any outfit and enhance personal style.',
+        'sweater': {
+            title: 'Sweater',
+            description: 'Premium sweater collection with intricate designs and superior quality materials.',
             images: [
-                'Accessories1.jpeg',
-                'Accessories2.jpg',
-                'Accessories3.jpg'
+                'Website Visuals/Product Category Overview/Sweater/fb dndb.webp',
+                'Website Visuals/Product Category Overview/Sweater/bfb dbdxfb.webp',
+                'Website Visuals/Product Category Overview/Sweater/_Z5A0724.webp',
+                'Website Visuals/Product Category Overview/Sweater/_Z5A0207.webp',
+                'Website Visuals/Product Category Overview/Sweater/Our Collection.webp',
+                'Website Visuals/Product Category Overview/Sweater/111.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Sweater/_Z5A0207.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Sweater/_Z5A0724.webp',
+                'Website Visuals/Product Category Overview/Sweater/111.webp'
+            ]
+        },
+        'workwear': {
+            title: 'Workwear',
+            description: 'Professional and safety wear. Durable, comfortable, and compliant with industry standards.',
+            images: [
+                'Website Visuals/Product Category Overview/Workwear/wef.webp',
+                'Website Visuals/Product Category Overview/Workwear/sfef.webp',
+                'Website Visuals/Product Category Overview/Workwear/q2.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Workwear/wef.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Workwear/sfef.webp',
+                'Website Visuals/Product Category Overview/Workwear/q2.webp'
+            ]
+        },
+        'denim': {
+            title: 'Denim',
+            description: 'Classic denim garments and accessories. Timeless style with modern comfort and durability.',
+            images: [
+                'Website Visuals/Product Category Overview/Denim/_Z5A0203.webp',
+                'Website Visuals/Product Category Overview/Denim/1dd08.webp',
+                'Website Visuals/Product Category Overview/Denim/108.webp',
+                'Website Visuals/Product Category Overview/Denim/106wr.webp',
+                'Website Visuals/Product Category Overview/Denim/106.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Denim/_Z5A0203.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Denim/1dd08.webp',
+                'Website Visuals/Product Category Overview/Denim/108.webp'
             ]
         }
     };
@@ -503,8 +544,6 @@ function initProductCategories() {
         // Update title and description
         if (productTitle) productTitle.textContent = data.title;
         if (productDescription) productDescription.textContent = data.description;
-        
-
         
         // Update gallery slider
         if (galleryGrid) {
@@ -745,6 +784,8 @@ function initQuickView() {
 
 // Category Slider Functionality
 function initCategorySlider() {
+
+    
     const slider = document.querySelector('.categories__gallery-slider');
     const dots = document.querySelectorAll('.categories__gallery-dot');
     const prevBtn = document.querySelector('.categories__gallery-nav--prev');
