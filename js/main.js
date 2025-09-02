@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
 
     initAboutImageSlider();
+    initAboutFeaturesTabs();
     initWhatWeDoTabs();
     initProductCategories();
     initProductsPage();
@@ -260,6 +261,70 @@ function initWhatWeDoTabs() {
             }
         }, 600);
     }
+}
+
+// About Features Tabs Functionality
+function initAboutFeaturesTabs() {
+    console.log('=== ABOUT FEATURES TABS INITIALIZATION ===');
+    const tabs = document.querySelectorAll('.about__feature-tab');
+    const photos = document.querySelectorAll('.about__feature-photo');
+    
+    console.log('About feature tabs found:', tabs.length);
+    console.log('About feature photos found:', photos.length);
+    
+    if (tabs.length === 0 || photos.length === 0) {
+        console.error('No about feature tabs or photos found!');
+        return;
+    }
+    
+    function activateTab(targetTab, clickedTabElement) {
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('about__feature-tab--active'));
+        
+        // Add active class to clicked tab
+        clickedTabElement.classList.add('about__feature-tab--active');
+        
+        // Hide all photos first
+        photos.forEach(p => p.classList.remove('about__feature-photo--active'));
+        
+        // Show target photo
+        const targetPhoto = document.getElementById(targetTab + '-photo');
+        if (targetPhoto) {
+            targetPhoto.classList.add('about__feature-photo--active');
+        }
+    }
+    
+    // Initialize first tab
+    if (tabs.length > 0) {
+        tabs[0].classList.add('about__feature-tab--active');
+    }
+    if (photos.length > 0) {
+        photos[0].classList.add('about__feature-photo--active');
+    }
+    
+    // Add click handlers
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Don't do anything if this tab is already active
+            if (this.classList.contains('about__feature-tab--active')) {
+                return;
+            }
+            
+            // Activate the tab
+            activateTab(targetTab, this);
+        });
+        
+        // Add keyboard support
+        tab.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
 }
 
 // Product Categories

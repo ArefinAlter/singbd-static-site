@@ -111,81 +111,39 @@ include 'partials/_header.php';
             <!-- What Sets Us Apart -->
             <div class="about__features-section">
                 <h3 class="about__features-title">What Sets Us Apart</h3>
-                <div class="about__features">
-                    <div class="about__feature feature-card-1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600">
-                        <div class="about__feature-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
-                        </div>
-                        <h3 class="about__feature-title">Timely</h3>
-                        <p class="about__feature-description">Fast and efficient delivery timelines</p>
+                <div class="about__features-container">
+                    <!-- Left Column - Tab Navigation -->
+                    <div class="about__features-tabs">
+                        <button class="about__feature-tab about__feature-tab--active" data-tab="timely">
+                            <h3 class="about__feature-tab-title">Timely</h3>
+                            <p class="about__feature-tab-description">Fast and efficient delivery timelines</p>
+                        </button>
+                        
+                        <button class="about__feature-tab" data-tab="ethical">
+                            <h3 class="about__feature-tab-title">Ethical</h3>
+                            <p class="about__feature-tab-description">Sustainable and responsible practices</p>
+                        </button>
+                        
+                        <button class="about__feature-tab" data-tab="quality">
+                            <h3 class="about__feature-tab-title">Quality</h3>
+                            <p class="about__feature-tab-description">Premium standards in every product</p>
+                        </button>
                     </div>
                     
-                    <div class="about__feature feature-card-2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600">
-                        <div class="about__feature-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
+                    <!-- Right Column - Photo Display -->
+                    <div class="about__features-photos">
+                        <div class="about__feature-photo about__feature-photo--active" id="timely-photo">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Timely.webp" alt="Timely Delivery" class="about__feature-photo-image">
                         </div>
-                        <h3 class="about__feature-title">Ethical</h3>
-                        <p class="about__feature-description">Sustainable and responsible practices</p>
-                    </div>
-                    
-                    <div class="about__feature feature-card-3" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="600">
-                        <div class="about__feature-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
+                        
+                        <div class="about__feature-photo" id="ethical-photo">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Ehical.webp" alt="Ethical Practices" class="about__feature-photo-image">
                         </div>
-                        <h3 class="about__feature-title">Quality</h3>
-                        <p class="about__feature-description">Premium standards in every product</p>
+                        
+                        <div class="about__feature-photo" id="quality-photo">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Quality.webp" alt="Quality Standards" class="about__feature-photo-image">
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sustainability Initiatives -->
-    <section class="sustainability-initiatives">
-        <div class="sustainability-initiatives__container">
-            <h2 class="section__title">Our Sustainability Initiatives</h2>
-            <div class="sustainability-initiatives__grid">
-                <div class="initiative__card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="initiative__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/GOTS.png" alt="GOTS Certified" class="initiative__img">
-                    </div>
-                    <h3 class="initiative__title">Green Manufacturing</h3>
-                    <p class="initiative__description">
-                        Implementing eco-friendly manufacturing processes and reducing waste generation across all our partner facilities.
-                    </p>
-                </div>
-                
-                <div class="initiative__card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="initiative__icon">
-                        <svg class="initiative__svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 6h18l-2 13H5L3 6z"/>
-                            <path d="M3 6l2-4h14l2 4"/>
-                            <circle cx="9" cy="20" r="1"/>
-                            <circle cx="20" cy="20" r="1"/>
-                        </svg>
-                    </div>
-                    <h3 class="initiative__title">Sustainable Materials</h3>
-                    <p class="initiative__description">
-                        Using sustainable and recycled materials in our production processes, prioritizing organic and eco-friendly fabrics.
-                    </p>
-                </div>
-                
-                <div class="initiative__card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="initiative__icon">
-                        <svg class="initiative__svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                        </svg>
-                    </div>
-                    <h3 class="initiative__title">Energy Efficiency</h3>
-                    <p class="initiative__description">
-                        Optimizing energy consumption and implementing renewable energy solutions in partnership with our manufacturing network.
-                    </p>
                 </div>
             </div>
         </div>

@@ -8,6 +8,31 @@ include 'partials/_header.php';
 ?>
 
 <main class="main">
+    <!-- Video Overview Section -->
+    <section class="video-overview" id="video-overview">
+        <div class="video-overview__container">
+            <div class="video-overview__content">
+                <div class="video-overview__video-container">
+                    <div class="video-overview__placeholder">
+                        <div class="video-overview__placeholder-icon">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </div>
+                        <p class="video-overview__placeholder-text">Video Coming Soon</p>
+                        <p class="video-overview__placeholder-description">Our company overview video will be available shortly</p>
+                    </div>
+                    <!-- Video will be added here when available -->
+                    <!-- <video class="video-overview__video" controls>
+                        <source src="path-to-video.mp4" type="video/mp4">
+                        <source src="path-to-video.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero__background">
@@ -70,60 +95,35 @@ include 'partials/_header.php';
                  <div class="partners__track">
                      <!-- First set of logos -->
                      <div class="partners__slide">
-                         <a href="https://www.auchan.com" target="_blank" class="partner__logo" data-partner="auchan">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/auchan.png" alt="Auchan" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="camel-active">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/Camel-Actice.webp" alt="Camel Active" class="partner__image">
                          </a>
-                         <a href="https://www.cna.com" target="_blank" class="partner__logo" data-partner="cna">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/cna.png" alt="CNA" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="denim-flower">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/Denim-&-Flower.webp" alt="Denim & Flower" class="partner__image">
                          </a>
-                         <a href="https://www.dragonsourcing.com" target="_blank" class="partner__logo" data-partner="dragon-sourcing">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/dragon_sourcing.png" alt="Dragon Sourcing" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="etos">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/ETOS.webp" alt="ETOS" class="partner__image">
                          </a>
-                         <a href="https://www.hm.com" target="_blank" class="partner__logo" data-partner="hm">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/HM-Logo.png" alt="H&M" class="partner__image">
-                         </a>
-                         <a href="https://www.inditex.com" target="_blank" class="partner__logo" data-partner="inditex">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/inditex.png" alt="Inditex" class="partner__image">
-                         </a>
-                         <a href="https://www.mudgear.com" target="_blank" class="partner__logo" data-partner="mudgear">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/mudgear.png" alt="MudGear" class="partner__image">
-                         </a>
-                         <a href="https://www.pullandbear.com" target="_blank" class="partner__logo" data-partner="pullnbear">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/pullnbear.png" alt="Pull&Bear" class="partner__image">
-                         </a>
-                         <a href="https://www.sears.com" target="_blank" class="partner__logo" data-partner="sears">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/sears.png" alt="Sears" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="etossa">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/ETOSSA.webp" alt="ETOSSA" class="partner__image">
                          </a>
                      </div>
                      
-                     <!-- Gap spacer to maintain consistent spacing -->
-                     <div class="partners__gap-spacer"></div>
+
                      
                      <!-- Duplicate set for seamless loop -->
                      <div class="partners__slide">
-                         <a href="https://www.auchan.com" target="_blank" class="partner__logo" data-partner="auchan">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/auchan.png" alt="Auchan" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="camel-active">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/Camel-Actice.webp" alt="Camel Active" class="partner__image">
                          </a>
-                         <a href="https://www.cna.com" target="_blank" class="partner__logo" data-partner="cna">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/cna.png" alt="CNA" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="denim-flower">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/Denim-&-Flower.webp" alt="Denim & Flower" class="partner__image">
                          </a>
-                         <a href="https://www.dragonsourcing.com" target="_blank" class="partner__logo" data-partner="dragon-sourcing">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/dragon_sourcing.png" alt="Dragon Sourcing" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="etos">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/ETOS.webp" alt="ETOS" class="partner__image">
                          </a>
-                         <a href="https://www.hm.com" target="_blank" class="partner__logo" data-partner="hm">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/HM-Logo.png" alt="H&M" class="partner__image">
-                         </a>
-                         <a href="https://www.inditex.com" target="_blank" class="partner__logo" data-partner="inditex">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/inditex.png" alt="Inditex" class="partner__image">
-                         </a>
-                         <a href="https://www.mudgear.com" target="_blank" class="partner__logo" data-partner="mudgear">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/mudgear.png" alt="MudGear" class="partner__image">
-                         </a>
-                         <a href="https://www.pullandbear.com" target="_blank" class="partner__logo" data-partner="pullnbear">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/pullnbear.png" alt="Pull&Bear" class="partner__image">
-                         </a>
-                         <a href="https://www.sears.com" target="_blank" class="partner__logo" data-partner="sears">
-                             <img src="<?php echo $baseUrl; ?>/images/optimized/sears.png" alt="Sears" class="partner__image">
+                         <a href="#" class="partner__logo" data-partner="etossa">
+                             <img src="<?php echo $baseUrl; ?>/images/Icon/Client List Logo/ETOSSA.webp" alt="ETOSSA" class="partner__image">
                          </a>
                      </div>
                  </div>
@@ -223,35 +223,38 @@ include 'partials/_header.php';
             <!-- What Sets Us Apart -->
             <div class="about__features-section">
                 <h3 class="about__features-title">What Sets Us Apart</h3>
-                <div class="about__features">
-                    <div class="about__feature feature-card-1" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600">
-                        <div class="about__feature-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
-                        </div>
-                        <h3 class="about__feature-title">Timely</h3>
-                        <p class="about__feature-description">Fast and efficient delivery timelines</p>
+                <div class="about__features-container">
+                    <!-- Left Column - Tab Navigation -->
+                    <div class="about__features-tabs">
+                        <button class="about__feature-tab about__feature-tab--active" data-tab="timely">
+                            <h3 class="about__feature-tab-title">Timely</h3>
+                            <p class="about__feature-tab-description">Fast and efficient delivery timelines</p>
+                        </button>
+                        
+                        <button class="about__feature-tab" data-tab="ethical">
+                            <h3 class="about__feature-tab-title">Ethical</h3>
+                            <p class="about__feature-tab-description">Sustainable and responsible practices</p>
+                        </button>
+                        
+                        <button class="about__feature-tab" data-tab="quality">
+                            <h3 class="about__feature-tab-title">Quality</h3>
+                            <p class="about__feature-tab-description">Premium standards in every product</p>
+                        </button>
                     </div>
                     
-                    <div class="about__feature feature-card-2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600">
-                        <div class="about__feature-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
+                    <!-- Right Column - Photo Display -->
+                    <div class="about__features-photos">
+                        <div class="about__feature-photo about__feature-photo--active" id="timely-photo">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Timely.webp" alt="Timely Delivery" class="about__feature-photo-image">
                         </div>
-                        <h3 class="about__feature-title">Ethical</h3>
-                        <p class="about__feature-description">Sustainable and responsible practices</p>
-                    </div>
-                    
-                    <div class="about__feature feature-card-3" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="600">
-                        <div class="about__feature-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
+                        
+                        <div class="about__feature-photo" id="ethical-photo">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Ehical.webp" alt="Ethical Practices" class="about__feature-photo-image">
                         </div>
-                        <h3 class="about__feature-title">Quality</h3>
-                        <p class="about__feature-description">Premium standards in every product</p>
+                        
+                        <div class="about__feature-photo" id="quality-photo">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Quality.webp" alt="Quality Standards" class="about__feature-photo-image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -269,15 +272,12 @@ include 'partials/_header.php';
             <!-- Tab Navigation -->
             <div class="what-we-do__tabs">
                 <button class="what-we-do__tab what-we-do__tab--active" data-tab="sourcing">
-                    <img src="<?php echo $baseUrl; ?>/images/Sourcing.png" alt="Sourcing" class="what-we-do__tab-icon">
                     <span>Sourcing</span>
                 </button>
                 <button class="what-we-do__tab" data-tab="qa-qc">
-                    <img src="<?php echo $baseUrl; ?>/images/QA_QC_Audit.png" alt="QA, QC & Audit" class="what-we-do__tab-icon">
                     <span>QA, QC & Audit</span>
                 </button>
                 <button class="what-we-do__tab" data-tab="cross-border">
-                    <img src="<?php echo $baseUrl; ?>/images/cross_border_business.png" alt="Cross Border" class="what-we-do__tab-icon">
                     <span>Cross Border</span>
                 </button>
             </div>
@@ -289,7 +289,7 @@ include 'partials/_header.php';
                     <div class="what-we-do__grid">
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="100">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Factory_introduction.png" alt="Factory Introduction">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/Factory-Intoduction.webp" alt="Factory Introduction">
                             </div>
                             <h3 class="what-we-do__card-title">Factory Introduction</h3>
                             <p class="what-we-do__card-description">
@@ -298,7 +298,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="200">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Product_development.png" alt="Product Development">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/product-development.webp" alt="Product Development">
                             </div>
                             <h3 class="what-we-do__card-title">Product Development</h3>
                             <p class="what-we-do__card-description">
@@ -307,7 +307,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="300">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Costing.png" alt="Costing">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/costing.webp" alt="Costing">
                             </div>
                             <h3 class="what-we-do__card-title">Costing</h3>
                             <p class="what-we-do__card-description">
@@ -316,7 +316,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="400">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Merchendising.png" alt="Merchandising">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/merchandising.webp" alt="Merchandising">
                             </div>
                             <h3 class="what-we-do__card-title">Merchandising</h3>
                             <p class="what-we-do__card-description">
@@ -331,7 +331,7 @@ include 'partials/_header.php';
                     <div class="what-we-do__grid what-we-do__grid--three">
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="100">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/QA_QC.png" alt="Quality Control">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/QC.webp" alt="Quality Control">
                             </div>
                             <h3 class="what-we-do__card-title">Quality Control</h3>
                             <p class="what-we-do__card-description">
@@ -340,7 +340,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="200">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/factory_audit.png" alt="Factory Assessments">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/Factory-Assesment.webp" alt="Factory Assessments">
                             </div>
                             <h3 class="what-we-do__card-title">Factory Assessments</h3>
                             <p class="what-we-do__card-description">
@@ -349,7 +349,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="300">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Compliance_audit.png" alt="Compliance Audit">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/Audit.webp" alt="Compliance Audit">
                             </div>
                             <h3 class="what-we-do__card-title">Compliance Audit</h3>
                             <p class="what-we-do__card-description">
@@ -364,7 +364,7 @@ include 'partials/_header.php';
                     <div class="what-we-do__grid what-we-do__grid--three">
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="100">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Consulting.png" alt="Consulting">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/consultation.webp" alt="Consulting">
                             </div>
                             <h3 class="what-we-do__card-title">Consulting</h3>
                             <p class="what-we-do__card-description">
@@ -373,7 +373,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="200">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Staff_Search.png" alt="Staff Search & Hosting">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/Staff-Search-&-Hosting.webp" alt="Staff Search & Hosting">
                             </div>
                             <h3 class="what-we-do__card-title">Staff Search & Hosting</h3>
                             <p class="what-we-do__card-description">
@@ -382,7 +382,7 @@ include 'partials/_header.php';
                         </div>
                         <div class="what-we-do__card" data-aos="fade-up" data-aos-delay="300">
                             <div class="what-we-do__card-icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Business_set_up.png" alt="Business Set-Up">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Services/Business-Set-Up.webp" alt="Business Set-Up">
                             </div>
                             <h3 class="what-we-do__card-title">Business Set-Up</h3>
                             <p class="what-we-do__card-description">

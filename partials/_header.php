@@ -21,7 +21,7 @@ require_once __DIR__ . '/../config.php';
     <meta property="og:description" content="<?php echo isset($page_description) ? $page_description : 'Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide.'; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo isset($canonical_url) ? $canonical_url : $baseUrl . (isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/'); ?>">
-    <meta property="og:image" content="<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png">
+    <meta property="og:image" content="<?php echo $baseUrl; ?>/images/Logo/SingBD logo Final.svg">
     <meta property="og:site_name" content="SingBD">
     <meta property="og:locale" content="en_US">
     
@@ -29,7 +29,7 @@ require_once __DIR__ . '/../config.php';
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo isset($page_title) ? $page_title . ' - SingBD' : 'SingBD - Quality Garments & Textiles'; ?>">
     <meta name="twitter:description" content="<?php echo isset($page_description) ? $page_description : 'Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide.'; ?>">
-    <meta name="twitter:image" content="<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png">
+    <meta name="twitter:image" content="<?php echo $baseUrl; ?>/images/Logo/SingBD logo Final.svg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo $baseUrl; ?>/images/favicon.ico">
@@ -73,7 +73,7 @@ require_once __DIR__ . '/../config.php';
         "@type": "Organization",
         "name": "SingBD",
         "url": "<?php echo $baseUrl; ?>",
-        "logo": "<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png",
+        "logo": "<?php echo $baseUrl; ?>/images/Logo/SingBD logo Final.svg",
         "description": "Leading manufacturer of high-quality garments and textiles. Connect with global brands and premium manufacturers worldwide for apparel sourcing solutions.",
         "foundingDate": "2014",
         "address": {
@@ -103,7 +103,7 @@ require_once __DIR__ . '/../config.php';
             <div class="nav__container">
                 <div class="nav__logo">
                     <a href="<?php echo $baseUrl; ?>/" class="nav__logo-link">
-                        <img src="<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png" alt="SingBD Logo" class="nav__logo-img">
+                        <img src="<?php echo $baseUrl; ?>/images/Logo/SingBD logo Final.svg" alt="SingBD Logo" class="nav__logo-img">
                     </a>
                 </div>
                 
@@ -116,6 +116,9 @@ require_once __DIR__ . '/../config.php';
                     </li>
                     <li class="nav__item">
                         <a href="<?php echo $baseUrl; ?>/about.php" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="<?php echo $baseUrl; ?>/sustainability.php" class="nav__link">Sustainability</a>
                     </li>
                     <li class="nav__item">
                         <a href="<?php echo $baseUrl; ?>/contact.php" class="nav__link">Contact</a>
