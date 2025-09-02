@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initHeroMapPoints();
     initPartnerSlider();
+    
+    // Initialize products page functionality
+    initProductsPageCategorySwitching();
 });
 
 // Mobile Menu Toggle
@@ -327,6 +330,158 @@ function initAboutFeaturesTabs() {
     });
 }
 
+// Product data - Global for access by multiple functions
+const productData = {
+        'woven-tops': {
+            title: 'Woven Tops',
+            description: 'High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.',
+            images: [
+                'Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp',
+                'Website Visuals/Product Category Overview/Woven Top/dr bdxf.webp',
+                'Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp',
+                'Website Visuals/Product Category Overview/Woven Top/_Z5A0814.webp',
+                'Website Visuals/Product Category Overview/Woven Top/_Z5A0200.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Woven Top/dr bdxf.webp',
+                'Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp'
+            ]
+        },
+        'coats-jackets': {
+            title: 'Coats & Jackets',
+            description: 'Stylish and functional outerwear for all seasons. From lightweight jackets to heavy winter coats.',
+            images: [
+                'Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0220.webp',
+                'Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0203.webp',
+                'Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0203 (2).webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0220.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0203.webp',
+                'Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0203 (2).webp'
+            ]
+        },
+        'sportswear': {
+            title: 'Sportswear',
+            description: 'Performance-driven athletic wear designed for comfort and functionality during physical activities.',
+            images: [
+                'Website Visuals/Product Category Overview/Sportswear/dsrgdb.webp',
+                'Website Visuals/Product Category Overview/Sportswear/_Z5A0225.webp',
+                'Website Visuals/Product Category Overview/Sportswear/244.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Sportswear/dsrgdb.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Sportswear/_Z5A0225.webp',
+                'Website Visuals/Product Category Overview/Sportswear/244.webp'
+            ]
+        },
+        'woven-bottoms': {
+            title: 'Woven Bottoms',
+            description: 'Classic and contemporary bottom wear including trousers, pants, and skirts.',
+            images: [
+                'Website Visuals/Product Category Overview/Woven Bottom/safv.webp',
+                'Website Visuals/Product Category Overview/Woven Bottom/pg nfv.webp',
+                'Website Visuals/Product Category Overview/Woven Bottom/IMG_8297.webp',
+                'Website Visuals/Product Category Overview/Woven Bottom/111.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Woven Bottom/safv.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Woven Bottom/pg nfv.webp',
+                'Website Visuals/Product Category Overview/Woven Bottom/IMG_8297.webp'
+            ]
+        },
+        'knitwear': {
+            title: 'Knitwear',
+            description: 'Soft and comfortable knit garments perfect for layering and everyday wear.',
+            images: [
+                'Website Visuals/Product Category Overview/Knitwear/_Z5A0835.webp',
+                'Website Visuals/Product Category Overview/Knitwear/_Z5A0233.webp',
+                'Website Visuals/Product Category Overview/Knitwear/_Z5A0200.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Knitwear/_Z5A0835.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Knitwear/_Z5A0233.webp',
+                'Website Visuals/Product Category Overview/Knitwear/_Z5A0200.webp'
+            ]
+        },
+        'homeware': {
+            title: 'Homeware',
+            description: 'Beautiful and functional home textiles and accessories for modern living.',
+            images: [
+                'Website Visuals/Product Category Overview/Homewear/sdbb.webp',
+                'Website Visuals/Product Category Overview/Homewear/fgvdxb.webp',
+                'Website Visuals/Product Category Overview/Homewear/afav s.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Homewear/sdbb.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Homewear/fgvdxb.webp',
+                'Website Visuals/Product Category Overview/Homewear/afav s.webp'
+            ]
+        },
+        'handicrafts': {
+            title: 'Handicrafts',
+            description: 'Artisanal handcrafted items showcasing traditional craftsmanship and unique designs.',
+            images: [
+                'Website Visuals/Product Category Overview/Handicrafts/qefc.webp',
+                'Website Visuals/Product Category Overview/Handicrafts/arfa.webp',
+                'Website Visuals/Product Category Overview/Handicrafts/3w42.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Handicrafts/qefc.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Handicrafts/arfa.webp',
+                'Website Visuals/Product Category Overview/Handicrafts/3w42.webp'
+            ]
+        },
+        'sweater': {
+            title: 'Sweater',
+            description: 'Premium sweater collection with intricate designs and superior quality materials.',
+            images: [
+                'Website Visuals/Product Category Overview/Sweater/fb dndb.webp',
+                'Website Visuals/Product Category Overview/Sweater/bfb dbdxfb.webp',
+                'Website Visuals/Product Category Overview/Sweater/_Z5A0724.webp',
+                'Website Visuals/Product Category Overview/Sweater/_Z5A0207.webp',
+                'Website Visuals/Product Category Overview/Sweater/Our Collection.webp',
+                'Website Visuals/Product Category Overview/Sweater/111.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Sweater/_Z5A0207.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Sweater/_Z5A0724.webp',
+                'Website Visuals/Product Category Overview/Sweater/111.webp'
+            ]
+        },
+        'workwear': {
+            title: 'Workwear',
+            description: 'Professional and safety wear. Durable, comfortable, and compliant with industry standards.',
+            images: [
+                'Website Visuals/Product Category Overview/Workwear/wef.webp',
+                'Website Visuals/Product Category Overview/Workwear/sfef.webp',
+                'Website Visuals/Product Category Overview/Workwear/q2.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Workwear/wef.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Workwear/sfef.webp',
+                'Website Visuals/Product Category Overview/Workwear/q2.webp'
+            ]
+        },
+        'denim': {
+            title: 'Denim',
+            description: 'Classic denim garments and accessories. Timeless style with modern comfort and durability.',
+            images: [
+                'Website Visuals/Product Category Overview/Denim/_Z5A0203.webp',
+                'Website Visuals/Product Category Overview/Denim/1dd08.webp',
+                'Website Visuals/Product Category Overview/Denim/108.webp',
+                'Website Visuals/Product Category Overview/Denim/106wr.webp',
+                'Website Visuals/Product Category Overview/Denim/106.webp'
+            ],
+            overviewPhoto: 'Website Visuals/Product Category Overview/Denim/_Z5A0203.webp',
+            bottomPhotos: [
+                'Website Visuals/Product Category Overview/Denim/1dd08.webp',
+                'Website Visuals/Product Category Overview/Denim/108.webp'
+            ]
+        }
+    };
+
 // Product Categories
 function initProductCategories() {
     const categoryItems = document.querySelectorAll('.category__item');
@@ -336,76 +491,6 @@ function initProductCategories() {
     
     if (categoryItems.length === 0) return;
     
-    // Product data
-    const productData = {
-        'woven-tops': {
-            title: 'Woven Tops',
-            description: 'High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.',
-            images: [
-                'Woven_Top1.jpg',
-                'Woven_Top2.jpg'
-            ]
-        },
-        'coats-jackets': {
-            title: 'Coats & Jackets',
-            description: 'Stylish and functional outerwear for all seasons. From lightweight jackets to heavy winter coats.',
-            images: [
-                'Coats_Jacket1.jpg',
-                'Coats_Jacket2.jpg'
-            ]
-        },
-        'sportswear': {
-            title: 'Sportswear',
-            description: 'Performance-driven athletic wear designed for comfort and functionality during physical activities.',
-            images: [
-                'Sportswear1.jpg',
-                'Sportswear2.jpg',
-                'Sportswear3.jpg'
-            ]
-        },
-        'woven-bottoms': {
-            title: 'Woven Bottoms',
-            description: 'Classic and contemporary bottom wear including trousers, pants, and skirts.',
-            images: [
-                'Woven_Bottoms1.jpg',
-                'Woven_Bottoms2.jpg'
-            ]
-        },
-        'knitwear': {
-            title: 'Knitwear',
-            description: 'Soft and comfortable knit garments perfect for layering and everyday wear.',
-            images: [
-                'Knitwear1.jpg',
-                'Knitwear2.jpg'
-            ]
-        },
-        'homeware': {
-            title: 'Homeware',
-            description: 'Beautiful and functional home textiles and accessories for modern living.',
-            images: [
-                'Homewear1.jpg',
-                'Homewear2.jpg'
-            ]
-        },
-        'handicrafts': {
-            title: 'Handicrafts',
-            description: 'Artisanal handcrafted items showcasing traditional craftsmanship and unique designs.',
-            images: [
-                'Handicrafts1.jpg',
-                'Handicrafts2.jpg'
-            ]
-        },
-        'accessories': {
-            title: 'Accessories',
-            description: 'Stylish accessories to complement any outfit and enhance personal style.',
-            images: [
-                'Accessories1.jpeg',
-                'Accessories2.jpg',
-                'Accessories3.jpg'
-            ]
-        }
-    };
-    
     function updateProductDisplay(category) {
         const data = productData[category];
         if (!data) return;
@@ -413,8 +498,6 @@ function initProductCategories() {
         // Update title and description
         if (productTitle) productTitle.textContent = data.title;
         if (productDescription) productDescription.textContent = data.description;
-        
-
         
         // Update gallery slider
         if (galleryGrid) {
@@ -466,119 +549,14 @@ function initProductCategories() {
 
 // Initialize Products Page functionality
 function initProductsPage() {
-    const categoryTabs = document.querySelectorAll('.products-hero__category-tab');
-    const overviewPhotos = document.querySelectorAll('.products-hero__overview-photo');
-    const productCategories = document.querySelectorAll('.product-category');
-    const overviewPhoto1 = document.getElementById('overview-photo-1');
-    const overviewPhoto2 = document.getElementById('overview-photo-2');
-
-    if (categoryTabs.length === 0) return; // Not on products page
-
-    function switchCategory(categoryName) {
-        // Update active tab
-        categoryTabs.forEach(tab => {
-            tab.classList.remove('products-hero__category-tab--active');
-            if (tab.dataset.category === categoryName) {
-                tab.classList.add('products-hero__category-tab--active');
-            }
-        });
-
-        // Update overview photo
-        overviewPhotos.forEach(photo => {
-            photo.classList.remove('products-hero__overview-photo--active');
-            if (photo.id === `${categoryName}-overview`) {
-                photo.classList.add('products-hero__overview-photo--active');
-            }
-        });
-
-        // Update product category display
-        productCategories.forEach(category => {
-            category.classList.remove('product-category--active');
-            if (category.id === `${categoryName}-products`) {
-                category.classList.add('product-category--active');
-            }
-        });
-
-        // Update bottom overview photos based on category
-        updateOverviewPhotos(categoryName);
+    // Check if we're on the products page
+    if (!window.location.pathname.includes('products.php')) {
+        return; // Not on products page
     }
 
-    function updateOverviewPhotos(categoryName) {
-        // Update bottom overview photos based on selected category
-        const overviewPhoto1 = document.getElementById('overview-photo-1');
-        const overviewPhoto2 = document.getElementById('overview-photo-2');
-        
-        if (overviewPhoto1 && overviewPhoto2) {
-            // Define different overview photos for each category
-            const categoryPhotos = {
-                'woven-tops': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Woven Top/dr bdxf.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp'
-                },
-                'coats-jackets': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Coats & Jacket/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Coats & Jacket/dr bdxf.webp'
-                },
-                'sportswear': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Sportswear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Sportswear/dr bdxf.webp'
-                },
-                'woven-bottoms': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Woven Bottom/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Woven Bottom/dr bdxf.webp'
-                },
-                'knitwear': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Knitwear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Knitwear/dr bdxf.webp'
-                },
-                'homeware': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Homewear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Homewear/dr bdxf.webp'
-                },
-                'handicrafts': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Handicrafts/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Handicrafts/dr bdxf.webp'
-                },
-                'accessories': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Workwear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Workwear/dr bdxf.webp'
-                }
-            };
-            
-            const photos = categoryPhotos[categoryName];
-            if (photos) {
-                overviewPhoto1.querySelector('img').src = photos.photo1;
-                overviewPhoto2.querySelector('img').src = photos.photo2;
-                
-                // Update alt text
-                overviewPhoto1.querySelector('img').alt = `${categoryName.replace('-', ' ')} Manufacturing Process 1`;
-                overviewPhoto2.querySelector('img').alt = `${categoryName.replace('-', ' ')} Manufacturing Process 2`;
-            }
-        }
-    }
-
-    // Add click event listeners to category tabs
-    categoryTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const categoryName = tab.dataset.category;
-            switchCategory(categoryName);
-        });
-
-        // Add keyboard support
-        tab.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                const categoryName = tab.dataset.category;
-                switchCategory(categoryName);
-            }
-        });
-    });
-
-    // Initialize with first category active
-    if (categoryTabs.length > 0) {
-        const firstCategory = categoryTabs[0].dataset.category;
-        switchCategory(firstCategory);
-    }
+    // Since we're now using the products-hero structure,
+    // the category switching is handled by initProductsPageCategorySwitching
+    console.log('Products page initialized');
 }
 
 // Quick View Modal
@@ -652,6 +630,8 @@ function initQuickView() {
 
 // Category Slider Functionality
 function initCategorySlider() {
+
+    
     const slider = document.querySelector('.categories__gallery-slider');
     const dots = document.querySelectorAll('.categories__gallery-dot');
     const prevBtn = document.querySelector('.categories__gallery-nav--prev');
@@ -1141,4 +1121,239 @@ function initPartnerSlider() {
             animationPaused = false;
         }
     });
+}
+
+// Initialize bottom overview photos navigation
+function initOverviewPhotosNavigation() {
+    const prevBtn = document.getElementById('overview-prev-btn');
+    const nextBtn = document.getElementById('overview-next-btn');
+    const overviewPhoto1 = document.getElementById('overview-photo-1');
+    const overviewPhoto2 = document.getElementById('overview-photo-2');
+    
+    if (!prevBtn || !nextBtn || !overviewPhoto1 || !overviewPhoto2) return;
+    
+    let currentPhotoIndex = 0;
+    let currentCategory = 'woven-tops';
+    
+    function updateOverviewPhotos(category) {
+        currentCategory = category;
+        const data = productData[category];
+        if (!data || !data.images || data.images.length < 2) return;
+        
+        // Show first two photos
+        if (data.images.length >= 1) {
+            overviewPhoto1.src = `images/${data.images[1]}`;
+            overviewPhoto1.alt = `${data.title} Manufacturing Process 1`;
+        }
+        
+        if (data.images.length >= 2) {
+            overviewPhoto2.src = `images/${data.images[2]}`;
+            overviewPhoto2.alt = `${data.title} Manufacturing Process 2`;
+        }
+        
+        currentPhotoIndex = 0;
+        updateNavigationButtons();
+    }
+    
+    function updateNavigationButtons() {
+        const data = productData[currentCategory];
+        if (!data || !data.images) return;
+        
+        const totalPhotos = data.images.length;
+        
+        // Show/hide navigation buttons based on available photos
+        if (totalPhotos <= 2) {
+            prevBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+        } else {
+            prevBtn.style.display = 'flex';
+            nextBtn.style.display = 'flex';
+        }
+    }
+    
+    function showNextPhotos() {
+        const data = productData[currentCategory];
+        if (!data || !data.images) return;
+        
+        const totalPhotos = data.images.length;
+        if (totalPhotos <= 2) return;
+        
+        currentPhotoIndex = (currentPhotoIndex + 2) % totalPhotos;
+        
+        // Show next two photos
+        const photo1Index = currentPhotoIndex;
+        const photo2Index = (currentPhotoIndex + 1) % totalPhotos;
+        
+        overviewPhoto1.src = `images/${data.images[photo1Index]}`;
+        overviewPhoto1.alt = `${data.title} Manufacturing Process ${photo1Index + 1}`;
+        
+        overviewPhoto2.src = `images/${data.images[photo2Index]}`;
+        overviewPhoto2.alt = `${data.title} Manufacturing Process ${photo2Index + 1}`;
+    }
+    
+    function showPrevPhotos() {
+        const data = productData[currentCategory];
+        if (!data || !data.images) return;
+        
+        const totalPhotos = data.images.length;
+        if (totalPhotos <= 2) return;
+        
+        currentPhotoIndex = (currentPhotoIndex - 2 + totalPhotos) % totalPhotos;
+        
+        // Show previous two photos
+        const photo1Index = currentPhotoIndex;
+        const photo2Index = (currentPhotoIndex + 1) % totalPhotos;
+        
+        overviewPhoto1.src = `images/${data.images[photo1Index]}`;
+        overviewPhoto1.alt = `${data.title} Manufacturing Process ${photo1Index + 1}`;
+        
+        overviewPhoto2.src = `images/${data.images[photo2Index]}`;
+        overviewPhoto2.alt = `${data.title} Manufacturing Process ${photo2Index + 1}`;
+    }
+    
+    // Event listeners
+    nextBtn.addEventListener('click', showNextPhotos);
+    prevBtn.addEventListener('click', showPrevPhotos);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            showNextPhotos();
+        } else if (e.key === 'ArrowLeft') {
+            showPrevPhotos();
+        }
+    });
+    
+    // Return the update function so it can be called from category switching
+    return updateOverviewPhotos;
+}
+
+// Products Page Category Switching Functionality
+function initProductsPageCategorySwitching() {
+    // Only run on products page
+    console.log('Current pathname:', window.location.pathname);
+    if (!window.location.pathname.includes('products.php')) {
+        console.log('Not on products page, pathname:', window.location.pathname);
+        return;
+    }
+    
+    console.log('Initializing products page category switching...');
+    
+    const categoryItems = document.querySelectorAll('.category__item');
+    const productTitle = document.querySelector('.categories__product-title');
+    const productDescription = document.querySelector('.categories__product-description');
+    const singlePhoto = document.querySelector('#category-single-photo');
+    const overviewSubtitle = document.querySelector('#category-overview-subtitle');
+    const overviewPhoto1 = document.querySelector('#overview-photo-1');
+    const overviewPhoto2 = document.querySelector('#overview-photo-2');
+    const productCategories = document.querySelectorAll('.product-category');
+    const categoryBreadcrumb = document.querySelector('#category-breadcrumb');
+    
+    console.log('Found elements:', {
+        categoryItems: categoryItems.length,
+        productTitle: !!productTitle,
+        productDescription: !!productDescription,
+        singlePhoto: !!singlePhoto,
+        overviewSubtitle: !!overviewSubtitle,
+        overviewPhoto1: !!overviewPhoto1,
+        overviewPhoto2: !!overviewPhoto2,
+        productCategories: productCategories.length,
+        categoryBreadcrumb: !!categoryBreadcrumb
+    });
+    
+    if (categoryItems.length === 0) {
+        console.log('No category items found');
+        return;
+    }
+    
+    function switchCategory(category) {
+        console.log('Switching to category:', category);
+        const data = productData[category];
+        if (!data) {
+            console.log('No data found for category:', category);
+            return;
+        }
+        
+        console.log('Category data:', data);
+        
+        // Update title and description
+        if (productTitle) {
+            productTitle.textContent = data.title;
+        }
+        if (productDescription) {
+            productDescription.textContent = data.description;
+        }
+        
+        // Update breadcrumb
+        if (categoryBreadcrumb) {
+            categoryBreadcrumb.textContent = data.title;
+        }
+        
+        // Update single photo (top section)
+        if (singlePhoto) {
+            singlePhoto.src = `images/${data.overviewPhoto}`;
+            singlePhoto.alt = `${data.title} Overview`;
+        }
+        
+        // Update overview subtitle
+        if (overviewSubtitle) {
+            overviewSubtitle.textContent = `Additional insights into our ${data.title.toLowerCase()} manufacturing process`;
+        }
+        
+        // Update bottom overview photos
+        if (overviewPhoto1 && overviewPhoto2 && data.bottomPhotos && data.bottomPhotos.length >= 2) {
+            overviewPhoto1.src = `images/${data.bottomPhotos[0]}`;
+            overviewPhoto1.alt = `${data.title} Manufacturing Process 1`;
+            
+            overviewPhoto2.src = `images/${data.bottomPhotos[1]}`;
+            overviewPhoto2.alt = `${data.title} Manufacturing Process 2`;
+        }
+        
+        // Update overview photos navigation for this category
+        if (window.updateOverviewPhotos) {
+            window.updateOverviewPhotos(category);
+        }
+        
+        // Update product category visibility
+        productCategories.forEach(cat => {
+            cat.classList.remove('product-category--active');
+        });
+        
+        const activeCategory = document.getElementById(`${category}-products`);
+        if (activeCategory) {
+            activeCategory.classList.add('product-category--active');
+        }
+        
+        // Update active category item
+        categoryItems.forEach(item => {
+            item.classList.remove('category__item--active');
+        });
+        
+        const activeItem = document.querySelector(`[data-category="${category}"]`);
+        if (activeItem) {
+            activeItem.classList.add('category__item--active');
+        }
+    }
+    
+    // Add click event listeners to category items
+    categoryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            console.log('Category item clicked:', category);
+            switchCategory(category);
+        });
+    });
+    
+    // Initialize with first category
+    if (categoryItems.length > 0) {
+        const firstCategory = categoryItems[0].getAttribute('data-category');
+        console.log('Initializing with first category:', firstCategory);
+        switchCategory(firstCategory);
+    }
+    
+    // Initialize overview photos navigation and get the update function
+    const updateOverviewPhotosFunc = initOverviewPhotosNavigation();
+    if (updateOverviewPhotosFunc) {
+        window.updateOverviewPhotos = updateOverviewPhotosFunc;
+    }
 }
