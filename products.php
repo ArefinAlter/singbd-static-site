@@ -19,116 +19,98 @@ include 'partials/_header.php';
         </div>
     </nav>
 
-    <!-- Hero Section - 2 Columns -->
+    <!-- Top Section - Two Column Layout -->
     <section class="products-hero">
         <div class="products-hero__container">
-            <!-- Left Column - Category Selection -->
+            <!-- Left Column - Category Selection (2 rows, 5 categories each) -->
             <div class="products-hero__categories">
                 <h2 class="products-hero__title">Product Categories</h2>
                 <p class="products-hero__subtitle">Select a category to explore our products</p>
                 
-                <div class="products-hero__category-tabs">
-                    <button class="products-hero__category-tab products-hero__category-tab--active" data-category="woven-tops">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Tops.webp" alt="Woven Tops">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Woven Tops</h3>
-                        <p class="products-hero__category-tab-description">Shirts, blouses, and tunics</p>
-                    </button>
+                <div class="products-hero__category-grid">
+                    <!-- Row 1 -->
+                    <div class="products-hero__category-row">
+                        <button class="products-hero__category-tab products-hero__category-tab--active" data-category="woven-tops">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Tops.webp" alt="Woven Tops">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Woven Tops</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="woven-bottoms">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Bottoms.webp" alt="Woven Bottoms">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Woven Bottoms</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="coats-jackets">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Coats & Jackets.webp" alt="Coats & Jackets">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Coats & Jackets</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="denim">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Denim.webp" alt="Denim">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Denim</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="knitwear">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Knit Wear.webp" alt="Knitwear">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Knitwear</h3>
+                        </button>
+                    </div>
                     
-                    <button class="products-hero__category-tab" data-category="coats-jackets">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Coats & Jackets.webp" alt="Coats & Jackets">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Coats & Jackets</h3>
-                        <p class="products-hero__category-tab-description">Outerwear and jackets</p>
-                    </button>
-                    
-                    <button class="products-hero__category-tab" data-category="sportswear">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Sports Wear.webp" alt="Sportswear">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Sportswear</h3>
-                        <p class="products-hero__category-tab-description">Active and athletic wear</p>
-                    </button>
-                    
-                    <button class="products-hero__category-tab" data-category="woven-bottoms">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Bottoms.webp" alt="Woven Bottoms">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Woven Bottoms</h3>
-                        <p class="products-hero__category-tab-description">Pants, skirts, and shorts</p>
-                    </button>
-                    
-                    <button class="products-hero__category-tab" data-category="knitwear">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Knit Wear.webp" alt="Knitwear">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Knitwear</h3>
-                        <p class="products-hero__category-tab-description">Sweaters and knit garments</p>
-                    </button>
-                    
-                    <button class="products-hero__category-tab" data-category="homeware">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Home Wear.webp" alt="Homeware">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Homeware</h3>
-                        <p class="products-hero__category-tab-description">Home textiles and decor</p>
-                    </button>
-                    
-                    <button class="products-hero__category-tab" data-category="handicrafts">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Handicraft.webp" alt="Handicrafts">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Handicrafts</h3>
-                        <p class="products-hero__category-tab-description">Artisan crafts and accessories</p>
-                    </button>
-                    
-                    <button class="products-hero__category-tab" data-category="accessories">
-                        <div class="products-hero__category-tab-icon">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Accessories.webp" alt="Accessories">
-                        </div>
-                        <h3 class="products-hero__category-tab-title">Accessories</h3>
-                        <p class="products-hero__category-tab-description">Bags, scarves, and more</p>
-                    </button>
+                    <!-- Row 2 -->
+                    <div class="products-hero__category-row">
+                        <button class="products-hero__category-tab" data-category="sweater">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Accessories.webp" alt="Sweater">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Sweater</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="sportswear">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Sports Wear.webp" alt="Sportswear">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Sportswear</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="homeware">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Home Wear.webp" alt="Homeware">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Homeware</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="handicrafts">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Handicraft.webp" alt="Handicrafts">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Handicrafts</h3>
+                        </button>
+                        
+                        <button class="products-hero__category-tab" data-category="workwear">
+                            <div class="products-hero__category-tab-icon">
+                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Work Wear.webp" alt="Workwear">
+                            </div>
+                            <h3 class="products-hero__category-tab-title">Workwear</h3>
+                        </button>
+                    </div>
                 </div>
             </div>
             
-            <!-- Right Column - Overview Photos -->
+            <!-- Right Column - Category Overview Photo -->
             <div class="products-hero__overview">
-                <h3 class="products-hero__overview-title">Manufacturing Process</h3>
-                <div class="products-hero__overview-photos">
-                    <div class="products-hero__overview-photo products-hero__overview-photo--active" id="woven-tops-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp" alt="Woven Tops Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
-                    
-                    <div class="products-hero__overview-photo" id="coats-jackets-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Coats & Jacket/dsrgdb.webp" alt="Coats & Jackets Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
-                    
-                    <div class="products-hero__overview-photo" id="sportswear-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sportswear/dsrgdb.webp" alt="Sportswear Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
-                    
-                    <div class="products-hero__overview-photo" id="woven-bottoms-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Bottom/dsrgdb.webp" alt="Woven Bottoms Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
-                    
-                    <div class="products-hero__overview-photo" id="knitwear-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Knitwear/dsrgdb.webp" alt="Knitwear Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
-                    
-                    <div class="products-hero__overview-photo" id="homeware-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Homewear/dsrgdb.webp" alt="Homeware Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
-                    
-                    <div class="products-hero__overview-photo" id="handicrafts-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Handicrafts/dsrgdb.webp" alt="Handicrafts Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
-                    
-                    <div class="products-hero__overview-photo" id="accessories-overview">
-                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Workwear/dsrgdb.webp" alt="Accessories Manufacturing" class="products-hero__overview-photo-image">
-                    </div>
+                <h3 class="products-hero__overview-title">Category Overview</h3>
+                <div class="products-hero__overview-photo">
+                    <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp" alt="Woven Tops Overview" class="products-hero__overview-photo-image" id="category-overview-photo">
                 </div>
             </div>
         </div>
@@ -364,22 +346,82 @@ include 'partials/_header.php';
                 </div>
             </div>
             
-            <!-- Accessories Products -->
-            <div class="product-category" id="accessories-products">
-                <h3 class="product-category__title">Accessories Collection</h3>
+            <!-- Denim Products -->
+            <div class="product-category" id="denim-products">
+                <h3 class="product-category__title">Denim Collection</h3>
                 <div class="product-category__grid">
                     <div class="product-item" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?php echo $baseUrl; ?>/images/Products/Accessories/Accessories1.jpeg" alt="Accessory 1" class="product-item__image">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Denim/Denim Jacket.webp" alt="Denim Jacket" class="product-item__image">
                         <div class="product-item__info">
-                            <h4 class="product-item__title">Premium Accessory</h4>
-                            <p class="product-item__description">High-quality accessories</p>
+                            <h4 class="product-item__title">Denim Jacket</h4>
                         </div>
                     </div>
                     <div class="product-item" data-aos="fade-up" data-aos-delay="200">
-                        <img src="<?php echo $baseUrl; ?>/images/Products/Accessories/Accessories2.jpg" alt="Accessory 2" class="product-item__image">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Denim/Denim Shirt.webp" alt="Denim Shirt" class="product-item__image">
                         <div class="product-item__info">
-                            <h4 class="product-item__title">Stylish Accessory</h4>
-                            <p class="product-item__description">Trendy accessory pieces</p>
+                            <h4 class="product-item__title">Denim Shirt</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sweater Products -->
+            <div class="product-category" id="sweater-products">
+                <h3 class="product-category__title">Sweater Collection</h3>
+                <div class="product-category__grid">
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Sweater/_Z5A0207.webp" alt="Sweater 1" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">_Z5A0207</h4>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Sweater/_Z5A0724.webp" alt="Sweater 2" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">_Z5A0724</h4>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="300">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Sweater/111.webp" alt="Sweater 3" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">111</h4>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="400">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Sweater/bfb dbdxfb.webp" alt="Sweater 4" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">bfb dbdxfb</h4>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="500">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Sweater/fb dndb.webp" alt="Sweater 5" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">fb dndb</h4>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="600">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Sweater/Our Collection.webp" alt="Sweater 6" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">Our Collection</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Workwear Products -->
+            <div class="product-category" id="workwear-products">
+                <h3 class="product-category__title">Workwear Collection</h3>
+                <div class="product-category__grid">
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Workwear/Work Wear 1.webp" alt="Work Wear 1" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">Work Wear 1</h4>
+                        </div>
+                    </div>
+                    <div class="product-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="<?php echo $baseUrl; ?>/images/Products/Workwear/Work Wear 2.webp" alt="Work Wear 2" class="product-item__image">
+                        <div class="product-item__info">
+                            <h4 class="product-item__title">Work Wear 2</h4>
                         </div>
                     </div>
                 </div>
@@ -401,6 +443,17 @@ include 'partials/_header.php';
                 <div class="products-overview-photos__photo" data-aos="fade-up" data-aos-delay="200">
                     <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp" alt="Manufacturing Process 2" class="products-overview-photos__image" id="overview-photo-2">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get a Quote Section -->
+    <section class="products-quote">
+        <div class="products-quote__container">
+            <div class="products-quote__content">
+                <h2 class="products-quote__title">Ready to Get Started?</h2>
+                <p class="products-quote__subtitle">Contact us for custom manufacturing solutions and competitive quotes</p>
+                <a href="<?php echo $baseUrl; ?>/contact.php" class="btn btn--primary btn--large">Get a Quote</a>
             </div>
         </div>
     </section>
