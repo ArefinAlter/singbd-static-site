@@ -13,21 +13,17 @@ include 'partials/_header.php';
         <div class="video-overview__container">
             <div class="video-overview__content">
                 <div class="video-overview__video-container">
-                    <div class="video-overview__placeholder">
-                        <div class="video-overview__placeholder-icon">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </div>
-                        <p class="video-overview__placeholder-text">Video Coming Soon</p>
-                        <p class="video-overview__placeholder-description">Our company overview video will be available shortly</p>
-                    </div>
-                    <!-- Video will be added here when available -->
-                    <!-- <video class="video-overview__video" controls>
-                        <source src="path-to-video.mp4" type="video/mp4">
-                        <source src="path-to-video.webm" type="video/webm">
-                        Your browser does not support the video tag.
-                    </video> -->
+                    <iframe 
+                        class="video-overview__iframe"
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/P3fvecvOX3E?si=tkgHcPeNZh1y6Yoo" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
