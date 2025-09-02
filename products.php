@@ -138,6 +138,7 @@ include 'partials/_header.php';
                         <div class="product-item__info">
                             <h4 class="product-item__title">Jacket</h4>
                             <p class="product-item__description">Premium woven jacket</p>
+                            <small class="product-item__hint">Click to view details</small>
                         </div>
                     </div>
                     <div class="product-item" data-aos="fade-up" data-aos-delay="200">
@@ -145,6 +146,7 @@ include 'partials/_header.php';
                         <div class="product-item__info">
                             <h4 class="product-item__title">Kids' Top</h4>
                             <p class="product-item__description">Comfortable kids' woven top</p>
+                            <small class="product-item__hint">Click to view details</small>
                         </div>
                     </div>
                     <div class="product-item" data-aos="fade-up" data-aos-delay="300">
@@ -152,6 +154,7 @@ include 'partials/_header.php';
                         <div class="product-item__info">
                             <h4 class="product-item__title">Mens Jacket w Rib</h4>
                             <p class="product-item__description">Men's jacket with rib detailing</p>
+                            <small class="product-item__hint">Click to view details</small>
                         </div>
                     </div>
                     <div class="product-item" data-aos="fade-up" data-aos-delay="400">

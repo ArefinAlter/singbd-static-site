@@ -111,7 +111,7 @@
     <FilesMatch "^index\.php$">
         Header add Link "</css/style.css>; rel=preload; as=style"
         Header add Link "</js/main.js>; rel=preload; as=script"
-        Header add Link "</images/Logo/SingBD-logo-Final.webp>; rel=preload; as=image"
+        Header add Link "</images/SingBD-logo-Final-01.png>; rel=preload; as=image"
     </FilesMatch>
 </IfModule>
 

@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initHeroMapPoints();
     initPartnerSlider();
+    
+    // Initialize products page functionality
+    initProductsPageCategorySwitching();
 });
 
 // Mobile Menu Toggle
@@ -327,18 +330,8 @@ function initAboutFeaturesTabs() {
     });
 }
 
-// Product Categories
-function initProductCategories() {
-    const categoryItems = document.querySelectorAll('.category__item');
-    const productTitle = document.querySelector('.categories__product-title');
-    const productDescription = document.querySelector('.categories__product-description');
-    const galleryGrid = document.querySelector('.categories__gallery');
-    
-    if (categoryItems.length === 0) return;
-    
-    // Product data - Updated to use Website Visuals WebP images
-
-    const productData = {
+// Product data - Global for access by multiple functions
+const productData = {
         'woven-tops': {
             title: 'Woven Tops',
             description: 'High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.',
@@ -416,11 +409,11 @@ function initProductCategories() {
             title: 'Homeware',
             description: 'Beautiful and functional home textiles and accessories for modern living.',
             images: [
-                'Website Visuals/Product Category Overview/Homewear/safv.webp',
+                'Website Visuals/Product Category Overview/Homewear/sdbb.webp',
                 'Website Visuals/Product Category Overview/Homewear/fgvdxb.webp',
                 'Website Visuals/Product Category Overview/Homewear/afav s.webp'
             ],
-            overviewPhoto: 'Website Visuals/Product Category Overview/Homewear/safv.webp',
+            overviewPhoto: 'Website Visuals/Product Category Overview/Homewear/sdbb.webp',
             bottomPhotos: [
                 'Website Visuals/Product Category Overview/Homewear/fgvdxb.webp',
                 'Website Visuals/Product Category Overview/Homewear/afav s.webp'
@@ -486,17 +479,18 @@ function initProductCategories() {
                 'Website Visuals/Product Category Overview/Denim/1dd08.webp',
                 'Website Visuals/Product Category Overview/Denim/108.webp'
             ]
-        },
-        'accessories': {
-            title: 'Accessories',
-            description: 'Stylish accessories to complement any outfit and enhance personal style.',
-            images: [
-                'Accessories1.jpeg',
-                'Accessories2.jpg',
-                'Accessories3.jpg'
-            ]
         }
     };
+
+// Product Categories
+function initProductCategories() {
+    const categoryItems = document.querySelectorAll('.category__item');
+    const productTitle = document.querySelector('.categories__product-title');
+    const productDescription = document.querySelector('.categories__product-description');
+    const galleryGrid = document.querySelector('.categories__gallery');
+    
+    if (categoryItems.length === 0) return;
+    
     function updateProductDisplay(category) {
         const data = productData[category];
         if (!data) return;
@@ -504,8 +498,6 @@ function initProductCategories() {
         // Update title and description
         if (productTitle) productTitle.textContent = data.title;
         if (productDescription) productDescription.textContent = data.description;
-        
-
         
         // Update gallery slider
         if (galleryGrid) {
@@ -557,128 +549,23 @@ function initProductCategories() {
 
 // Initialize Products Page functionality
 function initProductsPage() {
-    const categoryTabs = document.querySelectorAll('.products-hero__category-tab');
-    const overviewPhotos = document.querySelectorAll('.products-hero__overview-photo');
-    const productCategories = document.querySelectorAll('.product-category');
-    const overviewPhoto1 = document.getElementById('overview-photo-1');
-    const overviewPhoto2 = document.getElementById('overview-photo-2');
-
-    if (categoryTabs.length === 0) return; // Not on products page
-
-    function switchCategory(categoryName) {
-        // Update active tab
-        categoryTabs.forEach(tab => {
-            tab.classList.remove('products-hero__category-tab--active');
-            if (tab.dataset.category === categoryName) {
-                tab.classList.add('products-hero__category-tab--active');
-            }
-        });
-
-        // Update overview photo
-        overviewPhotos.forEach(photo => {
-            photo.classList.remove('products-hero__overview-photo--active');
-            if (photo.id === `${categoryName}-overview`) {
-                photo.classList.add('products-hero__overview-photo--active');
-            }
-        });
-
-        // Update product category display
-        productCategories.forEach(category => {
-            category.classList.remove('product-category--active');
-            if (category.id === `${categoryName}-products`) {
-                category.classList.add('product-category--active');
-            }
-        });
-
-        // Update bottom overview photos based on category
-        updateOverviewPhotos(categoryName);
+    // Check if we're on the products page
+    if (!window.location.pathname.includes('products.php')) {
+        return; // Not on products page
     }
 
     // Since we're now using the products-hero structure,
     // the category switching is handled by initProductsPageCategorySwitching
     console.log('Products page initialized');
-    function updateOverviewPhotos(categoryName) {
-        // Update bottom overview photos based on selected category
-        const overviewPhoto1 = document.getElementById('overview-photo-1');
-        const overviewPhoto2 = document.getElementById('overview-photo-2');
-        
-        if (overviewPhoto1 && overviewPhoto2) {
-            // Define different overview photos for each category
-            const categoryPhotos = {
-                'woven-tops': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Woven Top/dr bdxf.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp'
-                },
-                'coats-jackets': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0220.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Coats_&_Jacket/_Z5A0203.webp'
-                },
-                'sportswear': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Sportswear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Sportswear/dr bdxf.webp'
-                },
-                'woven-bottoms': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Woven Bottom/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Woven Bottom/dr bdxf.webp'
-                },
-                'knitwear': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Knitwear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Knitwear/dr bdxf.webp'
-                },
-                'homeware': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Homewear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Homewear/dr bdxf.webp'
-                },
-                'handicrafts': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Handicrafts/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Handicrafts/dr bdxf.webp'
-                },
-                'accessories': {
-                    photo1: 'images/Website Visuals/Product Category Overview/Workwear/dsrgdb.webp',
-                    photo2: 'images/Website Visuals/Product Category Overview/Workwear/dr bdxf.webp'
-                }
-            };
-            
-            const photos = categoryPhotos[categoryName];
-            if (photos) {
-                overviewPhoto1.querySelector('img').src = photos.photo1;
-                overviewPhoto2.querySelector('img').src = photos.photo2;
-                
-                // Update alt text
-                overviewPhoto1.querySelector('img').alt = `${categoryName.replace('-', ' ')} Manufacturing Process 1`;
-                overviewPhoto2.querySelector('img').alt = `${categoryName.replace('-', ' ')} Manufacturing Process 2`;
-            }
-        }
-    }
-
-    // Add click event listeners to category tabs
-    categoryTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const categoryName = tab.dataset.category;
-            switchCategory(categoryName);
-        });
-
-        // Add keyboard support
-        tab.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                const categoryName = tab.dataset.category;
-                switchCategory(categoryName);
-            }
-        });
-    });
-
-    // Initialize with first category active
-    if (categoryTabs.length > 0) {
-        const firstCategory = categoryTabs[0].dataset.category;
-        switchCategory(firstCategory);
-    }
 }
 
 // Quick View Modal
 function initQuickView() {
+    // Handle both product cards (if they exist) and product items
     const quickViewButtons = document.querySelectorAll('.product-card__quick-view');
+    const productItems = document.querySelectorAll('.product-item');
     
+    // Handle product card quick view buttons (existing functionality)
     quickViewButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -690,62 +577,109 @@ function initQuickView() {
             const category = card.querySelector('.product-card__category').textContent;
             const code = card.querySelector('.product-card__code').textContent;
             
-            // Create modal
-            const modal = document.createElement('div');
-            modal.className = 'quick-view-modal';
-            modal.innerHTML = `
-                <div class="quick-view-modal__overlay">
-                    <div class="quick-view-modal__content">
-                        <button class="quick-view-modal__close">&times;</button>
-                        <div class="quick-view-modal__body">
-                            <div class="quick-view-modal__image">
-                                <img src="${image}" alt="${title}">
-                            </div>
-                            <div class="quick-view-modal__info">
-                                <h3>${title}</h3>
-                                <p>${description}</p>
-                                <div class="quick-view-modal__meta">
-                                    <span class="quick-view-modal__category">${category}</span>
-                                    <span class="quick-view-modal__code">${code}</span>
-                                </div>
-                                <a href="<?php echo $baseUrl; ?>/contact.php" class="quick-view-modal__cta">
-                                    Get Quote
-                                </a>
-                            </div>
+            openProductModal(title, description, image, category, code);
+        });
+    });
+    
+    // Handle product items (new functionality for products page)
+    productItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const title = this.querySelector('.product-item__title').textContent;
+            const description = this.querySelector('.product-item__description').textContent;
+            const image = this.querySelector('.product-item__image').src;
+            
+            // Get category from the parent container or breadcrumb
+            const categoryContainer = this.closest('.product-category');
+            const category = categoryContainer ? categoryContainer.querySelector('.product-category__title').textContent.replace(' Collection', '') : 'Product';
+            
+            // Generate a simple code based on title
+            const code = title.replace(/\s+/g, '-').toUpperCase();
+            
+            openProductModal(title, description, image, category, code);
+        });
+        
+        // Add hover effect to indicate clickability
+        item.style.cursor = 'pointer';
+        item.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+        
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    });
+}
+
+// Function to open product modal with given information
+function openProductModal(title, description, image, category, code) {
+    // Create modal
+    const modal = document.createElement('div');
+    modal.className = 'quick-view-modal';
+    modal.innerHTML = `
+        <div class="quick-view-modal__overlay">
+            <div class="quick-view-modal__content">
+                <button class="quick-view-modal__close">&times;</button>
+                <div class="quick-view-modal__body">
+                    <div class="quick-view-modal__image">
+                        <img src="${image}" alt="${title}">
+                    </div>
+                    <div class="quick-view-modal__info">
+                        <h3>${title}</h3>
+                        <p>${description}</p>
+                        <div class="quick-view-modal__meta">
+                            <span class="quick-view-modal__category">${category}</span>
+                            <span class="quick-view-modal__code">${code}</span>
                         </div>
+                        <a href="contact.php" class="quick-view-modal__cta">
+                            Get Quote
+                        </a>
                     </div>
                 </div>
-            `;
-            
-            document.body.appendChild(modal);
-            
-            // Close modal functionality
-            const closeBtn = modal.querySelector('.quick-view-modal__close');
-            const overlay = modal.querySelector('.quick-view-modal__overlay');
-            
-            function closeModal() {
-                modal.remove();
-            }
-            
-            closeBtn.addEventListener('click', closeModal);
-            overlay.addEventListener('click', function(e) {
-                if (e.target === overlay) {
-                    closeModal();
-                }
-            });
-            
-            // ESC key to close
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeModal();
-                }
-            });
-        });
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+    
+    // Close modal functionality
+    const closeBtn = modal.querySelector('.quick-view-modal__close');
+    const overlay = modal.querySelector('.quick-view-modal__overlay');
+    
+    function closeModal() {
+        // Restore body scrolling
+        document.body.style.overflow = '';
+        modal.remove();
+    }
+    
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closeModal();
+        }
+    });
+    
+    // ESC key to close
+    document.addEventListener('keydown', function handleEscape(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', handleEscape);
+        }
     });
 }
 
 // Category Slider Functionality
 function initCategorySlider() {
+
+    
     const slider = document.querySelector('.categories__gallery-slider');
     const dots = document.querySelectorAll('.categories__gallery-dot');
     const prevBtn = document.querySelector('.categories__gallery-nav--prev');
@@ -1353,22 +1287,30 @@ function initProductsPageCategorySwitching() {
     
     console.log('Initializing products page category switching...');
     
-    const categoryTabs = document.querySelectorAll('.products-hero__category-tab');
-    const overviewPhoto = document.getElementById('category-overview-photo');
-    const overviewPhoto1 = document.getElementById('overview-photo-1');
-    const overviewPhoto2 = document.getElementById('overview-photo-2');
+    const categoryItems = document.querySelectorAll('.category__item');
+    const productTitle = document.querySelector('.categories__product-title');
+    const productDescription = document.querySelector('.categories__product-description');
+    const singlePhoto = document.querySelector('#category-single-photo');
+    const overviewSubtitle = document.querySelector('#category-overview-subtitle');
+    const overviewPhoto1 = document.querySelector('#overview-photo-1');
+    const overviewPhoto2 = document.querySelector('#overview-photo-2');
     const productCategories = document.querySelectorAll('.product-category');
+    const categoryBreadcrumb = document.querySelector('#category-breadcrumb');
     
     console.log('Found elements:', {
-        categoryTabs: categoryTabs.length,
-        overviewPhoto: !!overviewPhoto,
+        categoryItems: categoryItems.length,
+        productTitle: !!productTitle,
+        productDescription: !!productDescription,
+        singlePhoto: !!singlePhoto,
+        overviewSubtitle: !!overviewSubtitle,
         overviewPhoto1: !!overviewPhoto1,
         overviewPhoto2: !!overviewPhoto2,
-        productCategories: productCategories.length
+        productCategories: productCategories.length,
+        categoryBreadcrumb: !!categoryBreadcrumb
     });
     
-    if (categoryTabs.length === 0) {
-        console.log('No category tabs found');
+    if (categoryItems.length === 0) {
+        console.log('No category items found');
         return;
     }
     
@@ -1382,33 +1324,42 @@ function initProductsPageCategorySwitching() {
         
         console.log('Category data:', data);
         
-        // Update overview photo
-        if (overviewPhoto && data.overviewPhoto) {
-            const newSrc = `images/${data.overviewPhoto}`;
-            console.log('Updating overview photo to:', newSrc);
-            overviewPhoto.src = newSrc;
-            overviewPhoto.alt = `${data.title} Overview`;
-        } else {
-            console.log('Overview photo or data.overviewPhoto not found');
+        // Update title and description
+        if (productTitle) {
+            productTitle.textContent = data.title;
+        }
+        if (productDescription) {
+            productDescription.textContent = data.description;
         }
         
-        // Update bottom photos
-        if (overviewPhoto1 && data.bottomPhotos && data.bottomPhotos[0]) {
-            const newSrc1 = `images/${data.bottomPhotos[0]}`;
-            console.log('Updating bottom photo 1 to:', newSrc1);
-            overviewPhoto1.src = newSrc1;
-            overviewPhoto1.alt = `${data.title} Process 1`;
-        } else {
-            console.log('Bottom photo 1 or data.bottomPhotos[0] not found');
+        // Update breadcrumb
+        if (categoryBreadcrumb) {
+            categoryBreadcrumb.textContent = data.title;
         }
         
-        if (overviewPhoto2 && data.bottomPhotos && data.bottomPhotos[1]) {
-            const newSrc2 = `images/${data.bottomPhotos[1]}`;
-            console.log('Updating bottom photo 2 to:', newSrc2);
-            overviewPhoto2.src = newSrc2;
-            overviewPhoto2.alt = `${data.title} Process 2`;
-        } else {
-            console.log('Bottom photo 2 or data.bottomPhotos[1] not found');
+        // Update single photo (top section)
+        if (singlePhoto) {
+            singlePhoto.src = `images/${data.overviewPhoto}`;
+            singlePhoto.alt = `${data.title} Overview`;
+        }
+        
+        // Update overview subtitle
+        if (overviewSubtitle) {
+            overviewSubtitle.textContent = `Additional insights into our ${data.title.toLowerCase()} manufacturing process`;
+        }
+        
+        // Update bottom overview photos
+        if (overviewPhoto1 && overviewPhoto2 && data.bottomPhotos && data.bottomPhotos.length >= 2) {
+            overviewPhoto1.src = `images/${data.bottomPhotos[0]}`;
+            overviewPhoto1.alt = `${data.title} Manufacturing Process 1`;
+            
+            overviewPhoto2.src = `images/${data.bottomPhotos[1]}`;
+            overviewPhoto2.alt = `${data.title} Manufacturing Process 2`;
+        }
+        
+        // Update overview photos navigation for this category
+        if (window.updateOverviewPhotos) {
+            window.updateOverviewPhotos(category);
         }
         
         // Update product category visibility
@@ -1421,30 +1372,36 @@ function initProductsPageCategorySwitching() {
             activeCategory.classList.add('product-category--active');
         }
         
-        // Update active tab
-        categoryTabs.forEach(tab => {
-            tab.classList.remove('products-hero__category-tab--active');
+        // Update active category item
+        categoryItems.forEach(item => {
+            item.classList.remove('category__item--active');
         });
         
-        const activeTab = document.querySelector(`[data-category="${category}"]`);
-        if (activeTab) {
-            activeTab.classList.add('products-hero__category-tab--active');
+        const activeItem = document.querySelector(`[data-category="${category}"]`);
+        if (activeItem) {
+            activeItem.classList.add('category__item--active');
         }
     }
     
-    // Add click event listeners to category tabs
-    categoryTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+    // Add click event listeners to category items
+    categoryItems.forEach(item => {
+        item.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
-            console.log('Category tab clicked:', category);
+            console.log('Category item clicked:', category);
             switchCategory(category);
         });
     });
     
     // Initialize with first category
-    if (categoryTabs.length > 0) {
-        const firstCategory = categoryTabs[0].getAttribute('data-category');
+    if (categoryItems.length > 0) {
+        const firstCategory = categoryItems[0].getAttribute('data-category');
         console.log('Initializing with first category:', firstCategory);
         switchCategory(firstCategory);
+    }
+    
+    // Initialize overview photos navigation and get the update function
+    const updateOverviewPhotosFunc = initOverviewPhotosNavigation();
+    if (updateOverviewPhotosFunc) {
+        window.updateOverviewPhotos = updateOverviewPhotosFunc;
     }
 }
