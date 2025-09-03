@@ -15,13 +15,10 @@ include 'partials/_header.php';
                 <div class="video-overview__video-container">
                     <iframe 
                         class="video-overview__iframe"
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/P3fvecvOX3E?si=tkgHcPeNZh1y6Yoo" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
+                        src="https://iframe.mediadelivery.net/embed/489779/454d1a4e-7efb-47dc-b850-bff479befc7e?autoplay=true&loop=true&muted=false&preload=true&responsive=true"
+                        loading="lazy"
+                        style="border:0;width:100%;height:100%;max-width:800px;aspect-ratio:16/9;"
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                         allowfullscreen>
                     </iframe>
                 </div>
