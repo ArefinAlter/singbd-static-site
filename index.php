@@ -584,7 +584,7 @@ include 'partials/_header.php';
                     <!-- Right Column - Photo Display -->
                     <div class="about__features-photos">
                         <div class="about__feature-photo about__feature-photo--active" id="erp-driven-photo">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Timely.webp?v=2" alt="ERP Driven Efficiency" class="about__feature-photo-image">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Timely.webp?v=3" alt="ERP Driven Efficiency" class="about__feature-photo-image">
                     </div>
                         
                         <div class="about__feature-photo" id="ethical-photo">

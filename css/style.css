@@ -282,7 +282,7 @@ p {
 
 /* Video Overview Section */
 .video-overview {
-    padding: calc(var(--spacing-xl) + var(--spacing-xl)) 0 calc(var(--spacing-5xl) + var(--spacing-xl)) 0;
+    padding: var(--spacing-3xl) 0;
     background: transparent;
 }
 
@@ -390,7 +390,7 @@ p {
     align-items: center;
     background: #ffffff !important;
     position: relative;
-    padding: 0 0 var(--spacing-3xl) 0;
+    padding: var(--spacing-3xl) 0;
     overflow: hidden;
 }
 
@@ -866,9 +866,9 @@ p {
     background: #ffffff !important;
 }
 
-/* About section for What Sets Us Apart - remove bottom padding */
+/* About section for What Sets Us Apart - standardize padding */
 .about#what-sets-us-apart {
-    padding: var(--spacing-3xl) 0 0 0;
+    padding: var(--spacing-3xl) 0;
 }
 
 /* About Two-Column Layout */
@@ -1047,14 +1047,14 @@ p {
 
 /* About Features Section */
 .about__features-section {
-    padding: 0 var(--spacing-md) var(--spacing-xl) var(--spacing-md);
+    padding: 0 var(--spacing-md) 0 var(--spacing-md);
     background: #ffffff;
 }
 
 /* Desktop override for What Sets Us Apart bottom padding */
 @media (min-width: 769px) {
     .about__features-section {
-        padding: 0 var(--spacing-md) calc(var(--spacing-5xl) + var(--spacing-xl)) var(--spacing-md);
+        padding: 0 var(--spacing-md) 0 var(--spacing-md);
     }
     
     .values {
@@ -1076,11 +1076,11 @@ p {
     }
     
     .about__features-section {
-        padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+        padding: 0 var(--spacing-md) 0 var(--spacing-md);
     }
     
     .about#what-sets-us-apart {
-        padding: var(--spacing-md) 0 0 0;
+        padding: var(--spacing-md) 0;
     }
     
     /* Add top padding for fixed header on mobile */
@@ -1447,7 +1447,7 @@ p {
 /* What We Do Section */
 .what-we-do {
     padding-top: var(--spacing-3xl);
-    padding-bottom: 0;
+    padding-bottom: var(--spacing-3xl);
     background: #ffffff !important;
     color: var(--body-text-color);
 }
@@ -2062,7 +2062,7 @@ p {
 
 /* Contact Section */
 .contact {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-3xl) 0;
     background: #ffffff !important;
 }
 
@@ -2867,8 +2867,12 @@ p {
         padding-top: 50px; /* Further reduced from 70px for less gutter space on mobile */
     }
     
+    .video-overview {
+        padding: calc(var(--spacing-md) + var(--spacing-2xl)) 0 var(--spacing-md) 0;
+    }
+    
     .hero {
-        padding: 0 0 var(--spacing-3xl) 0;
+        padding: var(--spacing-md) 0;
     }
     
     .nav__logo-img {
@@ -3062,6 +3066,39 @@ p {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet: All sections should have 64px spacing */
+    .video-overview {
+        padding: calc(var(--spacing-xl) + var(--spacing-2xl)) 0 var(--spacing-xl) 0;
+    }
+    
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .what-we-do {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .categories {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .partners {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .about {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .about#what-sets-us-apart {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .contact {
+        padding: var(--spacing-xl) 0;
+    }
+
     .hero__content {
         grid-template-columns: 1fr 1fr; /* Equal width columns on tablets */
         gap: 1rem;
@@ -3296,7 +3333,7 @@ p {
 /* Tablet responsive styles for categories section */
 @media (min-width: 768px) and (max-width: 1023px) {
     .categories {
-        padding: var(--spacing-2xl) 0;
+        padding: var(--spacing-3xl) 0;
     }
     
     .categories__container {
