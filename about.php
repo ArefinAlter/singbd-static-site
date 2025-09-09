@@ -88,8 +88,12 @@ include 'partials/_header.php';
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- What Sets Us Apart -->
+    <!-- What Sets Us Apart Section -->
+    <section class="about" id="what-sets-us-apart">
+        <div class="about__container">
             <div class="about__features-section">
                 <h3 class="about__features-title">What Sets Us Apart</h3>
                 <div class="about__features-container">

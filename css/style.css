@@ -282,7 +282,7 @@ p {
 
 /* Video Overview Section */
 .video-overview {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xl) 0 calc(var(--spacing-5xl) + var(--spacing-xl)) 0;
     background: transparent;
 }
 
@@ -386,13 +386,12 @@ p {
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
     display: flex;
     align-items: center;
     background: #ffffff !important;
     position: relative;
+    padding: 0 0 var(--spacing-3xl) 0;
     overflow: hidden;
-    padding: var(--spacing-xl) 0;
 }
 
 /* About Page Styles */
@@ -651,28 +650,27 @@ p {
 .hero__content {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Equal width columns */
-    gap: 2rem; /* gap-12 (48px) */
+    gap: 1rem; /* Reduced gap */
     align-items: center; /* items-center */
-    min-height: 80vh; /* min-h-[80vh] */
     width: 100%;
 }
 
 /* Container structure styling */
 .hero__content > *:first-child {
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     box-sizing: border-box;
     /* Match Next.js space-y-8 pattern */
     display: flex;
     flex-direction: column;
-    gap: 2rem; /* space-y-8 equivalent */
+    gap: 1rem; /* Reduced gap */
 }
 
 .hero__content > *:last-child {
-    padding: 4rem 4rem 4rem 8rem; /* More left padding to center map */
+    padding: 1rem; /* Reduced padding for GIF */
     width: 100%;
     box-sizing: border-box;
-    /* Position relative for map container */
+    /* Position relative for animation container */
     position: relative;
 }
 
@@ -766,20 +764,19 @@ p {
     align-items: center;
     width: 100%;
     height: 100%;
-    min-height: 400px;
 }
 
 .hero__animation-gif {
     width: 100%;
     height: auto;
-    max-width: 600px;
+    max-width: 900px;
     object-fit: contain;
 }
 
 /* Responsive animation sizing */
 @media (min-width: 1024px) {
     .hero__animation-gif {
-        max-width: 700px;
+        max-width: 1000px;
     }
 }
 
@@ -902,7 +899,7 @@ p {
 
 .about__image {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     display: block;
 }
@@ -1045,7 +1042,7 @@ p {
 
 /* About Features Section */
 .about__features-section {
-    padding: var(--spacing-3xl) var(--spacing-md);
+    padding: 0 var(--spacing-md) var(--spacing-3xl) var(--spacing-md);
     background: #ffffff;
 }
 
@@ -1406,8 +1403,8 @@ p {
 
 /* What We Do Section */
 .what-we-do {
-    padding-top: var(--spacing-xl);
-    padding-bottom: var(--spacing-md);
+    padding-top: var(--spacing-3xl);
+    padding-bottom: 0;
     background: #ffffff !important;
     color: var(--body-text-color);
 }
@@ -1684,7 +1681,7 @@ p {
 
 /* Categories Section */
 .categories {
-    padding: var(--spacing-3xl) 0;
+    padding: calc(var(--spacing-3xl) + var(--spacing-3xl)) 0 var(--spacing-3xl) 0;
     background: #ffffff !important;
 }
 
@@ -2828,7 +2825,7 @@ p {
     }
     
     .hero {
-        padding: var(--spacing-md) 0;
+        padding: var(--spacing-3xl) 0;
     }
     
     .nav__logo-img {
@@ -3024,7 +3021,7 @@ p {
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero__content {
         grid-template-columns: 1fr 1fr; /* Equal width columns on tablets */
-        gap: 5rem;
+        gap: 1rem;
     }
     
     
@@ -3047,7 +3044,7 @@ p {
 @media (min-width: 1025px) {
     .hero__content {
         grid-template-columns: 1fr 1fr; /* Equal width columns on desktop */
-        gap: 5rem;
+        gap: 1rem;
     }
     
     
