@@ -8,103 +8,105 @@ include 'partials/_header.php';
 ?>
 
 <main class="main">
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <div class="breadcrumbs__container">
-            <ol class="breadcrumbs__nav">
-                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
-                <li><span class="breadcrumbs__separator">/</span></li>
-                <li><span class="breadcrumbs__current">Products</span></li>
-            </ol>
-        </div>
-    </nav>
 
     <!-- Product Categories Section - Same structure as Home Page -->
     <section class="categories" id="categories">
         <div class="categories__container">
             <h2 class="section__title">Product Categories</h2>
             
-            <div class="categories__content">
-                <!-- Left Column - Categories -->
-                <div class="categories__sidebar">
-                    <div class="categories__list">
-                        <div class="category__item category__item--active" data-category="woven-tops">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Tops.webp" alt="Woven Tops" class="category__icon-img">
+            <!-- Product Categories Grid -->
+            <div class="categories__grid">
+                <!-- Row 1 -->
+                <button class="category__card category__card--active" data-category="woven-tops" data-target="woven-tops-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp?v=2" alt="Woven Top" class="category__card-img">
                             </div>
-                            <h3 class="category__title">Woven Tops</h3>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Woven Top</h3>
                         </div>
-                        <div class="category__item" data-category="woven-bottoms">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Woven Bottoms.webp" alt="Woven Bottoms" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Woven Bottoms</h3>
-                        </div>
-                        <div class="category__item" data-category="coats-jackets">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Coats & Jackets.webp" alt="Coats & Jackets" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Coats & Jackets</h3>
-                        </div>
-                        <div class="category__item" data-category="denim">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Denim.webp" alt="Denim" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Denim</h3>
-                        </div>
-                        <div class="category__item" data-category="knitwear">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Knit Wear.webp" alt="Knitwear" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Knitwear</h3>
-                    </div>
-                        <div class="category__item" data-category="sweater">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Accessories.webp" alt="Sweater" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Sweater</h3>
-                        </div>
-                        <div class="category__item" data-category="sportswear">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Sports Wear.webp" alt="Sportswear" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Sportswear</h3>
-                        </div>
-                        <div class="category__item" data-category="homeware">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Home Wear.webp" alt="Homeware" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Homeware</h3>
-                        </div>
-                        <div class="category__item" data-category="handicrafts">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Handicraft.webp" alt="Handicrafts" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Handicrafts</h3>
-                        </div>
-                        <div class="category__item" data-category="workwear">
-                            <div class="category__icon">
-                                <img src="<?php echo $baseUrl; ?>/images/Icon/Icons/Categories/Work Wear.webp" alt="Workwear" class="category__icon-img">
-                            </div>
-                            <h3 class="category__title">Workwear</h3>
-                        </div>
-                    </div>
-                </div>
+                </button>
                 
-                <!-- Right Column - Product Display (Single Photo Only) -->
-                <div class="categories__display">
-                    <div class="categories__product-info">
-                        <h3 class="categories__product-title">Woven Tops</h3>
-                        <p class="categories__product-description">High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.</p>
-                    </div>
-                    
-                    <div class="categories__gallery">
-                        <!-- Single photo display for each category -->
-                        <div class="categories__single-photo">
-                            <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp" alt="Woven Tops Overview" class="categories__single-photo-image" id="category-single-photo">
+                <button class="category__card" data-category="woven-bottoms" data-target="woven-bottoms-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Woven Bottom/pg nfv.webp" alt="Woven Bottom" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Woven Bottom</h3>
                         </div>
+                </button>
+                
+                <button class="category__card" data-category="coats-jackets" data-target="coats-jackets-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Coats_&_Jacket/Z5A0203.webp" alt="Coats & Jackets" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Coats & Jackets</h3>
+                        </div>
+                </button>
+                
+                <button class="category__card" data-category="denim" data-target="denim-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Denim/_Z5A0203.webp" alt="Denim" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Denim</h3>
+                        </div>
+                </button>
+                
+                <button class="category__card" data-category="knitwear" data-target="knitwear-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Knitwear/_Z5A0233.webp" alt="Knitwear" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Knitwear</h3>
                     </div>
-                </div>
+                </button>
+                
+                <!-- Row 2 -->
+                <button class="category__card" data-category="sweater" data-target="sweater-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sweater/_Z5A0207.webp" alt="Sweater" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Sweater</h3>
+                        </div>
+                </button>
+                
+                <button class="category__card" data-category="sportswear" data-target="sportswear-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Sportswear/dsrgdb.webp" alt="Sportswear" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Sportswear</h3>
+                        </div>
+                </button>
+                
+                <button class="category__card" data-category="homeware" data-target="homeware-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Homewear/afav s.webp" alt="Homeware" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Homeware</h3>
+                        </div>
+                </button>
+                
+                <button class="category__card" data-category="handicrafts" data-target="handicrafts-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Handicrafts/3w42.webp" alt="Handicrafts" class="category__card-img">
+                            </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Handicrafts</h3>
+                        </div>
+                </button>
+                
+                <button class="category__card" data-category="workwear" data-target="workwear-products">
+                    <div class="category__card-image">
+                        <img src="<?php echo $baseUrl; ?>/images/Website Visuals/Product Category Overview/Workwear/sfef.webp" alt="Workwear" class="category__card-img">
+                    </div>
+                    <div class="category__card-overlay">
+                        <h3 class="category__card-title">Workwear</h3>
+                        </div>
+                </button>
             </div>
 
         </div>
@@ -113,19 +115,6 @@ include 'partials/_header.php';
     <!-- Product Listings Section -->
     <section class="product-listings" id="product-listings">
         <div class="product-listings__container">
-            <!-- Breadcrumbs -->
-            <nav class="breadcrumbs" aria-label="Product Category Breadcrumb">
-                <div class="breadcrumbs__container">
-                    <ol class="breadcrumbs__nav">
-                        <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
-                        <li><span class="breadcrumbs__separator">/</span></li>
-                        <li><a href="<?php echo $baseUrl; ?>/products.php" class="breadcrumbs__link">Products</a></li>
-                        <li><span class="breadcrumbs__separator">/</span></li>
-                        <li><span class="breadcrumbs__current" id="category-breadcrumb">Woven Tops</span></li>
-                    </ol>
-                </div>
-            </nav>
-            
             <h2 class="section__title">Product Listings</h2>
             <p class="section__subtitle">Explore our complete collection of premium products</p>
             

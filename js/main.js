@@ -336,13 +336,13 @@ const productData = {
             title: 'Woven Tops',
             description: 'High-quality woven tops including shirts, blouses, and tunics. Made from premium fabrics with attention to detail and comfort.',
             images: [
-                'Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp',
+                'Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp?v=2',
                 'Website Visuals/Product Category Overview/Woven Top/dr bdxf.webp',
                 'Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp',
                 'Website Visuals/Product Category Overview/Woven Top/_Z5A0814.webp',
                 'Website Visuals/Product Category Overview/Woven Top/_Z5A0200.webp'
             ],
-            overviewPhoto: 'Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp',
+            overviewPhoto: 'Website Visuals/Product Category Overview/Woven Top/dsrgdb.webp?v=2',
             bottomPhotos: [
                 'Website Visuals/Product Category Overview/Woven Top/dr bdxf.webp',
                 'Website Visuals/Product Category Overview/Woven Top/bfb dbdxfb.webp'
@@ -590,7 +590,7 @@ function initQuickView() {
             const description = this.querySelector('.product-item__description').textContent;
             const image = this.querySelector('.product-item__image').src;
             
-            // Get category from the parent container or breadcrumb
+            // Get category from the parent container
             const categoryContainer = this.closest('.product-category');
             const category = categoryContainer ? categoryContainer.querySelector('.product-category__title').textContent.replace(' Collection', '') : 'Product';
             
@@ -1287,7 +1287,7 @@ function initProductsPageCategorySwitching() {
     
     console.log('Initializing products page category switching...');
     
-    const categoryItems = document.querySelectorAll('.category__item');
+    const categoryItems = document.querySelectorAll('.category__card');
     const productTitle = document.querySelector('.categories__product-title');
     const productDescription = document.querySelector('.categories__product-description');
     const singlePhoto = document.querySelector('#category-single-photo');
@@ -1295,7 +1295,6 @@ function initProductsPageCategorySwitching() {
     const overviewPhoto1 = document.querySelector('#overview-photo-1');
     const overviewPhoto2 = document.querySelector('#overview-photo-2');
     const productCategories = document.querySelectorAll('.product-category');
-    const categoryBreadcrumb = document.querySelector('#category-breadcrumb');
     
     console.log('Found elements:', {
         categoryItems: categoryItems.length,
@@ -1306,7 +1305,6 @@ function initProductsPageCategorySwitching() {
         overviewPhoto1: !!overviewPhoto1,
         overviewPhoto2: !!overviewPhoto2,
         productCategories: productCategories.length,
-        categoryBreadcrumb: !!categoryBreadcrumb
     });
     
     if (categoryItems.length === 0) {
@@ -1332,10 +1330,6 @@ function initProductsPageCategorySwitching() {
             productDescription.textContent = data.description;
         }
         
-        // Update breadcrumb
-        if (categoryBreadcrumb) {
-            categoryBreadcrumb.textContent = data.title;
-        }
         
         // Update single photo (top section)
         if (singlePhoto) {
@@ -1374,12 +1368,21 @@ function initProductsPageCategorySwitching() {
         
         // Update active category item
         categoryItems.forEach(item => {
-            item.classList.remove('category__item--active');
+            item.classList.remove('category__card--active');
         });
         
         const activeItem = document.querySelector(`[data-category="${category}"]`);
         if (activeItem) {
-            activeItem.classList.add('category__item--active');
+            activeItem.classList.add('category__card--active');
+        }
+        
+        // Scroll to product listings section
+        const productListingsSection = document.getElementById('product-listings');
+        if (productListingsSection) {
+            productListingsSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     }
     

@@ -8,17 +8,6 @@ include 'partials/_header.php';
 ?>
 
 <main class="main">
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <div class="breadcrumbs__container">
-            <ol class="breadcrumbs__nav">
-                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
-                <li><span class="breadcrumbs__separator">/</span></li>
-                <li><span class="breadcrumbs__current">GDPR Compliance</span></li>
-            </ol>
-        </div>
-    </nav>
-    
     <!-- Hero Section -->
     <section class="legal-hero">
         <div class="legal-hero__container">
@@ -606,3 +595,1219 @@ include 'partials/_header.php';
 </main>
 
 <?php include 'partials/_footer.php'; ?>
+
+                                        <circle cx="12" cy="12" r="9"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Adequacy Decisions:</strong> Transfers to countries deemed adequate by the European Commission
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+
+                                        <polyline points="14,2 14,8 20,8"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Standard Contractual Clauses:</strong> Approved by the European Commission for data protection
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Binding Corporate Rules:</strong> Internal data protection rules for multinational companies
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+
+                                        <circle cx="12" cy="16" r="1"/>
+
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Additional Safeguards:</strong> Technical and organizational measures to ensure data protection
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Exercising Rights Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="600">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M9 11H1v3h8v3l3-4-3-4v2z"/>
+
+                                <path d="M22 12h0"/>
+
+                                <path d="M22 6v12c0 1.1-.9 2-2 2h-8"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">6. Exercising Your Rights</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>To exercise any of your GDPR rights, you can contact us through our privacy email or designated channels. We will respond to your request within one month of receipt, unless the request is complex or we receive multiple requests from you.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">How to Make a Request</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Provide Complete Information:</strong> Include your full name, contact information, and description of the right you wish to exercise
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+
+                                        <circle cx="12" cy="12" r="3"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Identity Verification:</strong> We may require proof of identity to protect your personal data from unauthorized access
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <path d="M12 6v6l4 2"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Response Timeline:</strong> We will respond within one month, or up to three months for complex requests with proper notification
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <line x1="9" y1="9" x2="15" y2="15"/>
+
+                                        <line x1="15" y1="9" x2="9" y2="15"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>No Cost:</strong> Exercising your GDPR rights is generally free of charge, unless requests are excessive or unfounded
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Data Protection Officer Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="700">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+
+                                <circle cx="12" cy="7" r="4"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">7. Data Protection Officer</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>We have appointed a Data Protection Officer (DPO) to oversee our GDPR compliance and ensure your data protection rights are respected.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">DPO Responsibilities</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+
+                                        <circle cx="12" cy="12" r="3"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Monitoring Compliance:</strong> Overseeing data protection practices and GDPR compliance
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Training & Awareness:</strong> Providing data protection training and raising awareness within our organization
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Point of Contact:</strong> Acting as a contact point for data subjects and supervisory authorities
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Risk Assessment:</strong> Conducting data protection impact assessments and risk evaluations
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">You can contact our DPO directly for any questions or concerns about our data processing activities at dpo@singbd.com.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Complaints and Supervisory Authorities Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="800">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+
+                                <line x1="4" y1="22" x2="4" y2="15"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">8. Complaints and Supervisory Authorities</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>If you have concerns about how we handle your personal data, you have the right to lodge a complaint with your local data protection authority. However, we encourage you to contact us first so we can address your concerns directly.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">Filing a Complaint</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Contact Us First:</strong> We encourage direct communication to resolve concerns quickly and effectively
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Local Authority:</strong> You can file a complaint with the data protection authority in your EU member state
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+
+                                        <path d="M7 15h0M2 4h20v16H2z"/>
+
+                                        <circle cx="17" cy="10" r="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Online Resources:</strong> Find your local authority at https://edpb.europa.eu/about-edpb/board/members_en
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <line x1="9" y1="9" x2="15" y2="15"/>
+
+                                        <line x1="15" y1="9" x2="9" y2="15"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>No Cost:</strong> Filing a complaint with supervisory authorities is free of charge
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Updates and Changes Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="900">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">9. Updates to This Policy</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>We may update this GDPR Compliance page from time to time to reflect changes in our practices or legal requirements. When we make significant changes, we will take appropriate steps to inform you.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">How We Notify You</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Posting the updated policy on this page with a new "Last updated" date</div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+
+                                        <polyline points="22,6 12,13 2,6"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Sending email notifications for material changes that affect your rights</div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+
+                                        <path d="M7 15h0M2 4h20v16H2z"/>
+
+                                        <circle cx="17" cy="10" r="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Displaying prominent website banners for significant policy changes</div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <path d="M12 6v6l4 2"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Providing reasonable advance notice before changes take effect</div>
+
+                            </div>
+
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">Your continued use of our services after policy updates constitutes acceptance of the changes, unless you exercise your right to object or withdraw consent.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<?php include 'partials/_footer.php'; ?>
+
+
+
+                                        <circle cx="12" cy="12" r="9"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Adequacy Decisions:</strong> Transfers to countries deemed adequate by the European Commission
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+
+                                        <polyline points="14,2 14,8 20,8"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Standard Contractual Clauses:</strong> Approved by the European Commission for data protection
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Binding Corporate Rules:</strong> Internal data protection rules for multinational companies
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+
+                                        <circle cx="12" cy="16" r="1"/>
+
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Additional Safeguards:</strong> Technical and organizational measures to ensure data protection
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Exercising Rights Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="600">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M9 11H1v3h8v3l3-4-3-4v2z"/>
+
+                                <path d="M22 12h0"/>
+
+                                <path d="M22 6v12c0 1.1-.9 2-2 2h-8"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">6. Exercising Your Rights</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>To exercise any of your GDPR rights, you can contact us through our privacy email or designated channels. We will respond to your request within one month of receipt, unless the request is complex or we receive multiple requests from you.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">How to Make a Request</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Provide Complete Information:</strong> Include your full name, contact information, and description of the right you wish to exercise
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+
+                                        <circle cx="12" cy="12" r="3"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Identity Verification:</strong> We may require proof of identity to protect your personal data from unauthorized access
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <path d="M12 6v6l4 2"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Response Timeline:</strong> We will respond within one month, or up to three months for complex requests with proper notification
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <line x1="9" y1="9" x2="15" y2="15"/>
+
+                                        <line x1="15" y1="9" x2="9" y2="15"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>No Cost:</strong> Exercising your GDPR rights is generally free of charge, unless requests are excessive or unfounded
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Data Protection Officer Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="700">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+
+                                <circle cx="12" cy="7" r="4"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">7. Data Protection Officer</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>We have appointed a Data Protection Officer (DPO) to oversee our GDPR compliance and ensure your data protection rights are respected.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">DPO Responsibilities</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+
+                                        <circle cx="12" cy="12" r="3"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Monitoring Compliance:</strong> Overseeing data protection practices and GDPR compliance
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Training & Awareness:</strong> Providing data protection training and raising awareness within our organization
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Point of Contact:</strong> Acting as a contact point for data subjects and supervisory authorities
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Risk Assessment:</strong> Conducting data protection impact assessments and risk evaluations
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">You can contact our DPO directly for any questions or concerns about our data processing activities at dpo@singbd.com.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Complaints and Supervisory Authorities Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="800">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+
+                                <line x1="4" y1="22" x2="4" y2="15"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">8. Complaints and Supervisory Authorities</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>If you have concerns about how we handle your personal data, you have the right to lodge a complaint with your local data protection authority. However, we encourage you to contact us first so we can address your concerns directly.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">Filing a Complaint</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Contact Us First:</strong> We encourage direct communication to resolve concerns quickly and effectively
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Local Authority:</strong> You can file a complaint with the data protection authority in your EU member state
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+
+                                        <path d="M7 15h0M2 4h20v16H2z"/>
+
+                                        <circle cx="17" cy="10" r="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>Online Resources:</strong> Find your local authority at https://edpb.europa.eu/about-edpb/board/members_en
+
+                                </div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <line x1="9" y1="9" x2="15" y2="15"/>
+
+                                        <line x1="15" y1="9" x2="9" y2="15"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">
+
+                                    <strong>No Cost:</strong> Filing a complaint with supervisory authorities is free of charge
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Updates and Changes Card -->
+
+                <div class="legal-card" data-aos="fade-up" data-aos-delay="900">
+
+                    <div class="legal-card__header">
+
+                        <div class="legal-card__icon">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+
+                            </svg>
+
+                        </div>
+
+                        <h2 class="legal-card__title">9. Updates to This Policy</h2>
+
+                    </div>
+
+                    <div class="legal-card__content">
+
+                        <p>We may update this GDPR Compliance page from time to time to reflect changes in our practices or legal requirements. When we make significant changes, we will take appropriate steps to inform you.</p>
+
+                        
+
+                        <h3 style="margin: 2rem 0 1rem; color: var(--heading-color);">How We Notify You</h3>
+
+                        <div class="legal-list">
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Posting the updated policy on this page with a new "Last updated" date</div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+
+                                        <polyline points="22,6 12,13 2,6"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Sending email notifications for material changes that affect your rights</div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+
+                                        <path d="M7 15h0M2 4h20v16H2z"/>
+
+                                        <circle cx="17" cy="10" r="1"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Displaying prominent website banners for significant policy changes</div>
+
+                            </div>
+
+                            <div class="legal-list__item">
+
+                                <div class="legal-list__icon">
+
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                                        <circle cx="12" cy="12" r="10"/>
+
+                                        <path d="M12 6v6l4 2"/>
+
+                                    </svg>
+
+                                </div>
+
+                                <div class="legal-list__content">Providing reasonable advance notice before changes take effect</div>
+
+                            </div>
+
+                        </div>
+
+                        <p style="margin-top: 1.5rem;">Your continued use of our services after policy updates constitutes acceptance of the changes, unless you exercise your right to object or withdraw consent.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<?php include 'partials/_footer.php'; ?>
+
+

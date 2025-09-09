@@ -8,17 +8,6 @@ include 'partials/_header.php';
 ?>
 
 <main class="main">
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <div class="breadcrumbs__container">
-            <ol class="breadcrumbs__nav">
-                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
-                <li><span class="breadcrumbs__separator">/</span></li>
-                <li><span class="breadcrumbs__current">About Us</span></li>
-            </ol>
-        </div>
-    </nav>
-    
     <!-- About Section (matching homepage structure) -->
     <section class="about" id="about">
         <div class="about__container">
@@ -76,7 +65,7 @@ include 'partials/_header.php';
                     </div>
                     <h2 class="section__title">About Us</h2>
                     <p class="section__subtitle">
-                        We are a dynamic buying house based in Singapore, specializing in the sourcing and production of high-quality knitwear, woven garments, outerwear, and functional outdoor apparel. We work with homeware, accessories like bags and handicrafts.
+                        Based in Singapore, we are a dynamic buying house sourcing and producing premium knitwear, woven garments, outerwear, functional apparel, and lifestyle accessories.
                     </p>
                     <p class="about__description about__description--centered">
                         We are a sister concern of Fakir Apparels Ltd, in Bangladesh, one of the leading and largest privately owned multi-product knit, woven, and fabric manufacturing groups of companies.
@@ -106,9 +95,9 @@ include 'partials/_header.php';
                 <div class="about__features-container">
                     <!-- Left Column - Tab Navigation -->
                     <div class="about__features-tabs">
-                        <button class="about__feature-tab about__feature-tab--active" data-tab="timely">
-                            <h3 class="about__feature-tab-title">Timely</h3>
-                            <p class="about__feature-tab-description">Fast and efficient delivery timelines</p>
+                        <button class="about__feature-tab about__feature-tab--active" data-tab="erp-driven">
+                            <h3 class="about__feature-tab-title">ERP Driven</h3>
+                            <p class="about__feature-tab-description">streamlined ERP for efficiency</p>
                         </button>
                         
                         <button class="about__feature-tab" data-tab="ethical">
@@ -124,8 +113,8 @@ include 'partials/_header.php';
                     
                     <!-- Right Column - Photo Display -->
                     <div class="about__features-photos">
-                        <div class="about__feature-photo about__feature-photo--active" id="timely-photo">
-                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Timely.webp" alt="Timely Delivery" class="about__feature-photo-image">
+                        <div class="about__feature-photo about__feature-photo--active" id="erp-driven-photo">
+                            <img src="<?php echo $baseUrl; ?>/images/Icon/What Sets Us Apart/Timely.webp?v=2" alt="ERP Driven Efficiency" class="about__feature-photo-image">
                         </div>
                         
                         <div class="about__feature-photo" id="ethical-photo">

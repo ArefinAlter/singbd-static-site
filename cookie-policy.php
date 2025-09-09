@@ -8,17 +8,6 @@ include 'partials/_header.php';
 ?>
 
 <main class="main">
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <div class="breadcrumbs__container">
-            <ol class="breadcrumbs__nav">
-                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
-                <li><span class="breadcrumbs__separator">/</span></li>
-                <li><span class="breadcrumbs__current">Cookie Policy</span></li>
-            </ol>
-        </div>
-    </nav>
-    
     <!-- Hero Section -->
     <section class="legal-hero">
         <div class="legal-hero__container">

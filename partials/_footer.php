@@ -66,29 +66,6 @@ require_once __DIR__ . '/../config.php';
 
 
 
-    <!-- Breadcrumb Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "<?php echo $baseUrl; ?>/"
-            }
-            <?php if (isset($page_title) && $page_title !== "Home"): ?>,
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "<?php echo isset($page_title) ? $page_title : 'Page'; ?>",
-                "item": "<?php echo isset($canonical_url) ? $canonical_url : $baseUrl . (isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/'); ?>"
-            }
-            <?php endif; ?>
-        ]
-    }
-    </script>
     
     <!-- LocalBusiness Structured Data -->
     <script type="application/ld+json">
@@ -133,7 +110,6 @@ require_once __DIR__ . '/../config.php';
 
     <!-- JavaScript -->
     <script src="<?php echo $baseUrl; ?>/js/main.js?v=<?php echo time(); ?>"></script>
-    <script src="<?php echo $baseUrl; ?>/js/world-map.js"></script>
     <script src="<?php echo $baseUrl; ?>/js/chat-widget.js"></script>
 </body>
 </html>

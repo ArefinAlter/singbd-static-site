@@ -8,16 +8,6 @@ include 'partials/_header.php';
 ?>
 
 <main class="main">
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <div class="breadcrumbs__container">
-            <ol class="breadcrumbs__nav">
-                <li><a href="<?php echo $baseUrl; ?>/" class="breadcrumbs__link">Home</a></li>
-                <li><span class="breadcrumbs__separator">/</span></li>
-                <li><span class="breadcrumbs__current">Sustainability</span></li>
-            </ol>
-        </div>
-    </nav>
 
     <!-- Hero Section -->
     <section class="sustainability-hero">
@@ -52,7 +42,7 @@ include 'partials/_header.php';
                 
                 <div class="certification__card" data-aos="fade-up" data-aos-delay="200">
                     <div class="certification__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/OEKO_TEX.png" alt="OEKO-TEX Standard 100" class="certification__img">
+                        <img src="<?php echo $baseUrl; ?>/images/oeko-tex-confidence-in-textiles-standard-100-logo-vector.svg" alt="OEKO-TEX Standard 100" class="certification__img">
                     </div>
                     <h3 class="certification__title">OEKO-TEX Standard 100</h3>
                     <div class="certification__status">Certified</div>
@@ -61,20 +51,20 @@ include 'partials/_header.php';
                 
                 <div class="certification__card" data-aos="fade-up" data-aos-delay="300">
                     <div class="certification__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/Better_Cotton_Initiative.png" alt="Better Cotton Initiative" class="certification__img">
+                        <img src="<?php echo $baseUrl; ?>/images/Wrap Logo.svg" alt="Wrap" class="certification__img">
                     </div>
-                    <h3 class="certification__title">Better Cotton Initiative</h3>
+                    <h3 class="certification__title">Wrap — Member</h3>
                     <div class="certification__status">Member</div>
-                    <p class="certification__description">Sustainable cotton sourcing program</p>
+                    <p class="certification__description">Responsible Production</p>
                 </div>
                 
                 <div class="certification__card" data-aos="fade-up" data-aos-delay="400">
                     <div class="certification__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/CradletoCradleLogo.jpg" alt="Cradle to Cradle" class="certification__img">
+                        <img src="<?php echo $baseUrl; ?>/images/Accord Logo.png" alt="Accord" class="certification__img">
                     </div>
-                    <h3 class="certification__title">Cradle to Cradle</h3>
-                    <div class="certification__status">Silver Level</div>
-                    <p class="certification__description">Circular economy design methodology</p>
+                    <h3 class="certification__title">Accord — Member</h3>
+                    <div class="certification__status">Member</div>
+                    <p class="certification__description">Ensuring Safety</p>
                 </div>
             </div>
         </div>
@@ -147,45 +137,21 @@ include 'partials/_header.php';
                 <div class="goal__card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="goal__title">Carbon Neutral by 2030</h3>
                     <p class="goal__description">Reducing greenhouse gas emissions across operations</p>
-                    <div class="goal__progress">
-                        <div class="goal__progress-bar">
-                            <div class="goal__progress-fill" style="width: 65%"></div>
-                        </div>
-                        <div class="goal__progress-text">65% Complete</div>
-                    </div>
                 </div>
                 
                 <div class="goal__card" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="goal__title">100% Sustainable Materials</h3>
                     <p class="goal__description">Transitioning to eco-friendly raw materials</p>
-                    <div class="goal__progress">
-                        <div class="goal__progress-bar">
-                            <div class="goal__progress-fill" style="width: 80%"></div>
-                        </div>
-                        <div class="goal__progress-text">80% Complete</div>
-                    </div>
                 </div>
                 
                 <div class="goal__card" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="goal__title">Zero Liquid Discharge</h3>
                     <p class="goal__description">Eliminating wastewater discharge from facilities</p>
-                    <div class="goal__progress">
-                        <div class="goal__progress-bar">
-                            <div class="goal__progress-fill" style="width: 45%"></div>
-                        </div>
-                        <div class="goal__progress-text">45% Complete</div>
-                    </div>
                 </div>
                 
                 <div class="goal__card" data-aos="fade-up" data-aos-delay="400">
                     <h3 class="goal__title">Circular Supply Chain</h3>
                     <p class="goal__description">Creating closed-loop manufacturing processes</p>
-                    <div class="goal__progress">
-                        <div class="goal__progress-bar">
-                            <div class="goal__progress-fill" style="width: 55%"></div>
-                        </div>
-                        <div class="goal__progress-text">55% Complete</div>
-                    </div>
                 </div>
             </div>
         </div>
