@@ -1062,6 +1062,13 @@ p {
     }
 }
 
+/* Tablet responsive - add top padding for fixed header */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about:first-of-type {
+        padding-top: calc(var(--spacing-3xl) + var(--spacing-lg));
+    }
+}
+
 /* Mobile override for Values section top padding */
 @media (max-width: 768px) {
     .values {
@@ -1074,6 +1081,11 @@ p {
     
     .about#what-sets-us-apart {
         padding: var(--spacing-md) 0 0 0;
+    }
+    
+    /* Add top padding for fixed header on mobile */
+    .about:first-of-type {
+        padding-top: calc(var(--spacing-3xl) + var(--spacing-2xl));
     }
 }
 
@@ -1700,13 +1712,13 @@ p {
     }
     
     .what-we-do__card-icon {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
     }
     
     .what-we-do__card-icon img {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -2856,7 +2868,7 @@ p {
     }
     
     .hero {
-        padding: var(--spacing-3xl) 0;
+        padding: 0 0 var(--spacing-3xl) 0;
     }
     
     .nav__logo-img {
@@ -3289,6 +3301,11 @@ p {
     
     .categories__container {
         padding: 0 var(--spacing-md);
+    }
+    
+    /* Add top padding for fixed header on tablet */
+    .categories:first-of-type {
+        padding-top: calc(var(--spacing-2xl) + var(--spacing-lg));
     }
     
     .categories__content {
@@ -5750,6 +5767,11 @@ p {
     
     .products-hero__title {
         font-size: 2rem;
+    }
+    
+    /* Add top padding for fixed header on mobile */
+    .categories:first-of-type {
+        padding-top: calc(var(--spacing-lg) + var(--spacing-2xl));
     }
     
     .products-hero__product-title {
