@@ -5,6 +5,9 @@ $page_description = "Browse our complete collection of premium apparel and texti
 $page_keywords = "all products, complete collection, apparel, garments, textiles, woven tops, sportswear, knitwear, homeware, handicrafts, workwear";
 $canonical_url = $baseUrl . "/all-products.php";
 
+// Include product data
+include 'partials/_product_listing.php';
+
 // Pagination settings
 $products_per_page = 12;
 $current_page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
@@ -15,8 +18,8 @@ $allProducts = [];
 $categories = ['woven-tops', 'woven-bottoms', 'coats-jackets', 'denim', 'knitwear', 'sportswear', 'sweater', 'homeware', 'handicrafts', 'workwear'];
 
 foreach ($categories as $category) {
-    if (isset($productData[$category]['products'])) {
-        foreach ($productData[$category]['products'] as $product) {
+    if (isset($productData[$category])) {
+        foreach ($productData[$category] as $product) {
             $product['category'] = $category;
             $product['category_name'] = ucwords(str_replace('-', ' ', $category));
             $allProducts[] = $product;
@@ -27,6 +30,9 @@ foreach ($categories as $category) {
 $total_products = count($allProducts);
 $total_pages = ceil($total_products / $products_per_page);
 $paginated_products = array_slice($allProducts, $offset, $products_per_page);
+
+// Debug: Uncomment the line below to see product count
+// echo "<!-- Debug: Total products found: " . $total_products . " -->";
 
 include 'partials/_header.php';
 ?>

@@ -7,11 +7,17 @@ $page_keywords = "denim, jeans, denim jackets, denim shorts, cargo pants, SingBD
 $canonical_url = $baseUrl . "/products/denim.php";
 include '../partials/_header.php';
 include '../partials/_product_listing.php';
+include '../partials/_category_overview_photos.php';
+include '../partials/_get_quote_section.php';
 ?>
 
 <main class="main products">
 
     <?php renderProductListing($category, $productData[$category]); ?>
+    
+    <?php renderCategoryOverviewPhotos($category); ?>
+    
+    <?php renderGetQuoteSection(); ?>
 </main>
 
 <?php include '../partials/_footer.php'; ?>

@@ -7,11 +7,17 @@ $page_keywords = "woven bottoms, trousers, pants, skirts, bottom wear, premium f
 $canonical_url = $baseUrl . "/products/woven-bottoms.php";
 include '../partials/_header.php';
 include '../partials/_product_listing.php';
+include '../partials/_category_overview_photos.php';
+include '../partials/_get_quote_section.php';
 ?>
 
 <main class="main products">
 
     <?php renderProductListing($category, $productData[$category]); ?>
+    
+    <?php renderCategoryOverviewPhotos($category); ?>
+    
+    <?php renderGetQuoteSection(); ?>
 </main>
 
 <?php include '../partials/_footer.php'; ?>

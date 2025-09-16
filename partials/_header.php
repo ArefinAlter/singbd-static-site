@@ -144,11 +144,14 @@ require_once __DIR__ . '/../config.php';
                             <li class="nav__dropdown-item">
                                 <a href="<?php echo $baseUrl; ?>/products/handicrafts.php" class="nav__dropdown-link">Handicrafts</a>
                             </li>
-                            <li class="nav__dropdown-item">
-                                <a href="<?php echo $baseUrl; ?>/products/workwear.php" class="nav__dropdown-link">Workwear</a>
-                            </li>
-                        </ul>
-                    </li>
+                <li class="nav__dropdown-item">
+                    <a href="<?php echo $baseUrl; ?>/products/workwear.php" class="nav__dropdown-link">Workwear</a>
+                </li>
+                <li class="nav__dropdown-item nav__dropdown-item--separator">
+                    <a href="<?php echo $baseUrl; ?>/all-products.php" class="nav__dropdown-link">View All Products</a>
+                </li>
+            </ul>
+        </li>
                     <li class="nav__item">
                         <a href="<?php echo $baseUrl; ?>/about.php" class="nav__link">About</a>
                     </li>
