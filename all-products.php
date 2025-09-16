@@ -59,7 +59,7 @@ include 'partials/_header.php';
         <div class="all-products-grid__container">
             <div class="all-products-grid__grid">
                 <?php foreach ($paginated_products as $index => $product): ?>
-                <div class="all-products-grid__item" data-aos="fade-up" data-aos-delay="<?php echo ($index + 1) * 100; ?>" 
+                <div class="all-products-grid__item product-item" data-aos="fade-up" data-aos-delay="<?php echo ($index + 1) * 100; ?>" 
                      data-product-name="<?php echo htmlspecialchars($product['name']); ?>"
                      data-product-description="<?php echo htmlspecialchars($product['description']); ?>"
                      data-product-image="<?php echo $baseUrl; ?>/images/Products/<?php echo $product['image_path']; ?>"
@@ -76,7 +76,7 @@ include 'partials/_header.php';
                     <div class="all-products-grid__info">
                         <h3 class="all-products-grid__title"><?php echo htmlspecialchars($product['name']); ?></h3>
                         <p class="all-products-grid__description"><?php echo htmlspecialchars($product['description']); ?></p>
-                        <small class="all-products-grid__hint">Click to view details</small>
+                        <small class="all-products-grid__hint product-item__hint">Click to view details</small>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -140,5 +140,17 @@ include 'partials/_header.php';
         </div>
     </section>
 </main>
+
+<script>
+// Debug: Check if product items are found and click events are working
+document.addEventListener('DOMContentLoaded', function() {
+    const productItems = document.querySelectorAll('.product-item[data-product-name]');
+    console.log('All Products Page - Found product items:', productItems.length);
+    
+    productItems.forEach((item, index) => {
+        console.log(`Product ${index + 1}:`, item.getAttribute('data-product-name'));
+    });
+});
+</script>
 
 <?php include 'partials/_footer.php'; ?>
