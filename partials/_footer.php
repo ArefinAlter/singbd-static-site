@@ -47,10 +47,10 @@ require_once __DIR__ . '/../config.php';
                             <strong>Email:</strong> info@singbd.com
                         </p>
                         <p class="footer__contact-item">
-                            <strong>Phone:</strong> +880 1234 567890
+                            <strong>Phone:</strong> +8801711594673
                         </p>
                         <p class="footer__contact-item">
-                            <strong>Address:</strong> Dhaka, Bangladesh
+                            <strong>Address:</strong> 9th Floor, ANZ Huq Eleven Square<br>Plot #01, Road #11, Block #H<br>Banani, Dhaka-1213, Bangladesh
                         </p>
                     </div>
                 </div>
@@ -76,19 +76,20 @@ require_once __DIR__ . '/../config.php';
         "image": "<?php echo $baseUrl; ?>/images/SingBD-logo-Final-01.png",
         "description": "Leading manufacturer of high-quality garments and textiles, committed to sustainable practices and innovation.",
         "url": "<?php echo $baseUrl; ?>",
-        "telephone": "+65-1234-5678",
+        "telephone": "+8801711594673",
         "email": "info@singbd.com",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "100 Jln Sultan",
-            "addressLocality": "Singapore",
-            "postalCode": "199001",
-            "addressCountry": "SG"
+            "streetAddress": "9th Floor, ANZ Huq Eleven Square, Plot #01, Road #11, Block #H",
+            "addressLocality": "Banani",
+            "addressRegion": "Dhaka",
+            "postalCode": "1213",
+            "addressCountry": "BD"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 1.3000,
-            "longitude": 103.8583
+            "latitude": 23.8000,
+            "longitude": 90.4000
         },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",

@@ -156,7 +156,7 @@ class ChatWidget {
         
         if (message.includes('contact') || message.includes('email') || message.includes('phone')) {
             return {
-                text: 'Here\'s how you can reach us:\n\n📧 **Email**: info@singbd.com\n📞 **Phone**: +65 1234 5678\n📍 **Office**: 100 Jln Sultan, Singapore 199001\n\nOur team is available Monday-Friday, 9 AM - 6 PM SGT.\n\nWould you like to schedule a consultation?',
+                text: 'Here\'s how you can reach us:\n\n📧 **Email**: info@singbd.com\n📞 **Phone**: +8801711594673\n📍 **Office**: 9th Floor, ANZ Huq Eleven Square, Plot #01, Road #11, Block #H, Banani, Dhaka-1213, Bangladesh\n\nOur team is available Monday-Friday, 9 AM - 6 PM BST.\n\nWould you like to schedule a consultation?',
                 quickReplies: ['Schedule Meeting', 'Get Quote', 'WhatsApp', 'Email Us']
             };
         }
@@ -177,7 +177,7 @@ class ChatWidget {
         
         if (message.includes('whatsapp') || message.includes('wa')) {
             return {
-                text: 'You can reach us on WhatsApp for quick responses:\n\n📱 **WhatsApp**: +65 1234 5678\n\nWe typically respond within 1-2 hours during business hours.\n\nWould you like me to provide more specific information about any of our services?',
+                text: 'You can reach us on WhatsApp for quick responses:\n\n📱 **WhatsApp**: +8801711594673\n\nWe typically respond within 1-2 hours during business hours.\n\nWould you like me to provide more specific information about any of our services?',
                 quickReplies: ['Product Categories', 'Get Quote', 'Quality Standards', 'Contact Info']
             };
         }
@@ -327,7 +327,7 @@ class ChatWidget {
     }
 
     openWhatsApp() {
-        const phoneNumber = '+6512345678';
+        const phoneNumber = '8801711594673';
         const message = 'Hello! I\'m interested in SingBD\'s apparel sourcing services.';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');

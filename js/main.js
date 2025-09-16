@@ -27,8 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroMapPoints();
     initPartnerSlider();
     
-    // Initialize products page functionality
-    initProductsPageCategorySwitching();
+    // Initialize products page functionality (if needed)
+    // initProductsPageCategorySwitching(); // Removed - now using separate pages
+    
+    // Initialize product detail modals for category pages
+    initProductDetailModals();
 });
 
 // Mobile Menu Toggle
@@ -42,6 +45,26 @@ function initMobileMenu() {
             mobileToggle.classList.toggle('nav__mobile-toggle--active');
         });
     }
+    
+    // Mobile dropdown functionality - only for mobile menu toggle, not for dropdown behavior
+    // Dropdown should work on hover for both desktop and mobile
+    const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('.nav__link');
+        if (link) {
+            // Remove click prevention - let the link work normally
+            link.addEventListener('click', function(e) {
+                // Only prevent default if we're in mobile menu and want to toggle dropdown
+                // But for Products link, we want it to go to products page
+                if (window.innerWidth <= 768 && this.textContent.trim() !== 'Products') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    item.classList.toggle('active');
+                }
+                // For Products link, let it navigate normally
+            });
+        }
+    });
 }
 
 // About Section Image Slider
@@ -1274,6 +1297,55 @@ function initOverviewPhotosNavigation() {
     
     // Return the update function so it can be called from category switching
     return updateOverviewPhotos;
+}
+
+// Product Detail Modals for Category Pages
+function initProductDetailModals() {
+    const productItems = document.querySelectorAll('.product-item[data-product-name]');
+    
+    productItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const productName = this.getAttribute('data-product-name');
+            const productDescription = this.getAttribute('data-product-description');
+            const productImage = this.getAttribute('data-product-image');
+            const productCategory = this.getAttribute('data-product-category');
+            
+            // Generate a simple code based on title
+            const productCode = productName.replace(/\s+/g, '-').toUpperCase();
+            
+            openProductModal(productName, productDescription, productImage, productCategory, productCode);
+        });
+        
+        // Add hover effect to indicate clickability (desktop only)
+        if (window.innerWidth > 768) {
+            item.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+            
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        }
+        
+        // Add touch feedback for mobile
+        if (window.innerWidth <= 768) {
+            item.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+                this.style.transition = 'transform 0.1s ease';
+            });
+            
+            item.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        }
+    });
 }
 
 // Products Page Category Switching Functionality
