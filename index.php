@@ -15,7 +15,7 @@ include 'partials/_header.php';
                 <div class="video-overview__video-container">
                     <iframe 
                         class="video-overview__iframe"
-                        src="https://iframe.mediadelivery.net/embed/489779/ec23caa6-8128-4870-abbf-bb57daf2e32d?autoplay=true&loop=true&muted=true&preload=true&responsive=true"
+                        src="https://iframe.mediadelivery.net/embed/489779/ee3c06ad-c170-4447-834b-f3b43d305e4c?autoplay=true&loop=true&muted=true&preload=true&responsive=true"
                         loading="lazy"
                         style="border:0;width:100%;height:100%;max-width:800px;aspect-ratio:16/9;"
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
@@ -542,7 +542,7 @@ include 'partials/_header.php';
                             <div class="about__stat-label">Years Experience</div>
                         </div>
                         <div class="about__stat">
-                            <div class="about__stat-number">50+</div>
+                            <div class="about__stat-number">15+</div>
                             <div class="about__stat-label">Global Partners</div>
                         </div>
                         <div class="about__stat">
@@ -653,13 +653,13 @@ include 'partials/_header.php';
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                                     <circle cx="12" cy="10" r="3"/>
                                 </svg>
-                                <span>100 Jln Sultan, Singapore 199001</span>
+                                <span>9th Floor, ANZ Huq Eleven Square<br>Plot #01, Road #11, Block #H<br>Banani, Dhaka-1213, Bangladesh</span>
                             </div>
                             <div class="contact__info-item">
                                 <svg class="contact__info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                                 </svg>
-                                <span>+65 1234 5678</span>
+                                <span>+8801711594673</span>
                             </div>
                             <div class="contact__info-item">
                                 <svg class="contact__info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -673,7 +673,7 @@ include 'partials/_header.php';
                     
                     <div class="contact__map">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819123456789!2d103.8583!3d1.3000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTgnMDAuMCJOIDEwM8KwNTEnMjkuOSJF!5e0!3m2!1sen!2ssg!4v1234567890"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.123456789!2d90.4000!3d23.8000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a8b8b8b8b8%3A0x1234567890abcdef!2sANZ%20Huq%20Eleven%20Square%2C%20Plot%20%2301%2C%20Road%20%2311%2C%20Block%20%23H%2C%20Banani%2C%20Dhaka%201213%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1234567890"
                             width="100%" 
                             height="500" 
                             style="border: 0;" 

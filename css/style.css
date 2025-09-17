@@ -312,6 +312,10 @@ p {
     /* Ensure container is completely transparent */
     background: transparent !important;
     border-radius: 0;
+    /* Remove any padding/margin that could create visible borders */
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 
 
@@ -366,13 +370,13 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    /* Ensure iframe completely fills and covers the container */
+    /* Ensure iframe completely fills the container */
     min-width: 100%;
     min-height: 100%;
-    transform: scale(1); /* Even larger to ensure full coverage */
+    transform: scale(1);
     /* Additional properties to ensure proper sizing */
     box-sizing: border-box;
-    margin: -5px;
+    margin: 0;
     padding: 0;
     display: block;
     /* Override any default iframe background */
@@ -382,6 +386,8 @@ p {
     /* Additional iframe styling to ensure no background */
     background-color: transparent !important;
     background-image: none !important;
+    /* Ensure video content fills the iframe */
+    object-fit: cover;
 }
 
 /* Hero Section */

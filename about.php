@@ -78,7 +78,7 @@ include 'partials/_header.php';
                             <div class="about__stat-label">Years Experience</div>
                         </div>
                         <div class="about__stat">
-                            <div class="about__stat-number">50+</div>
+                            <div class="about__stat-number">15+</div>
                             <div class="about__stat-label">Global Partners</div>
                         </div>
                         <div class="about__stat">
