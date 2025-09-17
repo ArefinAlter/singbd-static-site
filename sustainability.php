@@ -42,15 +42,6 @@ include 'partials/_header.php';
                 
                 <div class="certification__card" data-aos="fade-up" data-aos-delay="200">
                     <div class="certification__icon">
-                        <img src="<?php echo $baseUrl; ?>/images/oeko-tex-confidence-in-textiles-standard-100-logo-vector.svg" alt="OEKO-TEX Standard 100" class="certification__img">
-                    </div>
-                    <h3 class="certification__title">OEKO-TEX Standard 100</h3>
-                    <div class="certification__status">Certified</div>
-                    <p class="certification__description">Textile products tested for harmful substances</p>
-                </div>
-                
-                <div class="certification__card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="certification__icon">
                         <img src="<?php echo $baseUrl; ?>/images/Wrap Logo.svg" alt="Wrap" class="certification__img">
                     </div>
                     <h3 class="certification__title">Wrap — Member</h3>
@@ -58,13 +49,67 @@ include 'partials/_header.php';
                     <p class="certification__description">Responsible Production</p>
                 </div>
                 
-                <div class="certification__card" data-aos="fade-up" data-aos-delay="400">
+                <div class="certification__card" data-aos="fade-up" data-aos-delay="300">
                     <div class="certification__icon">
                         <img src="<?php echo $baseUrl; ?>/images/Accord Logo.png" alt="Accord" class="certification__img">
                     </div>
                     <h3 class="certification__title">Accord — Member</h3>
                     <div class="certification__status">Member</div>
                     <p class="certification__description">Ensuring Safety</p>
+                </div>
+                
+                <div class="certification__card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certification__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/sedex-logo-png_seeklogo-460003.png" alt="SEDEX" class="certification__img">
+                    </div>
+                    <h3 class="certification__title">SEDEX</h3>
+                    <div class="certification__status">Certified</div>
+                    <p class="certification__description">Supplier Ethical Data Exchange</p>
+                </div>
+                
+                <div class="certification__card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="certification__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/betterwork.png" alt="Better Work" class="certification__img">
+                    </div>
+                    <h3 class="certification__title">Better Work</h3>
+                    <div class="certification__status">Certified</div>
+                    <p class="certification__description">Improving working conditions in global supply chains</p>
+                </div>
+                
+                <div class="certification__card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="certification__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/Business-social-compliance-initiative.jpg" alt="BSCI" class="certification__img">
+                    </div>
+                    <h3 class="certification__title">BSCI</h3>
+                    <div class="certification__status">Certified</div>
+                    <p class="certification__description">Business Social Compliance Initiative</p>
+                </div>
+                
+                <div class="certification__card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="certification__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/confidence-in-textiles-oeko-tex-standard-100-seeklogo.png" alt="OEKO-TEX Standard 100" class="certification__img">
+                    </div>
+                    <h3 class="certification__title">OEKO-TEX Standard 100</h3>
+                    <div class="certification__status">Certified</div>
+                    <p class="certification__description">Confidence in Textiles - Harmful Substance Testing</p>
+                </div>
+                
+                <div class="certification__card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="certification__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/Fairware.png" alt="Fairware" class="certification__img">
+                    </div>
+                    <h3 class="certification__title">Fairware</h3>
+                    <div class="certification__status">Certified</div>
+                    <p class="certification__description">Ethical and sustainable promotional products</p>
+                </div>
+                
+                <div class="certification__card" data-aos="fade-up" data-aos-delay="900">
+                    <div class="certification__icon">
+                        <img src="<?php echo $baseUrl; ?>/images/RDS_COLOR.png" alt="RDS" class="certification__img">
+                    </div>
+                    <h3 class="certification__title">RDS</h3>
+                    <div class="certification__status">Certified</div>
+                    <p class="certification__description">Responsible Down Standard</p>
                 </div>
             </div>
         </div>
